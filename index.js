@@ -1,4 +1,4 @@
-function Menu(e) {
+function menu(e) {
   
   let list = document.querySelector('#menu');
   e.name === "menu" ? (e.name = "close", list.classList.remove('hidden')) :( e.name = "menu" ,list.classList.add('hidden'))
