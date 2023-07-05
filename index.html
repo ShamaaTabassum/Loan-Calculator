@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+<html lang="en" class="" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <title>Home</title>
+  </head>
+  <body class="transition-all duration-500 bg-bgGrey">
+    <!-- header-start -->
+    <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+      <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
+        <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+          <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+            <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
+              <span class="cursor-pointer">
+                <a href="./index.html">
+                  <img src="./assets/logo.svg" class="w-full" alt="">
+                </a>
+              </span>
+            </div>
+            <div class="lg:hidden w-full">
+              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+              </span>
+            </div>
+          </div>
+  <div>
+    <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+        <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+          <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
+        </span></a>
+          <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
+  :text-[1.2] text-[0.938rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
+          <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
+          <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+          <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+          <li class="py-1"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
+          <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
+          <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+          <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
+      </ul>
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
+      </li>
+      <a href="">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-3 3xl:px-6 lg:py-2 lg:px-4 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] xl:text-xl lg:text-base md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1"></ion-icon>
+        </button>
+      </a>
+    </ul>
+  </div>
+        </nav>
+    </header>
+<!-- header-end -->
+<!-- section-1-start -->
+
+<div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
+<div class="3xl:min-w-[48.4rem] xl:min-w-[40rem] lg:min-w-[32rem] md:min-w-[25.125rem] h-full xl:mr-[-5.5rem] max-w-full pt-0">
+  <img src="./assets/Group 283.png" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem]">
+</div>
+<div class="2xl:pt-[11rem] md:pt-[4rem]  pt-[1rem] w-full flex flex-col">
+  <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
+    Find The Perfect Loan for Your Business
+  </p>
+  <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[1rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+    Business Loan Calculator
+  </h1>
+  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]   text-[0.57rem] text-black font-poppins font-normal">
+    A business loan calculator is a useful tool for entrepreneurs to  
+     quickly estimate monthly repayments, interest rates, and 
+      borrowing costs, aiding in informed financial decisions.
+  </p>
+    <a href="#">
+      <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+      </button>
+    </a>
+</div>
+</div>
+
+<!-- section-1-end -->
+
+<!-- bg-img-section -->
+<div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+  <img src="./assets/left-jal.png" width="100%" alt="">
+</div>
+<div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[76rem] xl:top-[72rem] lg:top-[66rem] md:top-[41rem] top-[48rem] right-0 z-[-1]">
+  <img src="./assets/right-elips.png" width="100%" alt="">
+</div>
+<div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+  <img src="./assets/left-jal.png" width="100%" alt="">
+</div>
+<div class="3xl:w-[14rem] xl:w-[7rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[245.438rem] xl:top-[255.438rem] lg:top-[260.438rem] md:top-[220rem] top-[270rem] right-0 z-[-1]">
+  <img src="./assets/Ellipse 19-3.png" width="100%" alt="">
+</div>
+
+<div class="3xl:w-[14rem] xl:w-[7rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[336.063rem] xl:top-[346.063] lg:top-[330.063rem] md:top-[300.063rem] top-[316.063rem] right-0 z-[-1]">
+  <img src="./assets/Ellipse 20.png" width="100%" alt="">
+</div>
+<div class="3xl:w-[13rem] xl:w-[8rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[312.063rem] xl:top-[322.063rem] lg:top-[304.063rem] md:top-[260.063rem] top-[342.063rem] left-0 z-[-1]">
+  <img src="./assets/Ellipse 18-1.png" width="100%" alt="">
+</div>
+<!-- bg-img-section -->
+
+<!-- calculator section start -->
+
+<div class="container mx-auto">
+  <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]
+  ">
+    Is a business loan right for me?
+  </h1>
+  <div class="flex items-center justify-between lg:my-[5rem] my-0 mx-0 gap-[1.875rem] w-full lg:flex-row flex-col">
+  <!-- calculator-left-section-start -->
+  <div class="flex flex-col lg:items-start items-center justify-center lg:w-[44rem]">
+    <h2 class="text-darkBlue font-bold 
+    3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">You may be able to borrow between</h2>
+    <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">A business loan can be customized to meet the needs of your company,</p>
+    <p class="text-lightBlue font-quicksand font-bold
+    3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] xl:leading-[6rem] leading-[4rem] lg:text-start text-center ">$2,880 - $4,320</p>
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          View Free Offers <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+  </div>
+  <!-- calculator-left-section-end -->
+  <!-- calculator-right-section-start -->
+  <div class="flex flex-col items-start justify-evenly p-[2.8rem] rounded-[2.8rem] bg-white lg:w-[61.313rem] lg:min-h-[35.938rem] w-full min-h-full">
+    <h3 class="font-quicksand font-bold text-black text-2xl 
+    2xl:pb-7 lg:pb-5 pb-3">
+      Business information
+    </h3>
+<div class="text-left pb-2 w-full">
+  <label id="date" class="font-quicksand font-normal text-xl text-black">Business Start Date</label>
+  <div class="flex lg:flex-row flex-col items-center justify-between w-full">
+    <div class="lg:w-[48%] w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+      <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+      <div class="">
+      <select id="" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey" aria-labelledby="date">
+        <option value="1">
+        January
+    </option><option value="2">
+        February 
+    </option><option value="3">
+        March
+    </option><option value="4">
+        April
+    </option><option value="5">
+        May
+    </option><option value="6">
+        June
+    </option><option value="7">
+        July
+    </option><option value="8">
+        August
+    </option><option value="9">
+        September
+    </option><option value="10">
+        October
+    </option><option value="11">
+        November
+    </option><option value="12">
+        December
+    </option></select>
+  </div>
+    </div>
+    <div class="lg:w-[48%] w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+      <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+      <div class="w-full">
+        <select id="" class="w-full  font-quicksand font-normal text-base bg-bgGrey" aria-labelledby="date"><option value="2023">
+          2023
+      </option><option value="2022">
+          2022
+      </option><option value="2021">
+          2021
+      </option><option value="2020">
+          2020
+      </option><option value="2019">
+          2019
+      </option><option value="2018">
+          2018
+      </option><option value="2017">
+          2017
+      </option><option value="2016">
+          2016
+      </option><option value="2015">
+          2015
+      </option><option value="2014">
+          2014
+      </option><option value="2013">
+          2013
+      </option><option value="2012">
+          2012
+      </option><option value="2011">
+          2011
+      </option><option value="2010">
+          2010
+      </option><option value="2009">
+          2009
+      </option><option value="2008">
+          2008
+      </option><option value="2007">
+          2007
+      </option><option value="2006">
+          2006
+      </option><option value="2005">
+          2005
+      </option><option value="2004">
+          2004
+      </option><option value="2003">
+          2003
+      </option><option value="2002">
+          2002
+      </option><option value="2001">
+          2001
+      </option><option value="2000">
+          2000
+      </option><option value="1999">
+          1999
+      </option><option value="1998">
+          1998
+      </option><option value="1997">
+          1997
+      </option><option value="1996">
+          1996
+      </option><option value="1995">
+          1995
+      </option><option value="1994">
+          1994
+      </option><option value="1993">
+          1993
+      </option><option value="1992">
+          1992
+      </option><option value="1991">
+          1991
+      </option><option value="1990">
+          1990
+      </option><option value="1989">
+          1989
+      </option><option value="1988">
+          1988
+      </option><option value="1987">
+          1987
+      </option><option value="1986">
+          1986
+      </option><option value="1985">
+          1985
+      </option><option value="1984">
+          1984
+      </option><option value="1983">
+          1983
+      </option><option value="1982">
+          1982
+      </option><option value="1981">
+          1981
+      </option><option value="1980">
+          1980
+      </option><option value="1979">
+          1979
+      </option><option value="1978">
+          1978
+      </option><option value="1977">
+          1977
+      </option><option value="1976">
+          1976
+      </option><option value="1975">
+          1975
+      </option><option value="1974">
+          1974
+      </option><option value="1973">
+          1973
+      </option><option value="1972">
+          1972
+      </option><option value="1971">
+          1971
+      </option><option value="1970">
+          1970
+      </option><option value="1969">
+          1969
+      </option><option value="1968">
+          1968
+      </option><option value="1967">
+          1967
+      </option><option value="1966">
+          1966
+      </option><option value="1965">
+          1965
+      </option><option value="1964">
+          1964
+      </option><option value="1963">
+          1963
+      </option><option value="1962">
+          1962
+      </option><option value="1961">
+          1961
+      </option><option value="1960">
+          1960
+      </option><option value="1959">
+          1959
+      </option><option value="1958">
+          1958
+      </option><option value="1957">
+          1957
+      </option><option value="1956">
+          1956
+      </option><option value="1955">
+          1955
+      </option><option value="1954">
+          1954
+      </option><option value="1953">
+          1953
+      </option><option value="1952">
+          1952
+      </option><option value="1951">
+          1951
+      </option><option value="1950">
+          1950
+      </option><option value="1949">
+          1949
+      </option><option value="1948">
+          1948
+      </option><option value="1947">
+          1947
+      </option><option value="1946">
+          1946
+      </option><option value="1945">
+          1945
+      </option><option value="1944">
+          1944
+      </option><option value="1943">
+          1943
+      </option><option value="1942">
+          1942
+      </option><option value="1941">
+          1941
+      </option><option value="1940">
+          1940
+      </option><option value="1939">
+          1939
+      </option><option value="1938">
+          1938
+      </option><option value="1937">
+          1937
+      </option><option value="1936">
+          1936
+      </option><option value="1935">
+          1935
+      </option><option value="1934">
+          1934
+      </option><option value="1933">
+          1933
+      </option><option value="1932">
+          1932
+      </option><option value="1931">
+          1931
+      </option><option value="1930">
+          1930
+      </option><option value="1929">
+          1929
+      </option><option value="1928">
+          1928
+      </option><option value="1927">
+          1927
+      </option><option value="1926">
+          1926
+      </option><option value="1925">
+          1925
+      </option><option value="1924">
+          1924
+      </option><option value="1923">
+          1923
+      </option></select>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="flex lg:flex-row flex-col justify-between w-full items-center">
+  <div class="lg:w-[48%] w-full ">
+    <label for="annual-revenue" class="font-quicksand font-normal text-xl text-black">Annual Revenue</label>
+    <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+      <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+      <div class="w-full">
+      <input type="number" name="annual-revenue" id="annual-revenue" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black" placeholder="60,000">
+    </div>
+  </div>
+  </div>
+
+  <div class="lg:w-[48%] w-full ">
+    <label for="last-month-deposit" class="font-quicksand font-normal text-xl text-black">Last Month’s Deposte</label>
+    <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+      <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+      <div class="w-full">
+      <input type="number" name="last-month-deposit" id="last-month-deposit" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black" placeholder="5,000">
+    </div>
+  </div>
+  </div>
+</div>
+
+<div class="flex lg:flex-row flex-col justify-between w-full items-center">
+<div class="lg:w-[48%] w-full ">
+  <label for="credit-store" class="font-quicksand font-normal text-xl text-black">Est Credit Score</label>
+  <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+    <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/credit-card.png" width="100%" height="100%" alt=""></div>
+    <div class="">
+      <select id="" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey" name="credit-store">
+        <option value="1">Excellent (720+)</option>
+        <option value="2">Good (680-719)</option>
+        <option value="3">Fair (640-679)</option>
+        <option value="4">Poor (639 or less)</option>
+      </select>
+</div>
+  </div>
+
+</div>
+<div class="lg:w-[48%] w-full ">
+  <label for="home-based" class="font-quicksand font-normal text-xl text-black">Home-based</label>
+  <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+    <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/credit-card.png" width="100%" height="100%" alt=""></div>
+    <div class="">
+      <select name="home-based" id="home-based" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey">
+        <option value="1">no</option>
+        <option value="2">yes</option>
+      </select>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="mt-7">
+  <button class="xl:w-[18.875rem] xl:max-h-[5rem] md:w-[15rem] md:max-h-[4rem] w-full min-h-[2rem] rounded-[0.313rem] px-[3.188rem] py-[1.375rem] bg-lightBlue font-poppins font-medium xl:text-xl md:text-base  text-white text-center hover:bg-blue transition-all">
+    Reset Calculator
+  </button>
+</div>
+</div>
+</div>
+</div>
+  <!-- calculator-right-section-end -->
+
+<!-- calculator section end -->
+
+<!-- section-3-start -->
+
+<div class="container mx-auto flex flex-col items-center justify-evenly lg:mt-0 mt-8">
+  <h2 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] mb-5">
+    How to Use The Business Loan Calculator
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center  mb-5">
+    Using a business loan calculator is a straightforward process that helps you estimate your loan repayments and make informed financial decisions. Begin by entering the loan amount, desired loan term, and estimated interest rate. Choose the repayment frequency that suits your business's cash flow, then click "Calculate" to obtain the results. Review the generated figures, including the monthly repayment amount, total interest paid, and overall repayment amount. Explore different loan scenarios by adjusting the loan details to understand their impact on your finances. With a business loan calculator, you can confidently plan and navigate your business loan journey.
+  </p>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center  mb-5">
+    Several factors related to your business can impact the loan amount you may be eligible for:
+  </p>
+</div>
+<!-- section-3-end -->
+<!-- section-4-start -->
+<div class="container mx-auto flex flex-col items-center lg:justify-between justify-center w-full mt-[3rem] gap-[2rem]  lg:gap-0">
+<div class="flex lg:items-baseline items-center lg:flex-row flex-col justify-between lg:gap-[5rem] gap-[2rem] text-center w-full">
+<div class="flex flex-col items-center justify-center gap-y-4 lg:w-[48%] w-full lg:bg-transparent bg-white md:rounded-[1.25rem] rounded-[1.563rem]  lg:p-0 md:p-6 p-[0.813rem]  ">
+  <div class="
+  3xl:w-[9.125rem] xl:w-[8.7rem] lg:w-[7.8rem] md:w-[7.125rem] w-[3.938rem]
+  ">
+    <img src="./assets/date.png" alt="" width="100%">
+  </div>
+<h2 class="font-quicksand font-bold text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem]">
+  Business start date & annual revenue
+</h2>
+<p class="font-poppins font-normal lg:text-base md:text-[0.938rem] text-[0.5rem] text-black ">
+  <strong class="font-semibold">Business start date & annual revenue:</strong>
+   When evaluating your eligibility for debt, lenders consider the start date of your business and its annual gross revenue. Gross revenue refers to the total income before deducting expenses. Lenders aim to ensure that your business generates sufficient earnings to cover the debt, influencing the loan amount based on your business's financial performance.
+</p>
+</div>
+<div class="flex flex-col items-center justify-center gap-y-4 lg:w-[48%] w-full lg:bg-transparent bg-white md:rounded-[1.25rem] rounded-[1.563rem]  lg:p-0 md:p-6 p-[0.813rem]">
+  <div class="3xl:w-[9.125rem] xl:w-[8.7rem] lg:w-[7.8rem] md:w-[7.125rem] w-[3.938rem]">
+    <img src="./assets/flask.svg" alt="" width="100%">
+  </div>
+<h2 class="font-quicksand font-bold text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] 4xl:pb-0 lg:pb-10 pb-0">
+  Last month’s sales
+</h2>
+<p class="font-poppins font-normal lg:text-base md:text-[0.938rem] text-[0.5rem] text-black ">
+  <strong class="font-semibold">Last month’s sales:</strong>
+  this information assists lenders in assessing your business's available cash reserves and determining your ability to make monthly debt payments. When seeking a loan, you might be asked to provide bank statements demonstrating your historical deposits.
+</p>
+</div>
+</div>
+<div class="flex lg:items-baseline items-center lg:flex-row flex-col justify-between lg:gap-[5rem] gap-[2rem]  text-center w-full lg:mt-14 mt-0">
+  <div class="flex flex-col items-center justify-center gap-y-4 lg:w-[48%] w-full lg:bg-transparent bg-white md:rounded-[1.25rem] rounded-[1.563rem]  lg:p-0 md:p-6 p-[0.813rem]">
+    <div class="3xl:w-[9.125rem] xl:w-[8.7rem] lg:w-[7.8rem] md:w-[7.125rem] w-[3.938rem] ">
+      <img src="./assets/cradit sc.svg" alt="" width="100%">
+    </div>
+  <h2 class="font-quicksand font-bold text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem]">
+    Your credit score
+  </h2>
+  <p class="font-poppins font-normal lg:text-base md:text-[0.938rem] text-[0.5rem] text-black ">
+    <strong class="font-semibold">Your credit score:</strong>
+     Having good or excellent credit may qualify you for a higher loan amount, whereas fair or poor credit could result in a smaller loan. Additionally, your business credit score plays a role, as a robust profile can enhance your chances of obtaining a larger loan during the application process.
+  </p>
+  </div>
+  <div class="flex flex-col items-center justify-center gap-y-4 lg:w-[48%] w-full lg:bg-transparent bg-white md:rounded-[1.25rem] rounded-[1.563rem]  lg:p-0 md:p-6 p-[0.813rem]">
+    <div class="3xl:w-[9.125rem] xl:w-[8.7rem] lg:w-[7.8rem] md:w-[7.125rem] w-[3.938rem] ">
+      <img src="./assets/home bases not.svg" alt="" width="100%">
+    </div>
+  <h2 class="font-quicksand font-bold text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] ">
+    Home based vs Not
+  </h2>
+  <p class="font-poppins font-normal lg:text-base md:text-[0.938rem] text-[0.5rem] text-black ">
+    <strong class="font-semibold">Home based vs Not:</strong>
+     A home-based business refers to any business operated from a personal residence. Such businesses may have limited assets available for collateral when applying for a loan, which can impact the loan amount that can be obtained.
+  </p>
+  </div>
+  </div>
+<p class="font-poppins font-normal
+3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.538rem]
+text-black my-8 text-center">When evaluating your loan application, a lender may request additional details that can influence the final loan amount. These may include your business plan, financial forecasts, and collateral.
+</p>
+</div>
+<!-- section-4-end -->
+<!-- section-5-start -->
+
+<div class="container mx-auto">
+  <h2 class="lg:text-black text-darkBlue
+  3xl:text-[3.1rem] xl:text-[2.75rem] lg:text-[2.5rem] md:text-[2.188rem]   text-[1.213rem]
+  font-quicksand font-semibold">
+    Some factors influencing small business loan payments
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    The loan amount you can borrow may be determined by the monthly payment size that you can comfortably afford. It is advisable to calculate your desired monthly payment before seeking funding to ensure it aligns with your budget. Several factors, such as:
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Business loan amount
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    Business loan amounts typically vary from $25,000 to over $1 million, depending on the lender. Banks generally offer larger loan amounts compared to online alternative lenders. However, qualifying for an online loan may be easier than obtaining a loan from a bank.  
+  </p>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    The specific type of business loan you require will also influence the loan amount. For example, U.S. Small Business Administration (SBA) loans can reach up to $5 million, while equipment loans may range from $50,000 to $1 million. The size of your business expense will determine the appropriate loan type you would pursue.
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Interest rate
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    Interest rates play a significant role in determining the total cost of business loans and can differ among lenders. Additionally, you may encounter various types of interest rates. Some commonly encountered forms of interest on business loans include:
+  </p>
+  <div class="m-10">
+  <ul class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5 list-disc">
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Annual percentage rate (APR):
+      </strong>
+        Compounding annual interest encompasses additional fees, such as loan origination fees and closing costs.
+        </p>
+    </li>
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Annual interest rate (AIR):
+      </strong>
+      Compounding annual interest, excluding any loan fees..
+        </p>
+    </li>
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Factor rate:
+      </strong>
+      The factor rate, a decimal value obtained by multiplying the initial loan amount, represents the comprehensive financing cost. It's important to note that the factor rate does not include any associated loan fees.
+        </p>
+    </li>
+  </ul>
+</div>
+<p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+  The determination of whether your interest rate is high or low hinges on the level of risk associated with you as a borrower. Lenders evaluate your personal credit score, as well as your business credit score if applicable, alongside your business's financial position to assess your risk level. Additionally, factors such as your business's longevity and annual revenue may also be considered.
+</p>
+<p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+  Before obtaining a business loan, it is essential to clarify whether your interest rate remains fixed or variable throughout the loan term. This information should be clearly stated in your loan agreement. To estimate the loan repayment duration based on a specific interest rate and monthly payment, you can utilize a business loan amortization calculator.
+</p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Top business loan fees you need to know about
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    If your interest rate is stated as APR, it's important to note that it encompasses various fees within the rate. However, if your interest rate is not expressed as APR, you have the option to either pay these fees upfront or at the conclusion of your loan term. Some typical examples of fees associated with business loans are as follows:
+  </p>
+  <div class="m-10">
+  <ul class="text-black list-disc 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5">
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Origination fee:
+      </strong>
+      Covers the cost of processing and approving your loan application.
+        </p>
+    </li>
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Service or processing fees:
+      </strong>
+      Covers the expense of activities such as billing and managing your account.
+        </p>
+    </li>
+    <li cclass="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Prepayment penalty:
+      </strong>
+      Paying off your loan early may result in a <span class="text-lightBlue">prepayment penalty</span>.
+        </p>
+    </li>
+    <li class="text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal">
+      <p>
+      <strong class="font-semibold">
+        Late payment fee:
+      </strong>
+      Charged when you make a payment past the due date.
+        </p>
+    </li>
+  </ul>
+</div>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Loan term
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    The duration of your loan term indicates the timeframe you have to fully repay your debt. Loan terms can range from a few months to several years, depending on the lender and loan type. SBA loans typically offer the longest maximum terms, spanning from 10 to 25 years, while traditional bank loans can have terms of up to 10 years.
+  </p>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    Online loans generally have shorter terms, often requiring repayment within as little as three months. These loans typically carry higher interest rates compared to bank loans. It's important to consider that the shorter repayment timeline, combined with accruing interest, may result in higher monthly payments.
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Discover the best source for business loans
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    Once you have determined your borrowing capacity and the loan payment size within your means, it is time to explore business loan options that align with your requirements. As mentioned previously, there are multiple types of business loans available, each offering different loan terms and repayment schedules. Initially, you can consider three broad categories of business loans before narrowing down your selection.
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Online loans
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    <strong class="font-semibold">
+      Online business loans 
+    </strong>
+    offered by alternative lenders often have flexible borrower requirements and rapid funding, sometimes within one business day. However, online loans are often accompanied by higher interest rates compared to traditional bank loans, making them more expensive. Loan amounts for online loans tend to be smaller, usually capped at $750,000. Nonetheless, if you require swift access to funds to address a small or medium-sized business expense and can afford the associated costs, especially if your credit profile is less than ideal, an online loan may be a suitable option.
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] py-4 font-poppins font-semibold">
+    SBA loans
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    SBA loans, facilitated by banks and other financial institutions, are supported by the U.S. Small Business Administration (SBA). The SBA's backing reduces risk for lenders, making it simpler for them to approve borrowers who may not meet typical financing requirements. While individual lenders may set their own interest rates, the SBA imposes rate caps to ensure affordable loan costs, making SBA loans an attractive financing choice.
+  </p>
+  <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+    Bank loans
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    If your business is well established, opting for traditional bank financing might be a suitable choice. Building a good relationship with the bank over time may qualify you for favorable rates and terms. Additionally, banks typically offer the potential for larger loan amounts compared to online lenders. However, keep in mind that bank loan approvals may take a few weeks or even months to process.
+  </p>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">
+    It is important to conduct thorough research and compare loan offers from different lenders. Find a lender that can provide the desired loan amount at affordable rates, along with a repayment schedule that aligns with your business's financial capabilities.
+  </p>
+  <div class="">
+    <a href="#">
+      <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        View Free Offers <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+      </button>
+    </a>
+</div>
+</div>
+<!-- section-5-end -->
+<!-- footer-start -->
+<footer class="">
+  <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
+<div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+  <!-- img-start -->
+<div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+<div class="w-[18rem]
+3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+">
+  <img src="./assets/logo.svg" alt="" width="100%">
+</div>
+<p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+</div>
+<!-- img-end -->
+<!-- links-start -->
+<div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+  <!-- link1-start -->
+  <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
+    <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
+    <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">
+      <li class="md:my-6 my-4"><a href="">Home</a></li>
+      <li class="md:my-6 my-4"><a href="">About Us</a></li>
+      <li class="md:my-6 my-4"><a href="">Loans</a></li>
+      <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+      <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+    </ul>
+  </div>
+  <!-- link1-end -->
+  <!-- link2-start -->
+  <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
+    <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+     <div class="text-white  flex items-center justify-start gap-x-2">
+      <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+<img src="./assets/phone.svg" alt="" width="100%">
+      </div>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">(973) 561-4301</p>
+      </div >
+     <div class="text-white  flex items-baseline justify-start gap-x-2">
+      <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+        <img src="./assets/mail.svg" alt="" class="w-full">
+      </div>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">helpdesk@businessloan <br> warriors.com</p>
+      </div>
+     <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/twitter.png" class="w-full">
+       </div>
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/fb.png" class="w-full">
+       </div>
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/insta.png" class="w-full ">
+       </div>
+       <div class="
+       3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/youtube.png" class="w-full">
+       </div>
+     </div>
+</div>
+  <!-- link2-end -->
+</div>
+<!-- links-end -->
+</div>
+</div>
+<div class="bg-[#153A66] text-center  min-h-[6.688rem]">
+  <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
+    Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
+    </span>
+  </p>
+</div>
+</footer>
+<!-- footer-end -->
+</body>
+<script src="./index.js"></script>
+</html>
+
+
+

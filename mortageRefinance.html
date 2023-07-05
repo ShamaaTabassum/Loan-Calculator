@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <title>Mortage Refinance Loan</title>
+</head>
+<body class="transition-all duration-500 bg-bgGrey">
+     <!-- header-start -->
+  <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+    <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
+      <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+        <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+          <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
+            <span class="cursor-pointer">
+              <a href="./index.html">
+                <img src="./assets/logo.svg" class="w-full" alt="">
+              </a>
+            </span>
+          </div>
+          <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+        </div>
+<div>
+  <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+      <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
+      </span></a>
+        <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
+:text-[1.2] text-[0.938rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
+        <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
+        <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+        <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+        <li class="py-1"><a class="" href="./mortgaga-refrence.html">Mortage Refrence</a></li>
+        <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
+        <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+        <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
+    </ul>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
+    </li>
+    <a href="">
+      <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-3 3xl:px-6 lg:py-2 lg:px-4 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] xl:text-xl lg:text-base md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1"></ion-icon>
+      </button>
+    </a>
+  </ul>
+</div>
+      </nav>
+  </header>
+<!-- header-end -->
+<div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
+  <div class="3xl:min-w-[50.4rem] xl:min-w-[45rem] lg:min-w-[38rem] md:min-w-[25.125rem] h-full xl:mr-[-5.5rem] max-w-full pt-0">
+    <img src="./assets/mortage refinance hero.svg" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem] ">
+  </div>
+  <div class="2xl:pt-[11rem] md:pt-[4rem]  pt-[1rem] w-full flex flex-col">
+    <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
+      Find The Perfect Loan for Your Business
+    </p>
+    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[1rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+        Mortgage Refinance 
+        Calculator
+    </h1>
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]   text-[0.57rem] text-black font-poppins font-normal">
+        The Mortgage Refinance Calculator helps assess the financial advantages of refinancing a mortgage, providing estimates on potential savings and cost reductions based on current loan terms and proposed refinancing options.
+
+    </p>
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+  </div>
+  </div>
+  
+  <!-- section-1-end -->
+  
+  <!-- bg-img-section -->
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[76rem] xl:top-[72rem] lg:top-[66rem] md:top-[41rem] top-[48rem] right-0 z-[-1]">
+    <img src="./assets/right-elips.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[14rem] xl:w-[7rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[245.438rem] xl:top-[255.438rem] lg:top-[260.438rem] md:top-[220rem] top-[270rem] right-0 z-[-1]">
+    <img src="./assets/Ellipse 19-3.png" width="100%" alt="">
+  </div>
+  <!-- bg-img-section -->
+<!-- calculator section start -->
+
+<div class="container mx-auto w-full">
+  <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]
+   lg:mb-0 mb-8">
+  Refinance Calculator: Estimate Your New Monthly Payment
+  </h1>
+  <div class="flex items-center justify-center lg:my-[5rem] my-0 mx-0 gap-[2rem] w-full ">
+  <div class="flex flex-col items-start  justify-evenly xl:p-[2.8rem] p-[1.8rem] rounded-[2.8rem] bg-white  lg:min-h-[29.813rem] min-w-full min-h-full flex-wrap">
+   <!-- Your Current Mortgage 1 start -->
+   <h3 class="font-quicksand font-bold text-black text-2xl text-start lg:my-0 my-2">
+    Your Current Mortgage
+    </h3>
+    <div class="flex w-full justify-between items-center lg:text-start text-center lg:flex-row flex-col">
+        <!-- original-amount -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+            <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Original Amount:</label>
+            <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+              <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+              <div class="w-full">
+              <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0" value="60,000" placeholder="60,000">
+            </div>
+          </div>
+         </div>
+         <!-- original-amount -->
+         <!-- loan-start-date -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+            <label for="date" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Loan Start Date:</label>
+            <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+              <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+              <div class="w-full">
+              <input type="date" name="date"  id="date" aria-label="Amount (to the nearest dollar)" class=" w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0 [appearance:textfield] [&::-webkit-calendar-picker-indicator]:opacity-0 " >
+            </div>
+          </div>
+         </div>
+         <!-- loan-start-date -->
+         <!-- loan-term -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+          <label for="term" class="font-quicksand font-normal text-xl text-black">Loan Term:</label>
+          <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+            <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+           <div class="w-full">
+             <select id="term" class="w-full  font-quicksand font-normal text-base bg-bgGrey focus:outline-0"><option value="2">
+               15 years
+           </option><option value="3">
+               30 years
+           </option>
+           </select>
+           </div>
+         </div>
+         </div>
+         <!-- loan-term -->
+<!-- interest-rate -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+          <label for="interest" class="font-quicksand font-normal text-xl text-black">Interest Rate:</label>
+          <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+            <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/percentage.png" width="100%" height="100%" alt=""></div>
+            <div class="flex text-black font-medium pr-1">
+              <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="5.000" placeholder="5.000">
+              
+        </div>
+          </div>
+         </div>
+<!-- interest-rate -->
+
+    </div>
+   <!-- Your Current Mortgage 1 end -->
+  <!-- Your Current Mortgage 2 start -->
+   <h3 class="font-quicksand font-bold text-black text-2xl text-start lg:my-0 my-2">
+    Your Current Mortgage
+    </h3>
+    <div class="flex w-full justify-between items-center lg:text-start text-center lg:flex-row flex-col ">
+        <!-- Loan-term -->
+        <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+          <label for="term" class="font-quicksand font-normal text-xl text-black">Loan Term:</label>
+          <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+            <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+           <div class="w-full">
+             <select id="term" class="w-full  font-quicksand font-normal text-base bg-bgGrey focus:outline-0"><option value="2">
+               15 years
+           </option><option value="3">
+               30 years
+           </option>
+           </select>
+           </div>
+         </div>
+         </div>
+         <!-- Loan-term -->
+         <!-- Interest-rate -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+          <label for="interest" class="font-quicksand font-normal text-xl text-black">Interest Rate:</label>
+          <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+            <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/percentage.png" width="100%" height="100%" alt=""></div>
+            <div class="flex text-black font-medium pr-1">
+              <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="5.000" placeholder="5.000">
+              
+        </div>
+          </div>
+         </div>
+         <!-- Interest-rate -->
+         <!-- Lender & Title Fees -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+          <label for="interest" class="font-quicksand font-normal text-xl text-black">Lender & Title Fees:</label>
+          <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+            <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/percentage.png" width="100%" height="100%" alt=""></div>
+            <div class="flex text-black font-medium pr-1">
+              <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="2.000" placeholder="2.000">
+              
+        </div>
+          </div>
+         </div>
+         <!-- Lender & Title Fees -->
+<!-- Length of Ownership -->
+         <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+            <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Length of Ownership:</label>
+            <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+              <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+              <div class="w-full">
+              <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0" value="5" placeholder="5">
+            </div>
+          </div>
+         </div>
+<!-- Length of Ownership -->
+</div>
+    </div>
+  <!-- Your Current Mortgage 2 end -->
+</div>
+</div>
+  <!-- calculator-section-end -->
+
+  <!-- breakdown-section-start -->
+
+  <div class="container mx-auto">
+    <!-- cost-breakdown-start -->
+    <div class="flex items-center justify-center gap-[3.25rem]">
+        <li  class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-darkBlue border border-darkBlue px-12 py-4"><a href="monthly">Monthly Cost Breakdown</a></li>
+        <li class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-white bg-lightBlue px-12 py-4"><a href="lifetime">Lifetime Cost Breakdown</a></li>
+    </div>
+    <!-- cost-breakdown-end -->
+    <!-- lifetime-section-start -->
+    <div id="lifetime" class="grid grid-rows-1 grid-cols-3 my-10">
+      <!-- left-section-start -->
+      <div class="flex flex-col lg:items-start items-center justify-center lg:w-[32.438rem] w-full ">
+        <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Lifetime savings</h2>
+        <p  id="autoLoanResult" class="text-lightBlue font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] xl:leading-[6rem] leading-[4rem] lg:text-start text-center ">$41,895</p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">Ready for the next step</p>
+        <a href="#">
+            <button class="bg-lightGreen text-darkBlue font-quicksand  font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+              See Refinance Offers  <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+            </button>
+          </a>
+      </div>
+      <!-- left-section-end -->
+      <!-- right-section-chart-start -->
+      <div class="col-span-2 bg-white rounded-[2.813rem] p-[2.813rem] gap-[1.375rem]">
+        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+      </div>
+      <script>
+        var xValues = ["2023", "2024", "2025", "2026", "2027","2028"];
+                              var yValues1  = [500, 1000, 1500, 2000, 2500,3000,3500,4000,4500,5000];
+                              var yValues2 = [400, 800, 1200, 1600, 2000,2400]; //second dataset
+                              var barColors1  = ["#19D176 ", "#19D176","#19D176","#19D176","#19D176","#19D176"];
+                              var barColors2 = ["#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0"]; 
+                                      new Chart("myChart", {
+                                              type: "bar",
+                                              data: {
+                                                  labels: xValues,
+                                                  datasets: [{
+                                                      backgroundColor: barColors1,
+                                                      data: yValues1,
+                                                      // label: 'Dataset 1' //optional label for this dataset
+                                                  },
+                                                  {
+                                                      backgroundColor: barColors2,
+                                                      data: yValues2,
+                                                      // label: 'Dataset 2' //optional label for this dataset
+                                                  }]
+                                              },
+                                              options: {
+                                                  legend: {display: true},
+                                                  title: {
+                                                      display: true,
+                                                  },
+                                                  scales: {
+                                                      y: {
+                                                          ticks: {
+                                                              // Include a dollar sign in the ticks
+                                                              callback: function(value, index, values) {
+                                                                  return '$' + value;
+                                                              }
+                                                          }
+                                                      }
+                                                  }
+                                              }
+                                          });
+      </script>
+      <!-- right-section-chart-end -->
+    </div>
+    <!-- lifetime-section-end -->
+  </div>
+  <!-- breakdown-section-end -->
+
+<!-- guide-section-start -->
+
+<div class="container mx-auto">
+    <div class="my-8">
+        <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Utilizing the SBA loan calculator: Step-by-step guide</h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            If you're considering applying for an SBA loan to finance your business, our SBA loan calculator is a valuable tool that can assist you in estimating your monthly repayment amount. It provides an estimate of how much you can expect to repay each month, helping you plan your finances effectively.
+        </p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            SBA loans offer several advantages to small business owners. One notable benefit is their extended repayment periods and reduced interest rates compared to other loans for small businesses. This typically translates into more manageable monthly payments, allowing business owners ample time to utilize the loan funds for business growth and generate profits before completing the repayment.
+        </p>
+    </div>
+    <div class="my-8">
+        <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Calculating monthly repayments using the SBA loan calculatore</h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            When it comes to SBA loans, three primary factors determine the loan payment: the loan amount, interest rate, and loan term. To begin calculating your monthly payments, it is advisable to utilize an SBA loan calculator that helps determine the affordable borrowing amount. SBA loans, particularly the widely sought-after SBA 7(a) loans, generally allow business owners to access a substantial funding limit of up to $5 million, providing them with a significant opportunity to secure ample financial resources for their business endeavors.
+
+        </p>
+        <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            SBA rates
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            SBA 7(a) loans offer borrowers the option of fixed or variable interest rates. Typically, both the borrower and the lender have the opportunity to discuss and agree upon the interest rates. However, the SBA implements a maximum spread to safeguard borrowers. A spread refers to the percentage that a bank can earn from a loan, and this measure ensures borrower protection and fairness in the lending process.  
+          </p>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            For variable 7(a) loans with a term of less than seven years, the spread on SBA interest rates ranges from 2.25% to 4.25%. To calculate the total interest rate, this spread is added to the current Prime rate. On the other hand, loans with a term of seven years or more are subject to slightly higher SBA loan interest rates, with the spread limited to a maximum of 4.75%. When it comes to fixed rate loans, the SBA employs a specific formula to determine the maximum allowable fixed interest rate.
+  
+          </p>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            Once you have determined the loan amount and interest rate, you can input these details into the designated fields of the SBA loan calculator. The calculator will then provide you with the estimated monthly payment you can expect. SBA loans typically offer terms of seven, ten, or twenty-five years, depending on the specific loan requirements. While longer-term loans allow for higher borrowing amounts, it's important to note that they may incur higher costs over the extended duration.
+          </p>
+    </div>
+    <div class="my-8">
+        <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Uncover the restrictions of the SBA loan calculator: Broaden your understanding</h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            The calculator's limitations primarily pertain to the estimated interest rate. When using the calculator to approximate your loan payment before obtaining an SBA loan, it's essential to understand that your actual monthly payments may vary, depending on the interest rate you ultimately receive. Therefore, the calculator provides a ballpark figure rather than an exact representation.
+        </p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            SBA loans have certain limitations worth noting. One distinctive aspect is that they receive partial government guarantee, where the SBA utilizes federal funds to back a portion of the loans, protecting lenders in case of borrower default. Although the SBA covers a significant portion of this guarantee, lenders are accountable for the remaining portion, which is assessed as a fee. Lenders have the choice to absorb this fee themselves or pass it on to the borrower, potentially increasing the total loan amount. If the lender opts to pass the fee to the borrower, it will impact the monthly SBA loan payment for the borrower.
+        </p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;"> 
+If you require quick funding for a temporary or one-time financial requirement, it is worth considering short-term loans or lines of credit as viable alternatives, especially since SBA loans may entail a longer waiting period before disbursement.
+        </p>
+        <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Guaranty fee
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin-bottom: 4rem; margin-top: 2rem;">
+            The guaranty fee associated with SBA loans can vary depending on the loan amount and term. Fortunately, the SBA has established guidelines that lenders must adhere to if they choose to incorporate the guaranty fee into the total SBA loan amount. Depending on the loan amount, the fee typically ranges from 0.25% to 3.5%. However, it's important to note that qualified veterans may be exempt from paying a guaranty fee for certain types of 7(a) loans. The main limitation of the SBA loan calculator stems from the fact that borrowers are unaware of whether their lender intends to include the guaranty fee until they engage in loan discussions.  
+          </p>
+    </div>
+    </div>
+
+
+
+<!-- guide-section-end -->
+
+  <!-- footer-start -->
+  <footer class="">
+    <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
+  <div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+    <!-- img-start -->
+  <div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+  <div class="w-[18rem]
+  3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+  ">
+    <img src="./assets/logo.svg" alt="" width="100%">
+  </div>
+  <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+  </div>
+  <!-- img-end -->
+  <!-- links-start -->
+  <div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+    <!-- link1-start -->
+    <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
+      <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
+      <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">
+        <li class="md:my-6 my-4"><a href="">Home</a></li>
+        <li class="md:my-6 my-4"><a href="">About Us</a></li>
+        <li class="md:my-6 my-4"><a href="">Loans</a></li>
+        <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+        <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+      </ul>
+    </div>
+    <!-- link1-end -->
+    <!-- link2-start -->
+    <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
+      <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+       <div class="text-white  flex items-center justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+  <img src="./assets/phone.svg" alt="" width="100%">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">(973) 561-4301</p>
+        </div >
+       <div class="text-white  flex items-baseline justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+          <img src="./assets/mail.svg" alt="" class="w-full">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">helpdesk@businessloan <br> warriors.com</p>
+        </div>
+       <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/twitter.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/fb.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/insta.png" class="w-full ">
+         </div>
+         <div class="
+         3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/youtube.png" class="w-full">
+         </div>
+       </div>
+  </div>
+    <!-- link2-end -->
+  </div>
+  <!-- links-end -->
+  </div>
+  </div>
+  <div class="bg-[#153A66] text-center  min-h-[6.688rem]">
+    <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
+      Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
+      </span>
+    </p>
+  </div>
+  </footer>
+<!-- footer-end -->
+<script src="./index.js"></script>
+<script src="./mortageRefinance.js"></script>
+<!-- jquery  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<!-- pooper.js  -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

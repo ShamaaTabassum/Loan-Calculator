@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+ <!-- chart js  -->
+ <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+ <script
+src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+</script>
+    <title>Personal Loan</title>
+</head>
+<body class="transition-all duration-500 bg-bgGrey">
+     <!-- header-start -->
+  <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+    <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
+      <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+        <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+          <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
+            <span class="cursor-pointer">
+              <a href="./index.html">
+                <img src="./assets/logo.svg" class="w-full" alt="">
+              </a>
+            </span>
+          </div>
+          <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+        </div>
+<div>
+  <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+      <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
+      </span></a>
+        <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
+:text-[1.2] text-[0.938rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
+        <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
+        <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+        <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+        <li class="py-1"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
+        <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
+        <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+        <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
+    </ul>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
+    </li>
+    <a href="">
+      <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-3 3xl:px-6 lg:py-2 lg:px-4 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] xl:text-xl lg:text-base md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1"></ion-icon>
+      </button>
+    </a>
+  </ul>
+</div>
+      </nav>
+  </header>
+<!-- header-end -->
+<div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
+  <div class="3xl:min-w-[48.4rem] xl:min-w-[40rem] lg:min-w-[32rem] md:min-w-[25.125rem] h-full xl:mr-[-5.5rem] max-w-full pt-0">
+    <img src="./assets/hero paersonal loan.svg" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem] ">
+  </div>
+  <div class="2xl:pt-[11rem] md:pt-[4rem]  pt-[1rem] w-full flex flex-col">
+    <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
+      Find The Perfect Loan for Your Business
+    </p>
+    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[2rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+      Personal Loan Calculator
+    </h1>
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]   text-[0.57rem] text-black font-poppins font-normal">
+        Learn about the different business loans we offer, and find the perfect loan for your business. Get approved in minutes, and withdraw funds in as little as 24 hours!
+
+    </p>
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+  </div>
+  </div>
+  
+  <!-- section-1-end -->
+  
+  <!-- bg-img-section -->
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[76rem] xl:top-[72rem] lg:top-[66rem] md:top-[41rem] top-[48rem] right-0 z-[-1]">
+    <img src="./assets/right-elips.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[14rem] xl:w-[7rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[245.438rem] xl:top-[255.438rem] lg:top-[260.438rem] md:top-[220rem] top-[270rem] right-0 z-[-1]">
+    <img src="./assets/Ellipse 19-3.png" width="100%" alt="">
+  </div>
+  <!-- bg-img-section -->
+<!-- calculator section start -->
+
+<div class="container mx-auto">
+  <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]
+  ">
+  Estimate the monthly payments and total interest paid on your personal loan.
+  </h1>
+  <div class="flex items-center justify-between lg:my-[5rem] my-0 mx-0 gap-[2rem] w-full lg:flex-row-reverse flex-col-reverse">
+  <!-- calculator-right-section-start -->
+
+  <div class="flex flex-col items-center justify-center lg:w-[44rem]">
+    <div class="relative flex items-center justify-center">
+      <div class="mt-8 lg:mt-0  lg:w-full md:w-[25rem] w-[17rem] min-h-full">
+        <img src="./assets/Group 203.png" alt="">
+      </div>
+      <div class="absolute  text-white flex items-center justify-center flex-col">
+        <p class=" 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 md:leading-8  font-quicksand font-medium text-center" >
+            Monthly Payments
+        </p>
+        <h3 class="font-medium 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] md:leading-[3rem] text-center font-quicksand" id="monthlyPayment">
+            $30.42
+        </h3>
+        <p class=" 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 md:leading-8 font-quicksand font-medium text-center">
+            Total Repayment
+        </p>
+        <p class=" 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 md:leading-8 font-quicksand font-medium text-center" id="repayment">
+            $1,095.19
+        </p>
+    </div>
+    </div>
+
+    <div class=" flex gap-4 items-center mt-8 justify-center" >
+      <div class="flex items-center gap-2">
+         <img src="./assets/dot.svg" alt="">
+          <span class="font-quicksand font-medium 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-black">
+              Principal
+          </span>
+      </div>
+      <div class="flex items-center gap-2">
+          <img src="./assets/dot.svg" alt="" class="opacity-50">
+          <span class="font-quicksand font-medium 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-black">
+              Interest
+          </span>
+      </div>
+  </div>
+
+    <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          Show me my rates <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+  </div>
+  <!-- calculator-right-section-end -->
+  <!-- calculator-left-section-start -->
+  <div class="flex flex-col items-start justify-evenly p-[2.8rem] rounded-[2.8rem] bg-white lg:w-[62.438rem] lg:min-h-[29.813rem] w-full min-h-full mt-8 lg:mt-0">
+    <!-- loan-amount -->
+    <div class="w-full text-center py-2 ">
+        <label class="font-quicksand font-normal text-xl text-black" for="loanAmount">
+            How much is your loan amount?
+        </label>
+        <div class=" ">
+            <h3 class="text-lightBlue font-quicksand font-semibold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]  text-center md:mb-[-2rem] mb-[-1rem]" id="loan-amount-value">
+                $1000
+            </h3>
+                   <div class="flex justify-between mb-1">
+                    <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">$1k</span>
+                    <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">$35k</span>
+                  </div>
+                  <input type="range" class=" w-full scroll-smooth" id="loan-amount" min="1000" max="35000" value="1000" step="1000">
+          </div>
+
+    </div>
+    <!-- loan-amount -->
+  <!-- Interest rate -->
+
+  <div class="text-center py-2 w-full">
+    <label class="font-quicksand font-normal text-xl text-black" htmlFor="loanAmount">
+        What is your estimated interest rate
+    </label>
+    <div class=" ">
+        <h3 class="text-lightBlue font-quicksand font-semibold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]  text-center md:mb-[-2rem]  mb-[-1rem]" id="interest-rate-value">
+            6%
+        </h3>
+        <div class="flex justify-between mb-1">
+          <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">6%</span>
+          <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">35%</span>
+        </div>
+              <input type="range" id="interest-rate" class="w-full scroll-smooth" min="6" max="35" value="6" step="1">
+      </div>
+</div>
+  <!-- Interest rate -->
+ <!-- Loan-Term -->
+
+
+ <div class="text-center py-2 w-full">
+  <label class="font-quicksand font-normal text-xl text-black" htmlFor="loanAmount">
+      What is your loan term?
+  </label>
+  <div class=" ">
+      <h3 class="text-lightBlue font-quicksand font-semibold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]  text-center md:mb-[-2rem]  mb-[-1rem]" id="loan-term-value">
+          3 years
+      </h3>
+      <div class="flex justify-between mb-1">
+        <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">3 years</span>
+        <span class="font-quicksand font-semibold text-lightBlue 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">7 years</span>
+      </div>
+              <input type="range" class=" w-full scroll-smooth" id="loan-term" min="3" max="7" value="3" step="1">
+    </div>
+</div>
+
+ <!-- Loan-Term -->
+</div>
+</div>
+</div>
+  <!-- calculator-right-section-end -->
+  <!-- monthly-payment-start -->
+  <div class="container mx-auto">
+    <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] mt-8 lg:mt-0 lg:mb-12 mb-0
+    ">
+    Your monthly payments broken down
+    </h1>
+    <p class="text-black text-center 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;"> 
+        Use this chart to see how much principal and interest you are paying with each payment 
+                </p>
+    </div>
+    <!-- monthly-payment-end -->
+    <!-- chart-section-start -->
+    <div class="container mx-auto">
+<!-- Chart -->
+
+<div class="bg-white 3xl:min-h-[33.313rem] h-full rounded-[2.813rem] lg:p-[2.813rem] p-6 gap-[1.375rem]">
+  <canvas id="myChart" class="flex items-center justify-center lg:text-base md:text-[0.938rem] text-[0.5rem] font-quicksand font-normal"  style="width:100%; max-width:100%; height: 27rem;"></canvas>
+
+  <div class=" flex gap-4 px-4 " >
+    <div class="flex items-center gap-2">
+       <img src="./assets/dot2.png" alt="">
+        <span class="font-quicksand font-medium 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-black">
+            Principal
+        </span>
+    </div>
+    <div class="flex items-center gap-2">
+        <img src="./assets/dot.svg" alt="">
+        <span class="font-quicksand font-medium 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-black">
+            Interest
+        </span>
+    </div>
+</div>
+
+</div>
+<script>
+  var xValues = ["2023", "2024", "2025", "2026", "2027","2028"];
+                        var yValues1  = [500, 1000, 1500, 2000, 2500,3000,3500,4000,4500,5000];
+                        var yValues2 = [400, 800, 1200, 1600, 2000,2400]; //second dataset
+                        var barColors1  = ["#19D176 ", "#19D176","#19D176","#19D176","#19D176","#19D176"];
+                        var barColors2 = ["#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0"]; 
+                                new Chart("myChart", {
+                                        type: "bar",
+                                        data: {
+                                            labels: xValues,
+                                            datasets: [{
+                                                backgroundColor: barColors1,
+                                                data: yValues1,
+                                                // label: 'Dataset 1' //optional label for this dataset
+                                            },
+                                            {
+                                                backgroundColor: barColors2,
+                                                data: yValues2,
+                                                // label: 'Dataset 2' //optional label for this dataset
+                                            }]
+                                        },
+                                        options: {
+                                            legend: {display: true},
+                                            title: {
+                                                display: true,
+                                            },
+                                            scales: {
+                                                y: {
+                                                    ticks: {
+                                                        // Include a dollar sign in the ticks
+                                                        callback: function(value, index, values) {
+                                                            return '$' + value;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    });
+</script>
+<!-- Chart -->
+<div class="flex items-end justify-end">
+        <a href="#">
+            <button class="bg-lightGreen text-darkBlue font-quicksand  font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] flex items-center md:w-fit">
+              Close Amortization
+            </button>
+          </a>
+        </div>
+    </div>
+    <!-- chart-section-end -->
+<!-- 1st-table-start -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline"  ></ion-icon></span>
+                  2023</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 1st-table-end -->
+<!-- 2nd-table-start -->
+
+<div class="container mx-auto ">
+  <div class=" my-8">
+      <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+          <thead id="table-head1" class="h-[5.438rem] bg-lightBlue text-black border border-black ">              <tr >
+        
+              <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative ">
+                <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline1"  ></ion-icon></span>
+                <span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline1" ></ion-icon></span>
+                
+                2024</th>
+              <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+          3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+              <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+          3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+              <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+          3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+              <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+          3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+              <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+          3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+            </tr>
+          </thead>
+          <tbody id="table-body1" class="text-black  h-[24.187rem]">
+            <tr>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+            </tr>
+            <tr>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+            </tr>
+            <tr>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+            </tr>
+            <tr>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+            </tr>
+            <tr>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>
+</div>
+
+<!-- 2nd-table-end -->
+<!-- 3rd-table -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head2" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline2" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline2"  ></ion-icon></span>
+                  2025</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body2" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 3rd-table -->
+<!-- 4rth-table -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head3" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline3" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline3"  ></ion-icon></span>
+                  2026</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body3" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 4rth-table -->
+<!-- 5th-table -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head4" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline4" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline4"  ></ion-icon></span>
+                  2027</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body4" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 5th-table -->
+<!-- 6th-table -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head5" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline5" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline5"  ></ion-icon></span>
+                  2028</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body5" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 6th-table -->
+<!-- 7th-table -->
+<div class="container mx-auto ">
+    <div class=" my-8">
+        <table class="table-fixed text-left border-none bg-white text-black  border-black w-full ">
+            <thead id="table-head6" class="h-[5.438rem] bg-white text-black border-none border-black border-[0.06rem]">              <tr >
+          
+                <th scope="col"  class=" text-left border-r border-black p-4 lg:px-[4rem] md:px-12 sm:px-5  gap-4 font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] relative "><span class="md:mt-0 mt-[0.2rem] absolute text-black bg-white rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem] px-[.25em] md:py-0 py-[.03rem]   mx-[-1rem]    text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-down-outline" id="down-arrow-outline6" ></ion-icon></span>
+                  <span class="md:mt-0 mt-[0.2rem]  absolute text-white bg-lightBlue rounded-full text-center 3xl:px-[0.85rem] xl:px-[0.82rem] lg:px-[0.75rem] md:px-[.62rem]   px-[.25em] md:py-0 py-[.03rem]  mx-[-1rem]  text-[0.55rem] md:text-[0.7rem] lg:text-[0.813rem] md:mx-[-2.4rem] lg:mx-[-3rem] hover:cursor-pointer"><ion-icon name="chevron-forward-outline" id="forward-arrow-outline6"  ></ion-icon></span>
+                  2029</th>
+                <th scope="col"  class=" text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">PAYMENT</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">PRINCIPAL</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">INTEREST PAID</th>
+                <th scope="col"  class="text-left border-r border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">TOTAL INTEREST</th>
+                <th scope="col"  class="text-left border-black md:p-4 gap-4 px-1  font-poppins font-normal
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]  ">BALANCE</th>
+              </tr>
+            </thead>
+            <tbody id="table-body6" class="text-black hidden h-[24.187rem]">
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">January</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">February</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">March</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">April</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+              <tr>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">May</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+                <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-black md:px-4 px-1 gap-[0.625rem]">879.6</td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+</div>
+<!-- 7th-table -->
+  <!-- monthly-payment-end -->
+
+<!-- guide-section-start -->
+
+<div class="container mx-auto">
+    <div class="my-8">
+        <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Utilizing a personal loan calculator effectively </h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+          If you're not sure about the loan amount you can comfortably borrow for a personal loan, this calculator can provide the solution. To initiate the process, input the following details into our calculator:
+        </p>
+        <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+          Loan amount
+        </h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+          Spe cify the desired loan amount you intend to borrow. With this loan calculator, you can obtain an estimate of your monthly payment for personal loans ranging from $1,000 to $50,000.
+        </p>
+        <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+          APR
+        </h2>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+          Input the anticipated annual percentage rate (APR) into the designated field. The APR considers both the loan's interest rate and associated fees to provide an assessment of the over  all borrowing cost.
+        </p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+          If you're uncertain about the potential APR you may be eligible for, you can make an estimation based on your credit score. The following are the average APRs for various credit score ranges when it comes to personal loans:
+        </p>
+        <!-- table-start -->
+          <div class="min-w-full my-8">
+              <table class="table-fixed text-left border bg-white text-black h-[43.313rem] border-darkGrey min-w-full ">
+                  <thead id="table-head" class="h-[4.813rem] bg-lightBlue text-white border border-darkGrey">              
+                    <tr>
+                      <th scope="col"  class=" text-left border-darkGrey md:p-4 gap-4 px-1  font-poppins font-normal
+                      3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem] ">Credit score range</th>
+                  <th scope="col" class="text-left border-darkGrey md:p-4 gap-4 px-1  font-poppins font-normal
+                  3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]">average apr</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">720+</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">12.55%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">680-719</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">19.60%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">660-679</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">30.16%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">640-659</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">41.55%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">620-639</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">55.31%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">580-619</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">83.61%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">560-579</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem]">117.42%</td>
+                </tr>
+                <tr>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem] w-[50%]">Less than 560</td>
+                  <td class="3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-poppins font-normal border border-t-0 border-darkGrey md:px-4 px-1 gap-[0.625rem] w-[50%]">158.87%   </td>
+                </tr>
+               
+              </tbody>
+            </table>
+      </div>
+      </div>
+        <!-- table-end -->
+
+        <div class="my-8">
+          <h2 class="text-darkBlue font-bold 
+          3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Impact factors to evaluate before applying for a loan</h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            If you're planning to obtain a personal loan, it's important to take into account the following factors in advance to ensure a smooth and hassle-free experience.
+          </p>
+          <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Budget
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            Before committing to a personal loan, it is crucial to assess your repayment capability. If you cannot afford to repay the loan, it is not advisable to proceed. Prior to finalizing a loan agreement with a lender, carefully evaluate your monthly budget to determine the extent of your flexibility in accommodating an additional monthly payment.
+          </p>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            Consider your debt-to-income ratio (DTI) when determining your ability to take on new debt. DTI compares your income to your existing debts and helps lenders assess affordability. It is recommended to keep your DTI below 35% for a healthy financial balance.
+          </p>
+          <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Fees
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            A common fee associated with personal loans is the origination fee. These fees can reach up to 10.00% of the loan amount and are typically deducted from the total loan balance before you receive the funds. For example, if you apply for a $5,000 personal loan with a 5.00% origination fee, the lender will deduct $250 from your loan amount, resulting in $4,750 disbursed to you. To avoid such fees, consider exploring options for no-fee personal loans.
+          </p>
+          <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Type of loan
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            Two common types of personal loans exist: secured and unsecured loans. Unsecured loans do not require borrowers to provide any valuable collateral, such as a savings account or vehicle, as security for the loan.
+          </p>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            Conversely, secured loans necessitate collateral, which lenders can claim in the event of non-repayment. Secured loans may be preferable for individuals with lower credit scores who possess valuable collateral they are willing to offer. Since these loans are supported by collateral, they often carry lower interest rates, making them more accessible to borrowers in need of personal loans despite having bad credit.
+          </p>
+          <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Creditworthiness
+          </h2>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            To qualify for unsecured personal loans, your eligibility hinges on your creditworthiness. Lenders assess multiple factors, including your credit score, income, and credit history, to gauge your ability to repay the loan.
+          </p>
+          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+            Your creditworthiness is evaluated based on the activity reflected in your credit reports, which can be accessed at AnnualCreditReport.com. Credit scores, such as the FICO Score and VantageScore, are derived from these reports and take into account:
+          </p>
+        <ol class="list-decimal text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5 ml-12">
+          <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">Payment history</li>
+          <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">Outstanding debt</li>
+          <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">Length of credit history</li>
+          <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">Types of credit utilized</li>
+          <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">Recent credit inquiries</li>
+        </ol>
+
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
+          These factors collectively contribute to the calculation of your credit score.
+        </p>
+      </div>
+
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          See your free credit score <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+      </div>
+    
+<!-- guide-section-end -->
+
+  <!-- footer-start -->
+  <footer class="">
+    <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
+  <div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+    <!-- img-start -->
+  <div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+  <div class="w-[18rem]
+  3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+  ">
+    <img src="./assets/logo.svg" alt="" width="100%">
+  </div>
+  <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+  </div>
+  <!-- img-end -->
+  <!-- links-start -->
+  <div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+    <!-- link1-start -->
+    <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
+      <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
+      <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">
+        <li class="md:my-6 my-4"><a href="">Home</a></li>
+        <li class="md:my-6 my-4"><a href="">About Us</a></li>
+        <li class="md:my-6 my-4"><a href="">Loans</a></li>
+        <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+        <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+      </ul>
+    </div>
+    <!-- link1-end -->
+    <!-- link2-start -->
+    <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
+      <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+       <div class="text-white  flex items-center justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+  <img src="./assets/phone.svg" alt="" width="100%">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">(973) 561-4301</p>
+        </div >
+       <div class="text-white  flex items-baseline justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+          <img src="./assets/mail.svg" alt="" class="w-full">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">helpdesk@businessloan <br> warriors.com</p>
+        </div>
+       <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/twitter.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/fb.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/insta.png" class="w-full ">
+         </div>
+         <div class="
+         3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/youtube.png" class="w-full">
+         </div>
+       </div>
+  </div>
+    <!-- link2-end -->
+  </div>
+  <!-- links-end -->
+  </div>
+  </div>
+  <div class="bg-[#153A66] text-center  min-h-[6.688rem]">
+    <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
+      Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
+      </span>
+    </p>
+  </div>
+  </footer>
+<!-- footer-end -->
+<script src="./index.js"></script>
+<!-- <script src="SBAloan.js"></script> -->
+<script src="./personalloan.js"></script>
+</body>
+</html>
