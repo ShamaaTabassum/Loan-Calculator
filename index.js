@@ -1,8 +1,28 @@
-function Menu(e) {
+
+let menu=document.querySelector('#menu');
+let cross=document.querySelector('#close');
+let list = document.querySelector('#list');
+
+
+menu.addEventListener('click',()=>{
+  list.classList.remove('hidden');
+  menu.classList.add('hidden');
+  cross.classList.remove('block');
+  cross.classList.remove('hidden');
+  cross.classList.add('block');
+})
+cross.addEventListener('click',()=>{
+  list.classList.add('hidden');
+  menu.classList.remove('hidden');
+  menu.classList.add('block');
+  cross.classList.add('hidden');
+  cross.classList.remove('block');
+})
+
+// function Menu(e) {
   
-  let list = document.querySelector('#menu');
-  e.name === "menu" ? (e.name = "close", list.classList.remove('hidden')) :( e.name = "menu" ,list.classList.add('hidden'))
-} 
+//   e.name === "menu" ? (e.name = "close", list.classList.remove('hidden')) :( e.name = "menu" ,list.classList.add('hidden'))
+// } 
 
 
 
