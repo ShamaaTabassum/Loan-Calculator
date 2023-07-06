@@ -78,7 +78,7 @@
     <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
       Find The Perfect Loan for Your Business
     </p>
-    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[1rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[2rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
         Mortgage Refinance 
         Calculator
     </h1>
@@ -242,19 +242,41 @@
 
   <!-- breakdown-section-start -->
 
-  <div class="container mx-auto">
+  <div class="container mx-auto my-12">
     <!-- cost-breakdown-start -->
     <div class="flex items-center justify-center gap-[3.25rem]">
-        <li  class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-darkBlue border border-darkBlue px-12 py-4"><a href="monthly">Monthly Cost Breakdown</a></li>
-        <li class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-white bg-lightBlue px-12 py-4"><a href="lifetime">Lifetime Cost Breakdown</a></li>
+        <li id="monthly-btn"  class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-darkBlue border border-darkBlue md:px-12 p-[0.625rem] text-center md:py-4"><a href="#monthly">Monthly Cost Breakdown</a></li>
+        <li id="lifetime-btn" class="list-none 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.55rem] font-quicksand font-medium text-white text-center bg-lightBlue md:px-12 p-[0.625rem] md:py-4"><a href="#lifetime">Lifetime Cost Breakdown</a></li>
     </div>
     <!-- cost-breakdown-end -->
-    <!-- lifetime-section-start -->
-    <div id="lifetime" class="grid grid-rows-1 grid-cols-3 my-10">
+    <!-- monthly-saving-section-start -->
+    <div id="monthly" class=" lg:grid-rows-1 grid-rows-[repeat(2,auto)] lg:grid-cols-3 grid-cols-1 my-10 hidden ">
       <!-- left-section-start -->
-      <div class="flex flex-col lg:items-start items-center justify-center lg:w-[32.438rem] w-full ">
+      <div class="flex flex-col lg:items-start items-center justify-center 2xl:w-[32.438rem] w-full ">
+        <h2 class="text-[#F10202] font-bold 
+        3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Monthly savings</h2>
+        <p  id="autoLoanResult" class="text-[#F10202] font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] xl:leading-[6rem] leading-[4rem] lg:text-start text-center ">$177</p>
+        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">Ready for the next step</p>
+        <a href="#">
+            <button class="bg-lightGreen text-darkBlue font-quicksand  font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+              See Refinance Offers  <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+            </button>
+          </a>
+      </div>
+      <!-- left-section-end -->
+      <!-- right-section-chart-start -->
+      <div class="col-span-2 bg-white rounded-[2.813rem]  md:p-[2.813rem] px-2 py-0 gap-[1.375rem]">
+        <canvas id="myChart" class="flex items-center justify-center lg:text-base md:text-[0.938rem] text-[0.5rem] font-quicksand font-normal"></canvas>
+      </div>
+      <!-- right-section-chart-end -->
+    </div>
+    <!-- monthly-saving-section-end -->
+    <!-- lifetime-saving-section-start -->
+    <div id="lifetime" class="grid lg:grid-rows-1 grid-rows-[repeat(2,auto)] lg:grid-cols-3 grid-cols-1 my-10">
+      <!-- left-section-start -->
+      <div class="flex flex-col lg:items-start items-center justify-center 2xl:w-[32.438rem] w-full ">
         <h2 class="text-darkBlue font-bold 
-        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Lifetime savings</h2>
+        3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Lifetime savings</h2>
         <p  id="autoLoanResult" class="text-lightBlue font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] xl:leading-[6rem] leading-[4rem] lg:text-start text-center ">$41,895</p>
         <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">Ready for the next step</p>
         <a href="#">
@@ -265,51 +287,80 @@
       </div>
       <!-- left-section-end -->
       <!-- right-section-chart-start -->
-      <div class="col-span-2 bg-white rounded-[2.813rem] p-[2.813rem] gap-[1.375rem]">
-        <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+      <div class="col-span-2 bg-white rounded-[2.813rem] md:p-[2.813rem] px-2 py-0 gap-[1.375rem]">
+        <canvas id="myChart2" class="flex items-center justify-center lg:text-base md:text-[0.938rem] text-[0.5rem] font-quicksand font-normal"></canvas>
       </div>
-      <script>
-        var xValues = ["2023", "2024", "2025", "2026", "2027","2028"];
-                              var yValues1  = [500, 1000, 1500, 2000, 2500,3000,3500,4000,4500,5000];
-                              var yValues2 = [400, 800, 1200, 1600, 2000,2400]; //second dataset
-                              var barColors1  = ["#19D176 ", "#19D176","#19D176","#19D176","#19D176","#19D176"];
-                              var barColors2 = ["#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0"]; 
-                                      new Chart("myChart", {
-                                              type: "bar",
-                                              data: {
-                                                  labels: xValues,
-                                                  datasets: [{
-                                                      backgroundColor: barColors1,
-                                                      data: yValues1,
-                                                      // label: 'Dataset 1' //optional label for this dataset
-                                                  },
-                                                  {
-                                                      backgroundColor: barColors2,
-                                                      data: yValues2,
-                                                      // label: 'Dataset 2' //optional label for this dataset
-                                                  }]
-                                              },
-                                              options: {
-                                                  legend: {display: true},
-                                                  title: {
-                                                      display: true,
-                                                  },
-                                                  scales: {
-                                                      y: {
-                                                          ticks: {
-                                                              // Include a dollar sign in the ticks
-                                                              callback: function(value, index, values) {
-                                                                  return '$' + value;
-                                                              }
-                                                          }
-                                                      }
-                                                  }
-                                              }
-                                          });
-      </script>
       <!-- right-section-chart-end -->
     </div>
-    <!-- lifetime-section-end -->
+    <!-- lifetime-saving-section-end -->
+    <!-- monthly-card-start -->
+    <div class="grid 3xl:grid-rows-[1fr] 3xl:grid-cols-[repeat(4,1fr)] w-full gap-8 lg:grid-rows-[repeat(2,1fr)] lg:grid-cols-[repeat(2,1fr)] grid-rows-[repeat(4,1fr)] grid-cols-[1fr] items-baseline justify-items-center">
+<div class="w-full h-[14.688rem] bg-white rounded-[2.813rem] ">
+<div class=" md:text-2xl  text-lg font-quicksand text-center font-semibold h-[4.625rem] w-full bg-lightBlue text-white px-[1.938rem] py-[1.375rem] rounded-tl-[2.813rem] rounded-tr-[2.813rem]">
+  MONTHLY PAYMENT
+</div>
+<div class="flex items-center flex-col justify-evenly h-[10.063rem] w-full">
+  <div class="flex items-center justify-evenly lg:w-full w-[50%]">
+    <h3 class="font-quicksand font-normal text-black md:text-4xl text-xl">$1,653</h3>
+    <h3 class="text-black md:text-2xl text-[0.938rem] font-quicksand font-semibold">VS</h3>
+    <h3 class="font-quicksand font-normal text-[#F10202] md:text-4xl text-xl"> $1,835</h3>
+  </div>
+    <div class="flex text-center items-center justify-center lg:w-full md:w-[50%] w-full">
+      <div class="w-6 mr-1"><img src="./assets/arrow-circle-up.png" alt="" class="w-full"></div>
+      <p class="font-quicksand font-normal text-center md:text-xl text-[0.75rem] ">Increased your payment by $182</p>
+    </div>
+</div>
+</div>
+<div class=" w-full h-[14.688rem] bg-white rounded-[2.813rem] ">
+<div class=" md:text-2xl  text-lg font-quicksand text-center font-semibold h-[4.625rem] w-full bg-lightBlue text-white px-[1.938rem] py-[1.375rem] rounded-tl-[2.813rem] rounded-tr-[2.813rem]">
+  INTEREST RATE
+</div>
+<div class="flex items-center flex-col justify-evenly h-[10.063rem] w-full">
+  <div class="flex items-center justify-evenly lg:w-full w-[50%]">
+    <h3 class="font-quicksand font-normal text-black md:text-4xl text-xl">5.00%</h3>
+    <h3 class="text-black md:text-2xl text-[0.938rem] font-quicksand font-semibold">VS</h3>
+    <h3 class="font-quicksand font-normal text-darkGreen md:text-4xl text-xl"> $1,835</h3>
+  </div>
+    <div class="flex text-center items-center justify-center  lg:w-full md:w-[50%] w-full">
+      <div class="w-6 mr-1"><img src="./assets/arrow-circle-down.png" alt="" class="w-full"></div>
+      <p class="font-quicksand font-normal text-center md:text-xl text-[0.75rem] ">Lowers your interest rate</p>
+    </div>
+</div>
+</div>
+<div class=" w-full h-[14.688rem] bg-white rounded-[2.813rem] ">
+<div class=" md:text-2xl  text-lg font-quicksand text-center font-semibold h-[4.625rem] w-full bg-lightBlue text-white px-[1.938rem] py-[1.375rem] rounded-tl-[2.813rem] rounded-tr-[2.813rem]">
+  PAYOFF TIME
+</div>
+<div class="flex items-center flex-col justify-evenly h-[10.063rem] w-full">
+  <div class="flex items-center justify-evenly lg:w-full w-[50%]">
+    <h3 class="font-quicksand font-normal text-black md:text-4xl text-xl">19 years</h3>
+    <h3 class="text-black md:text-2xl text-[0.938rem] font-quicksand font-semibold">VS</h3>
+    <h3 class="font-quicksand font-normal text-darkGreen md:text-4xl text-xl">15 years</h3>
+  </div>
+    <div class="flex text-center items-center justify-center  lg:w-full md:w-[50%] w-full">
+      <div class="w-6 mr-1"><img src="./assets/arrow-circle-down.png" alt="" class="w-full"></div>
+      <p class="font-quicksand font-normal text-center md:text-xl text-[0.75rem] ">Lower your payoff time</p>
+    </div>
+</div>
+</div>
+<div class=" w-full h-[14.688rem] bg-white rounded-[2.813rem] ">
+<div class=" md:text-2xl  text-lg font-quicksand text-center font-semibold h-[4.625rem] w-full bg-lightBlue text-white px-[1.938rem] py-[1.375rem] rounded-tl-[2.813rem] rounded-tr-[2.813rem]">
+  TOTAL LOAN COST
+</div>
+<div class="flex items-center flex-col justify-evenly h-[10.063rem] w-full">
+  <div class="flex items-center justify-evenly lg:w-full w-[50%]">
+    <h3 class="font-quicksand font-normal text-black md:text-4xl text-xl">$376,978</h3>
+    <h3 class="text-black md:text-2xl text-[0.938rem] font-quicksand font-semibold">VS</h3>
+    <h3 class="font-quicksand font-normal text-darkGreen md:text-4xl text-xl">$335,083</h3>
+  </div>
+    <div class="flex text-center items-center justify-center  lg:w-[90%] md:w-[50%] w-full">
+      <div class="w-6 mr-1"><img src="./assets/arrow-circle-down.png" alt="" class="w-full"></div>
+      <p class="font-quicksand font-normal text-center md:text-xl text-[0.75rem] ">Save $41,895 in lifetime costs</p>
+    </div>
+</div>
+</div>
+    </div>
+    <!-- monthly-card-end -->
   </div>
   <!-- breakdown-section-end -->
 
@@ -318,59 +369,185 @@
 <div class="container mx-auto">
     <div class="my-8">
         <h2 class="text-darkBlue font-bold 
-        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Utilizing the SBA loan calculator: Step-by-step guide</h2>
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Why you should use a refinance calculator</h2>
         <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            If you're considering applying for an SBA loan to finance your business, our SBA loan calculator is a valuable tool that can assist you in estimating your monthly repayment amount. It provides an estimate of how much you can expect to repay each month, helping you plan your finances effectively.
-        </p>
-        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;">
-            SBA loans offer several advantages to small business owners. One notable benefit is their extended repayment periods and reduced interest rates compared to other loans for small businesses. This typically translates into more manageable monthly payments, allowing business owners ample time to utilize the loan funds for business growth and generate profits before completing the repayment.
+          The business loan warrior refinance calculator aids in evaluating the value of replacing your current loan with a new one. By inputting a few details, the calculator determines if the benefits of refinancing outweigh the associated costs, helping you make an informed decision.
         </p>
     </div>
     <div class="my-8">
         <h2 class="text-darkBlue font-bold 
-        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Calculating monthly repayments using the SBA loan calculatore</h2>
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">How to use a mortgage refinance calculator</h2>
         <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            When it comes to SBA loans, three primary factors determine the loan payment: the loan amount, interest rate, and loan term. To begin calculating your monthly payments, it is advisable to utilize an SBA loan calculator that helps determine the affordable borrowing amount. SBA loans, particularly the widely sought-after SBA 7(a) loans, generally allow business owners to access a substantial funding limit of up to $5 million, providing them with a significant opportunity to secure ample financial resources for their business endeavors.
-
+          For optimal results from the refinance calculator, gather essential details about your existing mortgage. Additionally, provide information about the new mortgage you intend to apply for.
         </p>
         <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
-            SBA rates
+          Your current mortgage information
           </h2>
           <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            SBA 7(a) loans offer borrowers the option of fixed or variable interest rates. Typically, both the borrower and the lender have the opportunity to discuss and agree upon the interest rates. However, the SBA implements a maximum spread to safeguard borrowers. A spread refers to the percentage that a bank can earn from a loan, and this measure ensures borrower protection and fairness in the lending process.  
+            To utilize the refinance calculator effectively, input the following details:
           </p>
-          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            For variable 7(a) loans with a term of less than seven years, the spread on SBA interest rates ranges from 2.25% to 4.25%. To calculate the total interest rate, this spread is added to the current Prime rate. On the other hand, loans with a term of seven years or more are subject to slightly higher SBA loan interest rates, with the spread limited to a maximum of 4.75%. When it comes to fixed rate loans, the SBA employs a specific formula to determine the maximum allowable fixed interest rate.
-  
-          </p>
-          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            Once you have determined the loan amount and interest rate, you can input these details into the designated fields of the SBA loan calculator. The calculator will then provide you with the estimated monthly payment you can expect. SBA loans typically offer terms of seven, ten, or twenty-five years, depending on the specific loan requirements. While longer-term loans allow for higher borrowing amounts, it's important to note that they may incur higher costs over the extended duration.
-          </p>
-    </div>
-    <div class="my-8">
-        <h2 class="text-darkBlue font-bold 
-        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Uncover the restrictions of the SBA loan calculator: Broaden your understanding</h2>
-        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            The calculator's limitations primarily pertain to the estimated interest rate. When using the calculator to approximate your loan payment before obtaining an SBA loan, it's essential to understand that your actual monthly payments may vary, depending on the interest rate you ultimately receive. Therefore, the calculator provides a ballpark figure rather than an exact representation.
-        </p>
-        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
-            SBA loans have certain limitations worth noting. One distinctive aspect is that they receive partial government guarantee, where the SBA utilizes federal funds to back a portion of the loans, protecting lenders in case of borrower default. Although the SBA covers a significant portion of this guarantee, lenders are accountable for the remaining portion, which is assessed as a fee. Lenders have the choice to absorb this fee themselves or pass it on to the borrower, potentially increasing the total loan amount. If the lender opts to pass the fee to the borrower, it will impact the monthly SBA loan payment for the borrower.
-        </p>
-        <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;"> 
-If you require quick funding for a temporary or one-time financial requirement, it is worth considering short-term loans or lines of credit as viable alternatives, especially since SBA loans may entail a longer waiting period before disbursement.
-        </p>
+          <ol class="list-decimal text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5 ml-12">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Original amount:</strong> Enter the initial borrowed amount of the loan you are refinancing.</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Loan Start Date: </strong> Provide the start date of your current loan, typically found on your monthly mortgage statement.</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Loan term: </strong> Select either a 30-year or 15-year term for the refinanced loan.</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Interest rate:</strong>Input your current interest rate, which can also be found on your current mortgage statement.</li>
+          </ol>
         <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
-            Guaranty fee
+          Your new mortgage information
           </h2>
-          <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin-bottom: 4rem; margin-top: 2rem;">
-            The guaranty fee associated with SBA loans can vary depending on the loan amount and term. Fortunately, the SBA has established guidelines that lenders must adhere to if they choose to incorporate the guaranty fee into the total SBA loan amount. Depending on the loan amount, the fee typically ranges from 0.25% to 3.5%. However, it's important to note that qualified veterans may be exempt from paying a guaranty fee for certain types of 7(a) loans. The main limitation of the SBA loan calculator stems from the fact that borrowers are unaware of whether their lender intends to include the guaranty fee until they engage in loan discussions.  
-          </p>
+          <ol class="list-decimal text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5 ml-12">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Loan term:</strong>Choose between a 30- or 15-year term</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Interest rate:</strong> Add the interest rate you’d like. Check current refinance rates for more precise numbers.</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Lender & Title Fees: </strong>Our calculator automatically assumes refinance closing costs equal to 2% of your new loan amount — actual costs may range between 2% and 6% of your loan amount.</li>
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Length of Ownership:</strong>Make sure you enter how long you plan to live in your if it’s more than five years — if you don’t, your refinance breakeven point won’t be accurate..</li>
+          </ol>
+          <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
+            Understanding the refinance calculator break-even point
+            </h2>
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+              The refinance break-even point represents the timeframe required to recover the closing costs associated with your refinance. For instance, if refinancing allows you to save $200 per month, but you incur $6,000 in costs, your break-even point would be 30 months ($6,000 divided by $200 equals 30 months). If you intend to remain in the home for at least 30 months, refinancing would result in savings. However, if your stay is shorter, it may not be financially beneficial to pursue a refinance.
+            </p>
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+              Our refinance calculator will provide two recommendations based on the breakeven point results:
+            </p>
+            <ol class="list-decimal text-black 3xl:text-[1.5rem] xl:text-[1.25rem] lg:text-[1.1rem] md:text-[0.938rem]   text-[0.538rem] font-poppins font-normal my-5 ml-12">
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Refinance makes sense. You’ll breakeven before you plan on moving.</strong>This simply means you’ll save more than the refinance costs, and the refinance is worth it.</li>
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal " style="margin: 2rem 0;"><strong>Refinancing makes sense if you plan to stay for more than “x” years. You’ll not break even before you plan on moving.</strong>If you get this warning, you may want to skip your refinance plans for now. The “X” will feature a number that tells you how long you need to stay in your home based on the information you provided.</li>
+            </ol>
     </div>
     </div>
-
-
-
 <!-- guide-section-end -->
+<!-- refinance-rate-start -->
+<div class="container mx-auto my-8">
+
+  <div class=" bg-white flex flex-col items-center  justify-evenly xl:p-[2.8rem] p-[1.8rem] rounded-[2.8rem]  lg:min-h-[17.875rem] min-w-full min-h-full flex-wrap">
+    <h2 class="font-quicksand font-bold 2xl:text-4xl lg:text-3xl md:text-2xl text-[0.8rem] text-center mb-4">See refinance rates in your area</h2>
+    <div class="grid lg:grid-rows-[1fr] lg:grid-cols-[repeat(5,1fr)] grid-cols-[1fr] grid-rows-[repeat(5,1fr)] items-center justify-items-center justify-between gap-4 w-full">
+      <div class="w-full flex flex-col items-start justify-start">
+        <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Loan Type:</label>
+        <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+          <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+          <div class="w-full">
+            <select id="term" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black bg-bgGrey focus:outline-0"><option value="1" class="">
+              Purchase
+          </option><option value="2" class="">
+              Refinance
+          </option>
+          </option><option value="3" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">
+              Home Equity
+          </option>
+          </select>
+        </div>
+      </div>
+     </div>
+      <div class="w-full flex flex-col items-start justify-start">
+        <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">ZIP Code:</label>
+        <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+          <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/map-pin-alt.png" width="100%" height="100%" alt=""></div>
+          <div class="w-full">
+            <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  bg-bgGrey text-black placeholder:text-black focus:outline-0" value="28277" placeholder="28277">
+        </div>
+      </div>
+     </div>
+      <div class="w-full flex flex-col items-start justify-start">
+        <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Home Value:</label>
+        <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+          <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+          <div class="w-full">
+          <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black bg-bgGrey placeholder:text-black focus:outline-0" value="0" placeholder="0">
+        </div>
+      </div>
+     </div>
+      <div class="w-full flex flex-col items-start justify-start">
+        <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  text-black">Current Balance:</label>
+        <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+          <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+          <div class="w-full">
+          <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  bg-bgGrey text-black placeholder:text-black focus:outline-0" value="0" placeholder="0">
+        </div>
+      </div>
+     </div>
+     <div>
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand  font-semibold duration-500 2xl:py-3 2xl:px-10 md:py-2  md:px-7 py-2 px-4 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-2xl xl:text-[1rem] md:text-[0.938rem] flex items-center md:w-fit mb-[-0.1rem]">
+          See rates  <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+     </div>
+    </div>
+  </div>
+</div>
+<!-- refinance-rate-end -->
+
+<!-- FAQs-start -->
+<div class="container mx-auto my-8">
+  <h2 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]
+  lg:mb-6 mb-8">Mortgage Refinancing FAQs</h2>
+  <div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
+    <!-- h-[9.063rem] -->
+    <div class=" flex items-baseline justify-between w-full  my-4">
+      <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>How does how long you stay in a home affect your refinance decision?</h2>
+      <div id="plus2" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
+      <div id="minus2" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
+    </div>
+    <div class="h-fit ">
+      <p id="para2" class=" hidden font-poppins font-normal mb-4
+      3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]">You may be tempted to just ignore the “Length of Ownership” field in your calculations and leave it pre-set to five years. However, before you spend thousands of dollars on closing costs, get your home appraisal and provide all the documentation you typically need to refinance, make sure you’ve given some thought to how much longer you’ll be in the home.
+<br>
+      Is it time to get a bigger home to support your growing family? Maybe it’s time to downsize your home now that the kids have flown the coop. Or it could be time to ditch city living for a home in the country. Pondering these questions before you refinance could save you time and money on something that won’t benefit you financially.</p>
+    </div>
+</div>
+<div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
+  <!-- h-[9.063rem] -->
+  <div class=" flex items-baseline justify-between w-full  my-4">
+    <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>What are the different types of mortgage refinances? </h2>
+    <div id="plus" class="lg:w-[2rem] w-[1.5rem] cursor-pointer hidden"><img src="./assets/Union.png" alt="" class="w-full"></div>
+    <div id="minus" class="lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
+  </div>
+  <div class="h-fit ">
+    <p id="para" class="font-poppins font-normal mb-4
+    3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]">Conventional refinance loans. Fannie Mae and Freddie Mac set the guidelines for the most popular loan type: conventional loans. You can avoid mortgage insurance with 20% equity in your home.
+<br>
+    FHA refinance loans. Homeowners with scores as low as 500 may qualify to refinance with an FHA loan. However, you’ll pay  FHA mortgage insurance regardless of your equity amount. 
+    <br>
+    VA refinance loans. Eligible military borrowers may be able to borrow up to 100% of their home’s value with a VA rate-and-term refinance. VA borrowers can borrow 90% of their home’s worth with a VA cash-out refinance.
+    <br>
+    USDA refinance loans. Borrowers in rural areas with current USDA loans can lower their payment, but don’t have a cash-out option.</p>
+  </div>
+</div>
+<div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
+  <!-- h-[9.063rem] -->
+  <div class=" flex items-baseline justify-between w-full  my-4">
+    <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>How does a mortgage refinance work?</h2>
+    <div id="plus3" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
+    <div id="minus3" class="lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] hidden"><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
+  </div>
+  <div class="h-fit ">
+    <p id="para3" class=" hidden font-poppins font-normal mb-4
+    3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]">Unless you’re eligible for a streamline refinance program like the FHA streamline or VA interest rate reduction refinance loan (IRRRL) the following steps best describe how to refinance a mortgage:
+
+    <strong>1. Pick your financial goal and loan program.</strong>  This is important because any changes (like switching from a rate-and-term refinance to a cash-out refinance) could add extra hoops — and costs — to your refinance loan. The same is true for loan programs — choose a government-backed refinance loan if you need to refinance with bad credit, or a conventional loan if you have a high credit score and more than 20% equity in your home.
+    <strong>2. Shop for a lender and lock your rate.</strong> Once you’ve reviewed loan estimates and chosen the best lender for your needs, ask your lender for a mortgage rate lock.  Mortgage rates change daily and your rate isn’t guaranteed until it’s locked in.
+    <strong>3. Gather your paperwork and get your home appraised.</strong> In most cases, you’ll need to provide current paysubs, W-2s and bank statements. You’ll also need information about the loan you’re paying off. Finally, spruce up your home for the home appraisal, unless you’re eligible for an appraisal waiver.
+    <strong>4. Finalize your closing disclosure and enjoy your savings.</strong> Once your loan is approved, you’ll receive a closing disclosure three business days before you sign. Review it and make sure the numbers are correct. If they are, sign your papers and you’re all done.</p>
+  </div>
+</div>
+<div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
+  <!-- h-[9.063rem] -->
+  <div class=" flex items-baseline justify-between w-full  my-4">
+    <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>How do I find the best refinance rates?</h2>
+    <div id="plus4" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
+    <div id="minus4" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
+  </div>
+  <div class="h-fit ">
+    <p id="para4" class=" hidden font-poppins font-normal mb-4
+    3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.55rem]">The answer is simple: shop around. LendingTree studies show that consumers who shop for a mortgage save thousands of dollars in interest charges. </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQs-end -->
 
   <!-- footer-start -->
   <footer class="">
@@ -448,6 +625,120 @@ If you require quick funding for a temporary or one-time financial requirement, 
   </div>
   </footer>
 <!-- footer-end -->
+
+<!-- script-monthly-chart-start -->
+
+<script>
+  // Data for the chart
+  const data = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    datasets: [{
+      label: 'Sales',
+      data: [-2, -2, 2, 4, 6, 8, 10, 10, 10, 10, 10, 10], // Including positive and negative values
+      backgroundColor: ['rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)'],
+      borderColor: ['rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)'],
+      borderWidth: 1 // Border width in pixels
+    }]
+  };
+
+  // Configuration options for the chart
+  const options = {
+    indexAxis: 'x', // Use the x-axis as the vertical axis
+    scales: {
+      x: {
+        beginAtZero: false, // Do not start the x-axis from zero
+        ticks: {
+          callback: function(value) {
+            return (value >= 0 ? '+' : '') + value; // Prefix positive values with '+' sign
+          }
+        }
+      },
+      y: {
+        // Optional configuration for the y-axis
+        // Adjust according to your specific requirements
+      }
+    }
+  };
+
+  // Create the chart
+  const ctx = document.getElementById('myChart').getContext('2d');
+  const myChart = new Chart(ctx, {
+    type: 'bar', // Use bar chart
+    data: data,
+    options: options
+  });
+
+  // Update colors for negative values
+  myChart.data.datasets[0].backgroundColor.forEach((color, index) => {
+    if (data.datasets[0].data[index] < 0) {
+      myChart.data.datasets[0].backgroundColor[index] = 'rgba(255, 99, 132, 0.5)'; // Change to red color
+      myChart.data.datasets[0].borderColor[index] = 'rgba(255, 99, 132, 1)'; // Change to red color
+    }
+  });
+
+  // Update the chart
+  myChart.update();
+</script>
+
+<!-- script-monthly-chart-end -->
+<!-- script-lifetime-chart-start -->
+
+<script>
+  // Data for the second chart
+  const data2 = {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+    datasets: [{
+      label: 'Sales',
+      data: [-2, -2, 2, 4, 6, 8, 10, 10, 10, 10, 10, 10], // Including positive and negative values
+      backgroundColor: ['rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)', 'rgba(54, 162, 235, 0.5)'],
+      borderColor: ['rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)', 'rgba(54, 162, 235, 1)'],
+      borderWidth: 1 // Border width in pixels
+    }]
+  };
+
+  // Configuration options for the second chart
+  const options2 = {
+    indexAxis: 'x', // Use the x-axis as the vertical axis
+    scales: {
+      x: {
+        beginAtZero: false, // Do not start the x-axis from zero
+        ticks: {
+          callback: function(value) {
+            return (value >= 0 ? '+' : '') + value; // Prefix positive values with '+' sign
+          }
+        }
+      },
+      y: {
+        // Optional configuration for the y-axis
+        // Adjust according to your specific requirements
+      }
+    }
+  };
+
+  // Create the second chart
+  const ctx2 = document.getElementById('myChart2').getContext('2d');
+  const myChart2 = new Chart(ctx2, {
+    type: 'bar', // Use bar chart
+    data: data2,
+    options: options2
+  });
+
+ // Update colors for negative values
+ myChart2.data.datasets[0].backgroundColor.forEach((color, index) => {
+    if (data.datasets[0].data[index] < 0) {
+      myChart2.data.datasets[0].backgroundColor[index] = 'rgba(255, 99, 132, 0.5)'; // Change to red color
+      myChart2.data.datasets[0].borderColor[index] = 'rgba(255, 99, 132, 1)'; // Change to red color
+    }
+  });
+
+  // Update the chart
+  myChart2.update();
+
+</script>
+
+<!-- script-lifetime-chart-end -->
+
+
 <script src="./index.js"></script>
 <script src="./mortageRefinance.js"></script>
 <!-- jquery  -->

@@ -1,41 +1,33 @@
-let monthlyBtn=document.querySelector('#monthly-btn');
-let lifetimeBtn=document.querySelector('#lifetime-btn');
-let monthly=document.querySelector('#monthly');
-let lifetime=document.querySelector('#lifetime');
+// Show-options function
+let calc2=document.querySelector('#calc-2');
+let resetCalcBtn=document.querySelector('#reset-calc-btn');
+let hideOpt=document.querySelector('#hide-opt');
+let showOpt=document.querySelector('#show-opt');
 
-monthlyBtn.addEventListener('click',()=>{
-    monthlyBtn.classList.add('bg-lightBlue');
-    monthlyBtn.classList.remove('border-darkBlue');
-    monthlyBtn.classList.add('text-white');
-    monthlyBtn.classList.remove('border');
-    monthlyBtn.classList.remove('text-darkBlue');
-    monthly.classList.remove('hidden');
-    monthly.classList.add('grid');
-    lifetimeBtn.classList.remove('bg-lightBlue');
-    lifetimeBtn.classList.add('border');
-    lifetimeBtn.classList.add('border-darkBlue');
-    lifetimeBtn.classList.remove('text-white');
-    lifetimeBtn.classList.remove('text-darkBlue');
-    lifetime.classList.add('hidden');
-    lifetime.classList.remove('grid');
-});
-lifetimeBtn.addEventListener('click',()=>{
-    monthlyBtn.classList.remove('bg-lightBlue');
-    monthlyBtn.classList.add('border-darkBlue');
-    monthlyBtn.classList.remove('text-white');
-    monthlyBtn.classList.add('border');
-    monthlyBtn.classList.add('text-darkBlue');
-    monthly.classList.add('hidden');
-    monthly.classList.remove('grid');
-    lifetimeBtn.classList.add('bg-lightBlue');
-    lifetimeBtn.classList.remove('border');
-    lifetimeBtn.classList.remove('border-darkBlue');
-    lifetimeBtn.classList.add('text-white');
-    lifetimeBtn.classList.add('text-darkBlue');
-    lifetime.classList.remove('hidden');
-    lifetime.classList.add('grid');
-});
-
+showOpt.addEventListener('click',()=>{
+    hideOpt.classList.remove('hidden');
+    hideOpt.classList.add('flex');
+    showOpt.classList.add('hidden');
+    showOpt.classList.remove('flex');
+    resetCalcBtn.classList.remove('hidden');
+    resetCalcBtn.classList.add('flex');
+    calc2.classList.remove('hidden');
+    calc2.classList.add('flex');
+    resetCalcBtn.classList.remove('hidden');
+    resetCalcBtn.classList.add('flex');
+})
+hideOpt.addEventListener('click',()=>{
+    hideOpt.classList.add('hidden');
+    hideOpt.classList.remove('flex');
+    showOpt.classList.remove('hidden');
+    showOpt.classList.add('flex');
+    resetCalcBtn.classList.add('hidden');
+    resetCalcBtn.classList.remove('flex');
+    calc2.classList.add('hidden');
+    calc2.classList.remove('flex');
+    resetCalcBtn.classList.add('hidden');
+    resetCalcBtn.classList.remove('flex');
+})
 
 // FAQs function 
 let plus=document.querySelector('#plus');
