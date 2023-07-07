@@ -92,3 +92,29 @@ plus4.addEventListener('click',()=>{
     para4.classList.remove('hidden');
 })
 
+// border-b-[0.563rem] border-lightBlue
+
+// table-function
+let btn1=document.querySelector('#btn1'); 
+let btn2=document.querySelector('#btn2'); 
+let Yrs30=document.querySelector('#yrs30'); 
+let Yrs15=document.querySelector('#yrs15'); 
+
+// func1
+btn2.addEventListener('click',()=>{
+btn1.classList.remove('border-b-[0.563rem]');
+btn1.classList.remove('border-lightBlue');
+btn2.classList.add('border-b-[0.563rem]');
+btn2.classList.add('border-lightBlue');
+Yrs15.classList.remove('hidden')
+Yrs30.classList.add('hidden')
+})
+// func2
+btn1.addEventListener('click',()=>{
+btn1.classList.add('border-b-[0.563rem]');
+btn1.classList.add('border-lightBlue');
+btn2.classList.remove('border-b-[0.563rem]');
+btn2.classList.remove('border-lightBlue');
+Yrs15.classList.add('hidden')
+Yrs30.classList.remove('hidden')
+})

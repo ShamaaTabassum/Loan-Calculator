@@ -22,17 +22,22 @@
                 </a>
               </span>
             </div>
-            <div class="lg:hidden w-full">
-              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end" id="menu">
-                <ion-icon name="menu-outline"></ion-icon>
+            <!-- <div class="lg:hidden w-full">
+              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
               </span>
-              <span class="hidden text-2xl cursor-pointer mx-2  lg:hidden  text-darkBlue w-full text-end" id="close">
-                <ion-icon name="close-outline"></ion-icon>
-              </span>
-            </div>
+            </div> -->
+          </div>
+          <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end" id="menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </span>
+            <span class="hidden text-2xl cursor-pointer mx-2  lg:hidden  text-darkBlue w-full text-end" id="close">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
           </div>
   <div>
-    <ul id="list" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+    <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
       <li class="mx-2 md:my-0 py-4 lg:py-0">
         <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
       </li>
@@ -759,7 +764,7 @@ text-black my-8 text-center">When evaluating your loan application, a lender may
 </footer>
 <!-- footer-end -->
 </body>
-<script src="./index.js"></script>
+<script src="./index.js" type="module"></script>
 </html>
 
 

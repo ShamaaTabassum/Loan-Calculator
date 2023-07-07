@@ -248,7 +248,167 @@ Calculator
   <!-- calculator-section-end -->
 
   <!-- breakdown-section-start -->
+<div class="container mx-auto">
+  <div class="bg-white w-full rounded-[2.813rem] md:my-8 my-4">
+    <div class="flex lg:items-center items-center justify-between lg:flex-row flex-col">
+      <!-- price-range-start -->
+<div class="flex flex-col items-center justify-center lg:border-r lg:border-darkGrey p-12">
+<h2 class="text-darkBlue font-semibold
+3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 text-center font-quicksand ">
+  Optimize your price range
+</h2>
+<p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal text-center">Discover how your budget changes based on your affordability range</p>
+<!-- input-range-start -->
+<div class="3xl:w-[9.125rem]  lg:w-[7.5rem] md:w-[6.625rem] w-[3.813rem] my-8">
+  <img width="100%" src="./assets/solar_home-bold.svg" alt="">
+</div>
+<div class="w-full ">
+  <input type="range" class=" w-full scroll-smooth accent-blue2" id="loan-amount" min="1000" max="35000" value="1000" step="1000">
+  <div class="flex justify-between mb-1">
+    <span class="text-black 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">Conservative</span>
+    <span class="text-black 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal">Aggressive</span>
+  </div>
+</div>
+<!-- input-range-end -->
+<!-- prices-start -->
+<div class="flex items-center justify-between w-full gap-1">
+  <div class="w-full flex items-center justify-center flex-row my-8 ">
+  <div class="flex flex-col justify-center items-center ">
+    <h2 class="text-darkBlue font-semibold
+    3xl:text-[3.125rem] 2xl:text-[2.4rem] xl:text-[2.1rem] lg:text-[1.7rem] md:text-[1.25rem] text-[1rem]  my-2 text-center font-quicksand">$262,817</h2>
+    <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.75rem] font-poppins font-normal text-center">Home Price</p>
+  </div>
+  </div>
+  <div class="w-full flex items-center justify-center my-8 ">
+  <div class="flex flex-col justify-center items-center border-r border-l border-darkGrey px-8">
+    <h2 class="text-darkBlue font-semibold
+    3xl:text-[3.125rem] 2xl:text-[2.4rem] xl:text-[2.1rem] lg:text-[1.7rem] md:text-[1.25rem] text-[1rem]  my-2 text-center font-quicksand">$1,517</h2>
+    <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.75rem] font-poppins font-normal text-center">Monthly Payment</p>
+  </div>
+  </div>
+  <div class="w-full flex items-center justify-center my-8 ">
+  <div class="flex flex-col justify-center items-center ">
+    <h2 class="text-darkGreen font-semibold
+    3xl:text-[3.125rem] 2xl:text-[2.4rem] xl:text-[2.1rem] lg:text-[1.7rem] md:text-[1.25rem] text-[1rem]  my-2 text-center font-quicksand">28%</h2>
+    <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.75rem] font-poppins font-normal text-center">Debt to income</p>
+  </div>
+  </div>
+</div>
+<!-- prices-end -->
+<!-- btn -->
+<div class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 my-0">
+  <a href="">
+    <button class="3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] font-poppins font-normal">View Free Offers</button>
+  </a>
+</div>
+<!-- btn -->
+</div>
+<!-- price-range-end -->
+<!-- circular chart start -->
+<div class="flex flex-col items-center justify-center p-12">
+  <h2 class="text-darkBlue font-semibold
+  3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] my-8 text-center font-quicksand ">
+  Monthly budget breakdown
+  </h2>
+  <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-center">Detailed view of your $5,417 monthly budget</p>
+  <div>
+    <canvas id="myChart" style="width:100%; max-width:500px; height: 600px;"></canvas>
+  </div>
+  <div class="flex justify-between flex-col gap-8 my-8">
+        <!-- price1 -->
+    <div class="flex justify-between items-center gap-8">
+      <div class="flex md:items-start items-center justify-between my-4">
+        <div class="mr-1 max-w-[2.188rem]">
+          <img src="./assets/Ellipse 35 (3).png" alt="">
+        </div>
+        <div class="flex items-start flex-col justify-center">
+        <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-center">MO. MORTAGE PMNT</p>
+        <h2 class="text-darkBlue font-semibold
+        3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] text-center font-quicksand">$1,517</h2>
+      </div>
+    </div>
+    <div class="flex md:items-start items-center justify-between my-4">
+      <div class="mr-1 max-w-[2.188rem]">
+        <img src="./assets/Ellipse 35 (2).png" alt="">
+      </div>
+      <div class="flex items-start flex-col justify-center">
+      <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-center">MO. MORTAGE PMNT</p>
+      <h2 class="text-darkBlue font-semibold
+      3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] text-center font-quicksand">$1,517</h2>
+    </div>
+  </div>
+    </div>
 
+    <!-- price1 -->
+        <!-- price2 -->
+    <div class="flex justify-between items-center gap-8">
+      <div class="flex md:items-start items-center justify-between my-4">
+        <div class="mr-1 max-w-[2.188rem]">
+          <img src="./assets/Ellipse 35 (1).png" alt="">
+        </div>
+        <div class="flex items-start flex-col justify-center">
+        <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-center">MO. MORTAGE PMNT</p>
+        <h2 class="text-darkBlue font-semibold
+        3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] text-center font-quicksand">$1,517</h2>
+      </div>
+    </div>
+    <div class="flex md:items-start items-center justify-between my-4">
+      <div class="mr-1 max-w-[2.188rem]">
+        <img src="./assets/Ellipse 35.png" alt="">
+      </div>
+      <div class="flex items-start flex-col justify-center">
+      <p class="text-darkGrey 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-center">MO. MORTAGE PMNT</p>
+      <h2 class="text-darkBlue font-semibold
+      3xl:text-[3.125rem] 2xl:text-[2.7rem] xl:text-[2.3rem] lg:text-[1.9rem] md:text-[1.563rem] text-[1.188rem] text-center font-quicksand">$0</h2>
+    </div>
+  </div>
+    </div>
+
+    <!-- price2 -->
+    
+  </div>
+</div>
+<!-- circular chart start -->
+
+    </div>
+    <!-- para start-->
+    <div class="w-full text-center flex justify-center items-center pb-12  px-4">
+      <p class="text-darkGrey text-center 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal w-[70%]">Discover your ideal home within your budget using our home affordability calculator. 
+        Determine the perfect home for you by evaluating your income, as well as any existing debts.</p>
+    </div>
+    <!-- para end -->
+  </div>
+</div>
+
+<!-- chart-script-start -->
+<script>
+  var xValues = ["MO. MORTAGE PMNT", "DEBT PAYMENTS", "INCOME TAXES", "LEFT OVER",];
+  var yValues = [1817, 1517, 1517, 0];
+  var barColors = [
+    "#19D176",
+    "#1277CB",
+    "#CCF5E1",
+    "#6C727F",
+  ];
+  
+  new Chart("myChart", {
+    type: "doughnut",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: ""
+      }
+    }
+  });
+  </script>
+<!-- chart-script-end -->
   <!-- breakdown-section-end -->
 
 <!-- guide-section-1-start -->
@@ -379,7 +539,257 @@ Calculator
                     </div>
 <!-- guide-section-1-end -->
 <!-- purchase-rate-start -->
+<div class="container mx-auto">
+  <h2 class="text-darkBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-start font-quicksand">Mortgage Purchase Rates In</h2>
+  <h2 class="text-lightBlue font-bold 
+        3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-start font-quicksand">Charlotte, NC</h2>
+        <h3 class="text-darkGrey 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-normal">
+          Wednesday, May 24, 2023 at 2:24 PM GMT+5
+          </h3>
+          <p class="text-lightBlue 2xl:text-lg lg:text-base md:text-sm text-xs font-poppins py-2 font-normal">How does lendingTree get paid?</p>
+          <div class=" bg-white flex flex-col items-center  justify-evenly xl:p-[2.8rem] p-[1.8rem] rounded-[2.8rem]  lg:min-h-[17.875rem] min-w-full min-h-full flex-wrap">
+            <div class="grid lg:grid-rows-[auto] lg:grid-cols-[repeat(4,1fr)] grid-cols-[1fr] grid-rows-[repeat(7,1fr)] items-center justify-items-center justify-between gap-4 w-full">
+              <div class="w-full flex flex-col items-start justify-start">
+                <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Loan Type:</label>
+                <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                  <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                  <div class="w-full">
+                    <select id="term" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black bg-bgGrey focus:outline-0"><option value="1" class="">
+                      Purchase
+                  </option><option value="2" class="">
+                      Refinance
+                  </option>
+                  </option>
+                  </select>
+                </div>
+              </div>
+             </div>
+             <div class="w-full flex flex-col items-start justify-start">
+              <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Home Value:</label>
+              <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                <div class="w-full">
+                  <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  bg-bgGrey text-black placeholder:text-black focus:outline-0" value="350,000" placeholder="350,000">
+              </div>
+            </div>
+           </div>
+             <div class="w-full flex flex-col items-start justify-start">
+              <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Down Payment:</label>
+              <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                <div class="w-full">
+                  <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  bg-bgGrey text-black placeholder:text-black focus:outline-0" value="40,000" placeholder="40,000">
+              </div>
+            </div>
+           </div>
+           <div class="w-full flex flex-col items-start justify-start">
+            <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Property Use:</label>
+            <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+              <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+              <div class="w-full">
+                <select id="term" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black bg-bgGrey focus:outline-0"><option value="1" class="">
+                  Primary Home
+              </option><option value="2" class="">
+                  Secondary Home
+              </option><option value="3" class="">
+                  Investment Property
+              </option>
+              </select>
+            </div>
+          </div>
+         </div>
+           <div class="w-full flex flex-col items-start justify-start">
+            <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">Credit Score:</label>
+            <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+              <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/credit-card.png" width="100%" height="100%" alt=""></div>
+              <div class="w-full">
+                <select id="term" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black bg-bgGrey focus:outline-0"><option value="1" class="">
+                  780+
+              </option><option value="2" class="">
+                  740-779
+              </option><option value="3" class="">
+                  700-739
+              </option>
+              <option value="3" class="">
+                  660-669
+              </option>
+              <option value="3" class="">
+                  580-659
+              </option>
+              </select>
+            </div>
+          </div>
+         </div>
+              <div class="w-full flex flex-col items-start justify-start">
+                <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem] text-black">ZIP Code:</label>
+                <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                  <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/map-pin-alt.png" width="100%" height="100%" alt=""></div>
+                  <div class="w-full">
+                    <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal 3xl:text-xl xl:text-[1.15rem] text-[0.938rem]  bg-bgGrey text-black placeholder:text-black focus:outline-0" value="28277" placeholder="28277">
+                </div>
+              </div>
+             </div>
+              <a href="#" class="w-full">
+                <button class="bg-lightGreen text-darkBlue font-quicksand  font-semibold duration-500 2xl:py-3 2xl:px-10 md:py-2  md:px-7 py-2 px-4 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-2xl xl:text-[1rem] md:text-[0.938rem] flex items-center md:w-fit mb-[-0.1rem]">
+                  See rates  <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+                </button>
+              </a>
+            </div>
+          </div>
+</div>
 <!-- purchase-rate-end -->
+<!-- table-start -->
+<div class="container mx-auto">
+  <div class="flex justify-between xl:w-[34rem] lg:w-[24rem] md:w-[22rem] w-[15rem] items-center">
+    <h2 id="btn1" class="font-poppins font-medium my-14
+    3xl:text-[2.813rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.8rem]  text-[1.2rem] border-b-[0.563rem] border-lightBlue hover:cursor-pointer">
+      30 yrs fixed
+    </h2>
+    <h2 id="btn2" class="font-poppins font-medium my-14
+    3xl:text-[2.813rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.8rem]   text-[1.2rem] hover:cursor-pointer">
+      15 yrs fixed
+    </h2>
+  </div>
+  <div id="yrs30" class="w-full my-4">
+    <table class="table-fixed w-full border border-black">
+      <thead class="">
+        <tr class="h-[4.813rem] bg-lightBlue ">
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-r border-b border-black  text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]"></th>
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]">Interest Rate</th>
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]">APR</th>
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]">Est. Monthly Pay</th>
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]">Loan Term</th>
+          <th class="md:p-[0.75rem] p-[0.12rem] gap-[0.625rem] border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem]">operate</th>
+        </tr>
+      </thead>
+      <tbody class="text-black">
+        <tr>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/omaha.svg" alt=""></td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">
+              $2,036/ mo.
+          </td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">30 Years</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-b border-black"><button class="md:px-[1.063rem] px-[0.25rem] md:py-[0.5rem] py-[0.25rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] ">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/amrisav.svg" alt=""></td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">
+              $2,036/ mo.
+          </td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">30 Years</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-b border-black"><button class="md:px-[1.063rem] px-[0.25rem] md:py-[0.5rem] py-[0.25rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] ">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/integrity.svg" alt=""></td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">
+              $2,036/ mo.
+          </td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">30 Years</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-b border-black"><button class="md:px-[1.063rem] px-[0.25rem] md:py-[0.5rem] py-[0.25rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] ">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black  3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal"> <img src="./assets/rocket.svg" alt=""></td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">
+              $2,036/ mo.
+          </td >
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.6rem] font-poppins font-normal">30 Years</td>
+          <td class="md:p-[0.75rem] p-[0.12rem]  gap-[0.625rem] text-start"><button class="md:px-[1.063rem] px-[0.25rem] md:py-[0.5rem] py-[0.25rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] ">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="yrs15" class="hidden w-full my-4">
+    <table class="table-fixed w-full border border-black">
+      <thead class="">
+        <tr class="h-[4.813rem] bg-lightBlue ">
+          <th class="p-[0.75rem] gap-[0.625rem] border-r border-b border-black  text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]"></th>
+          <th class="p-[0.75rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">Interest Rate</th>
+          <th class="p-[0.75rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">APR</th>
+          <th class="p-[0.75rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">Est. Monthly Pay</th>
+          <th class="p-[0.75rem] gap-[0.625rem] border-r border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">Loan Term</th>
+          <th class="p-[0.75rem] gap-[0.625rem] border-b border-black text-start font-poppins font-medium  text-white 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">operate</th>
+        </tr>
+      </thead>
+      <tbody class="text-black">
+        <tr>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/omaha.svg" alt=""></td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">
+              $2,036/mo.
+          </td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">30 Years</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-b border-black"><button class="px-[1.063rem] py-[0.5rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] ">
+              Get free offers
+          </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/amrisav.svg" alt=""></td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">
+              $2,036/mo.
+          </td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">30 Years</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-b border-black"><button class="px-[1.063rem] py-[0.5rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black"> <img src="./assets/integrity.svg" alt=""></td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">
+              $2,036/mo.
+          </td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">30 Years</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-b border-black"><button class="px-[1.063rem] py-[0.5rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+        <tr>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black  3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal"> <img src="./assets/rocket.svg" alt=""></td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.38% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">6.39% - 7.50%</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">
+              $2,036/mo.
+          </td >
+          <td class="p-[0.75rem] gap-[0.625rem] text-start border-r border-b border-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal">30 Years</td>
+          <td class="p-[0.75rem] gap-[0.625rem] text-start"><button class="px-[1.063rem] py-[0.5rem] bg-darkGreen text-white 3xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem]">
+            Get free offers
+        </button>
+      </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- table-end -->
 <!-- guide-section-2-start -->
 <div class="container mx-auto">
     <div class="my-8">
