@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">  type="module"
+    </script>
+
+    <title>Mortage Calculator</title>
+</head>
+<body class="transition-all duration-500 bg-bgGrey">
+     <!-- header-start -->
+  <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+    <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
+      <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+        <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+          <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
+            <span class="cursor-pointer">
+              <a href="./index.html">
+                <img src="./assets/logo.svg" class="w-full" alt="">
+              </a>
+            </span>
+          </div>
+          <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+              <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+            </span>
+          </div>
+        </div>
+<div>
+  <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+      <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
+      </span></a>
+        <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
+:text-[1.2] text-[0.938rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
+        <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
+        <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+        <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+        <li class="py-1"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
+        <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
+        <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+        <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
+    </ul>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
+    </li>
+    <li class="mx-2 md:my-0 py-4 lg:py-0">
+      <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
+    </li>
+    <a href="">
+      <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-3 3xl:px-6 lg:py-2 lg:px-4 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] xl:text-xl lg:text-base md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1"></ion-icon>
+      </button>
+    </a>
+  </ul>
+</div>
+      </nav>
+  </header>
+<!-- header-end -->
+<div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
+  <div class="3xl:min-w-[50.4rem] xl:min-w-[45rem] lg:min-w-[38rem] md:min-w-[25.125rem] h-full xl:mr-[-5.5rem] max-w-full pt-0">
+    <img src="./assets/rent vs buy hero (2).svg" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem] ">
+  </div>
+  <div class="2xl:pt-[11rem] md:pt-[4rem]  pt-[1rem] w-full flex flex-col">
+    <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
+      Find The Perfect Loan for Your Business
+    </p>
+    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[2rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+      Rent vs Buy Calculator
+    </h1>
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]   text-[0.57rem] text-black font-poppins font-normal">
+      Rent vs buy calculator is a financial tool that helps individuals assess the 
+      financial implications of renting a property versus buying one. It takes into account 
+      factors such as monthly rent, mortgage payments, property taxes, and other costs to provide 
+      an analysis of which option may be more financially advantageous.
+    </p>
+      <a href="#">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        </button>
+      </a>
+  </div>
+  </div>
+  
+  <!-- section-1-end -->
+  
+  <!-- bg-img-section -->
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[76rem] xl:top-[72rem] lg:top-[66rem] md:top-[41rem] top-[48rem] right-0 z-[-1]">
+    <img src="./assets/right-elips.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[15rem] xl:w-[12rem] lg:w-[10rem] md:w-[8rem] w-[4rem] absolute 2xl:top-[70rem] xl:top-[66rem] lg:top-[60rem] md:top-[35rem] top-[42rem] left-0 z-[-1]">
+    <img src="./assets/left-jal.png" width="100%" alt="">
+  </div>
+  <div class="3xl:w-[14rem] xl:w-[7rem] lg:w-[6rem] md:w-[4rem] w-[2rem] absolute 2xl:top-[245.438rem] xl:top-[255.438rem] lg:top-[260.438rem] md:top-[220rem] top-[270rem] right-0 z-[-1]">
+    <img src="./assets/Ellipse 19-3.png" width="100%" alt="">
+  </div>
+  <!-- bg-img-section -->
+
+<!-- monthly-payment-section-start -->
+<div class="container mx-auto">
+    
+    <div class="flex  items-center justify-center gap-12 my-8">
+<!-- sect-1-start -->
+<div class="flex lg:flex-row flex-col items-center justify-between w-full gap-x-8 lg:gap-y-0 gap-y-8">
+<!-- calculator section start -->
+    <div class="flex items-start justify-start  w-full">
+    <div class="flex  gap-4 justify-evenly xl:p-[2.8rem] p-[1.8rem] rounded-[2.8rem] bg-white  min-w-full min-h-fit flex-wrap w-full">
+     <!-- calculator-1 start -->
+      <div class="flex w-full justify-between items-center lg:text-start text-center  gap-y-4">
+          <!-- Home Price: -->
+           <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+              <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Property location:</label>
+              <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                <div class="w-full">
+                <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0" value="350,000" placeholder="350,000">
+              </div>
+            </div>
+           </div>
+           <!-- Home Price: -->
+           <!-- Loan Term -->
+  <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+      <label for="term" class="font-quicksand font-normal text-xl text-black">Desired home price</label>
+      <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+        <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+       <div class="w-full">
+         <select id="term" class="w-full  font-quicksand font-normal text-base bg-bgGrey focus:outline-0"><option value="2">
+           15 years
+       </option><option value="3">
+           30 years
+       </option>
+       </select>
+       </div>
+     </div>
+     </div>
+  <!-- Loan Term -->
+   <!-- Down Payment -->
+   <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+      <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Desired rent payment</label>
+      <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+        <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+        <div class="w-full">
+        <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0" value="70,000" placeholder="70,000">
+      </div>
+    </div>
+   </div>
+   <!-- Down Payment -->
+           <!-- loan-start-date -->
+           <div class="lg:w-[24%] w-full flex flex-col items-start justify-start">
+              <label for="date" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Planned length of stay:</label>
+              <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/calender.png" width="100%" height="100%" alt=""></div>
+                <div class="w-full">
+                <input type="date" name="date"  id="date" aria-label="Amount (to the nearest dollar)" class=" w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0 [appearance:textfield] [&::-webkit-calendar-picker-indicator]:opacity-0 " >
+              </div>
+            </div>
+           </div>
+           <!-- loan-start-date -->
+          
+  
+  
+      </div>
+     <!-- calculator-1 end -->
+    <!-- calculator-2 start -->
+      <div class="hidden w-full justify-between items-end lg:text-start text-center flex-col gap-y-4" id="calc-2">
+           <!-- Annual Home Insurance -->
+           <div class="w-full flex flex-col items-start justify-start">
+              <label for="principal" htmlFor="loanAmount" class="font-quicksand font-normal text-xl text-black">Home Insurance</label>
+              <div class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey relative p-1 my-2 ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute left-0"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                <div class="w-full">
+                <input type="number" name="principal" maxlength="13" id="principal" aria-label="Amount (to the nearest dollar)" class="w-full  font-quicksand font-normal text-base bg-bgGrey text-black placeholder:text-black focus:outline-0" value="1225" placeholder="1225">
+              </div>
+            </div>
+           </div>
+           <!-- Annual Home Insurance -->
+          <!-- Mortage-rate -->
+          <div class="w-full flex flex-col items-start justify-start">
+              <label for="interest" class="font-quicksand font-normal text-xl text-black">Mortage Rate:</label>
+              <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/percentage.png" width="100%" height="100%" alt=""></div>
+                <div class="flex text-black font-medium pr-1">
+                  <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="7" placeholder="7">
+                  
+            </div>
+              </div>
+             </div>
+             <!-- Mortage-rate -->
+         
+           
+           <!-- Annual Property Taxes -->
+           <div class="w-full flex flex-col items-start justify-start">
+              <label for="interest" class="font-quicksand font-normal text-xl text-black">Property Taxes</label>
+              <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+                <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+                <div class="flex text-black font-medium pr-1">
+                  <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="4,375" placeholder="4,375">
+                  
+            </div>
+              </div>
+             </div>
+           <!-- Annual Property Taxes -->
+  <!-- HOA Fees -->
+  <div class="w-full flex flex-col items-start justify-start">
+      <label for="interest" class="font-quicksand font-normal text-xl text-black">HOA Fees:</label>
+      <div class="w-full p-1 my-2  font-quicksand font-normal text-base bg-bgGrey relative ">
+        <div class="w-[1.5rem] h-[1.5rem] absolute"><img src="./assets/dollar-alt.png" width="100%" height="100%" alt=""></div>
+        <div class="flex text-black font-medium pr-1">
+          <input type="number" id="interest" class="w-full pl-[2rem]  font-quicksand font-normal text-base bg-bgGrey focus:outline-0 placeholder:text-black" aria-label="Amount (to the nearest dollar)" value="0" placeholder="0">
+          
+    </div>
+      </div>
+     </div>
+  <!-- HOA Fees -->
+  </div>
+      
+    <!-- calculator-2 end -->
+    <!-- calculator-3 start -->
+    <div class="hidden md:items-end md:justify-end items-center justify-center" id="reset-calc-btn">
+      <button class=" text-lightBlue font-quicksand font-medium duration-500   md:text-xl text-lg items-end justify-end w-full md:text-end text-center">
+          Reset Calculator
+        </button>
+    </div>
+    <!-- calculator-3 end -->
+    <!-- calculator-4 end -->
+    <div class="flex md:flex-row flex-col  items-center justify-between w-full mt-2">
+      
+  <p class="flex text-lightBlue font-quicksand font-medium duration-500  md:text-xl text-lg items-center justify-start  hover:cursor-pointer" id="show-opt">
+      <ion-icon name="add-circle-outline" class="mr-1" ></ion-icon>Show advanced options</p>
+  <p class=" text-lightBlue font-quicksand font-medium duration-500   md:text-xl text-lg items-center justify-start hidden hover:cursor-pointer" id="hide-opt">
+      <ion-icon name="remove-circle-outline" class="mr-1" ></ion-icon>Hide advanced options</p>
+  <p class="text-black font-quicksand font-medium duration-500   md:text-xl text-lg flex items-center justify-end ">Disclosures</p>
+    </div>
+    <!-- calculator-4 end -->
+  </div>
+  </div>
+    <!-- calculator-section-end -->
+   
+</div>
+<!-- sect-1-end -->
+</div>
+</div>
+<!-- monthly-payment-section-end -->
+<div class="container mx-auto">
+  <p></p>
+</div>
+<!-- guide-section-start -->
+
+
+<!-- guide-section-end -->
+
+            
+       
+
+  <!-- footer-start -->
+  <footer class="">
+    <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
+  <div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+    <!-- img-start -->
+  <div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+  <div class="w-[18rem]
+  3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+  ">
+    <img src="./assets/logo.svg" alt="" width="100%">
+  </div>
+  <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+  </div>
+  <!-- img-end -->
+  <!-- links-start -->
+  <div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+    <!-- link1-start -->
+    <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
+      <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
+      <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">
+        <li class="md:my-6 my-4"><a href="">Home</a></li>
+        <li class="md:my-6 my-4"><a href="">About Us</a></li>
+        <li class="md:my-6 my-4"><a href="">Loans</a></li>
+        <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+        <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+      </ul>
+    </div>
+    <!-- link1-end -->
+    <!-- link2-start -->
+    <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
+      <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+       <div class="text-white  flex items-center justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+  <img src="./assets/phone.svg" alt="" width="100%">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">(973) 561-4301</p>
+        </div >
+       <div class="text-white  flex items-baseline justify-start gap-x-2">
+        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+          <img src="./assets/mail.svg" alt="" class="w-full">
+        </div>
+         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">helpdesk@businessloan <br> warriors.com</p>
+        </div>
+       <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/twitter.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/fb.png" class="w-full">
+         </div>
+         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/insta.png" class="w-full ">
+         </div>
+         <div class="
+         3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+         ">
+           <img width="100%" src="./assets/youtube.png" class="w-full">
+         </div>
+       </div>
+  </div>
+    <!-- link2-end -->
+  </div>
+  <!-- links-end -->
+  </div>
+  </div>
+  <div class="bg-[#153A66] text-center  min-h-[6.688rem]">
+    <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
+      Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
+      </span>
+    </p>
+  </div>
+  </footer>
+<!-- footer-end -->
+
+<script src="./index.js"  type="module"></script>
+<script src="./rent-vs-buy.js"  type="module"></script>
+
+</body>
+</html>

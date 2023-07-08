@@ -28,6 +28,21 @@ hideOpt.addEventListener('click',()=>{
     resetCalcBtn.classList.add('hidden');
     resetCalcBtn.classList.remove('flex');
 })
+// FAQs function 
+let plus=document.querySelector('#plus');
+let minus=document.querySelector('#minus');
+let para=document.querySelector('#para');
+
+minus.addEventListener('click',()=>{
+    para.classList.add('hidden');
+    minus.classList.add('hidden');
+    plus.classList.remove('hidden');
+})
+plus.addEventListener('click',()=>{
+    plus.classList.add('hidden');
+    minus.classList.remove('hidden');
+    para.classList.remove('hidden');
+})
 // FAQs function 2
 let plus2=document.querySelector('#plus2');
 let minus2=document.querySelector('#minus2');
@@ -42,4 +57,34 @@ plus2.addEventListener('click',()=>{
     plus2.classList.add('hidden');
     minus2.classList.remove('hidden');
     para2.classList.remove('hidden');
+})
+// FAQs function 3
+let plus3=document.querySelector('#plus3');
+let minus3=document.querySelector('#minus3');
+let para3=document.querySelector('#para3');
+
+minus3.addEventListener('click',()=>{
+    para3.classList.add('hidden');
+    minus3.classList.add('hidden');
+    plus3.classList.remove('hidden');
+})
+plus3.addEventListener('click',()=>{
+    plus3.classList.add('hidden');
+    minus3.classList.remove('hidden');
+    para3.classList.remove('hidden');
+})
+// FAQs function 4
+let plus4=document.querySelector('#plus4');
+let minus4=document.querySelector('#minus4');
+let para4=document.querySelector('#para4');
+
+minus4.addEventListener('click',()=>{
+    para4.classList.add('hidden');
+    minus4.classList.add('hidden');
+    plus4.classList.remove('hidden');
+})
+plus4.addEventListener('click',()=>{
+    plus4.classList.add('hidden');
+    minus4.classList.remove('hidden');
+    para4.classList.remove('hidden');
 })
