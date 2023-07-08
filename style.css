@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Quicksand:wght@300;400;500;600;700&display=swap');
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif;
+font-family: 'Quicksand', sans-serif; */
+}
+:root {
+  --blue: #4e92c1;
+  --blue2: #1a75bb;
+  --blue3: #14395b; 
+  --red: #D6001C;
+  --white: #fff;
+  --black: #000;
+}
+html{
+  font-size: 95.5%;
+}
+
+body {
+  min-height: 100vh;
+  /* height: 100vh; */
+  min-height: -webkit-fill-available;
+  background-color: #ffff;
+  overflow-x: hidden;
+  font-family: 'Quicksand', sans-serif;
+}
+.navbar-width{
+  padding: 1rem 10rem;
+}
+.dropdown-toggle { outline: 0; }
+
+.btn-toggle {
+  padding: .25rem .5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, .65);
+  background-color: transparent;
+}
+a{
+  text-decoration: none;
+  color: #fff;
+}
+a:hover{
+  text-decoration: none;
+  color: #fff;
+}
+.text_color{
+  color: #002F68 !important;
+}
+.btn-toggle::before {
+  width: 1.25em;
+  line-height: 0;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+  transition: transform .35s ease;
+  transform-origin: .5em 50%;
+}
+
+.btn-toggle[aria-expanded="true"] {
+  color: rgba(0, 0, 0, .85);
+}
+.btn-toggle[aria-expanded="true"]::before {
+  transform: rotate(90deg);
+}
+
+.btn-toggle-nav a {
+  padding: .1875rem .5rem;
+  margin-top: .125rem;
+  margin-left: 1.25rem;
+}
+.btn-toggle-nav a:hover,
+.btn-toggle-nav a:focus {
+  background-color: #d2f4ea;
+}
+
+.scrollarea {
+  overflow-y: auto;
+}
+
+/* utility classes  */
+.test{
+  border: 2px solid red;
+}
+.navbar-left{
+  width: 180px;
+  height: 3.4rem;
+  background-color: #F2F2F2;
+}
+
+.fs_10px{
+  font-size: 10px !important;
+}
+.fs_14px{
+  font-size: 14px !important;
+}
+.fs_1rem{
+  font-size: 1rem !important;
+}
+.fs_13rem{
+  font-size: 1.3rem !important; 
+}
+.fs_11rem{
+  font-size: 1.5rem !important;
+}
+.fs_22rem{
+  font-size: 2rem !important;
+}
+.fs_2rem{
+  font-size: 3rem !important;
+}
+.small-img {
+  width: 16px;
+  height: 16px;
+}
+.equal-height {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.aside-width{
+  position: fixed;
+  top: 3.4rem;
+  left: -14px;
+  bottom: 0;
+  width: 205px;
+  z-index: 3;
+  /* margin-top: 10px; */
+}
+.side_container{
+  width: 85%;
+}
+.nav_btn{
+  background-color:#CCF5E1 !important;
+  color: #002F68 !important;
+  border-radius: 22px;
+}
+.body_bg{
+  background-color: #F6F6F9 !important;
+}
+
+.icon_color{
+  color: #60AFF0 !important;
+}
+.tabel_bg{
+  background-color: #60AFF0 !important;
+  color: white;
+}
+
+
+.btn_green{
+  background-color: #2FD583 !important;
+  color: white !important;
+}
+.btn_bg{
+  background-color: #60AFF0 !important;
+  color: #FFFFFF !important;
+}
+.tr_bg{
+  background-color: #D0EEFC;
+}
+.btn_bg_purpul{
+  background-color: #7030A0;
+  color: #ffff ;
+}
+.btn_bg_purpul:active{
+  background-color: #7030A0;
+  color: #ffff ;
+}
+.btn_bg_purpul:focus{
+  background-color: #7030A0;
+  color: #ffff ;
+}
+.white_space{
+  white-space: nowrap !important;
+}
+.bg_dark{
+  background-color: #3C6FAB;
+}
+.bg_fotter{
+  background-color: #153A66;
+}
+.border_left{
+  border-left: 1px solid black;
+}
+
+.bg_afford{
+  background-color: #CCF5E1 !important;
+}
+.bg_aff_2{
+  background-color: #CAE1F7 !important;
+}
+.margin_top{
+  margin-top: 8rem !important;
+}
+/* muteeb css  */
+
+.bg-lite-blue{
+  background-color: #CAE1F7;
+}
+.txt-lite-blue{
+  color: #CAE1F7;
+}
+.m-box{
+  border: 2px solid #60AFF0;
+}
+.bg-light-blue{
+  background: #60AFF0 !important;
+}
+
+
+/* ---------------------umar-css-style-start---------------------- */
+.input_border-style{
+  border-style: none;
+  background-color: #F6F6F9;
+  box-shadow: none !important; border-radius: 0px !important;
+}
+.input_border-style:focus{
+  background-color: #F6F6F9;
+}
+.top_div_rounded{
+  background-color: #60AFF0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+}
+.bottom_div_rounded{
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+.div_width{
+  width: 12rem;
+}
+.accordian_class{
+  background-color: white;
+  border-style: var(--white);
+}
+.Q_color{
+  color: #19D176;
+  font-weight: 900;
+}
+.buy_rent{
+  background-color: #60AFF0;
+  border-style: none;
+  border-radius: 5px;
+  color: white;
+}
+.buy_rent_1{
+  background-color: transparent;
+  border-style: none;
+  border-radius: 5px;
+  color: #60AFF0;
+  
+}
+
+/* ---------------------umar-css-style-end---------------------- */
+
+/* Personal Loan css start */
+.slider-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+/* Personal Loan css end */
+
+
+/* home  page css  */
+
+.hero-sec-text{
+  font-size: 1.8rem;
+  font-family: 'Poppins', sans-serif;
+  color: var(--black, #161616);
+}
+.hero-sec-btn1{
+  color: var(--primary, #002F68);
+text-align: center;
+font-size: 1.5rem;
+font-family: Quicksand;
+font-weight: 600;
+}
+.hero-sec-arrow{
+color: #19D176;
+width: 2.1rem;
+height: 1.5rem;
+}
+
+/* calculater area  */
+
+.calc-field{
+  display: flex;
+  padding: 2.8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.5rem;
+  border-radius: 2.8rem;
+  background-color: white;
+}
+.calc-text-right{
+  font-size: 1.25rem;
+}
+.para-text{
+  color: var(--black, #161616);
+font-size: 1.5rem;
+font-family: Poppins;
+}
+.calc-price-left{
+  color: var(--secondary, #60AFF0);
+font-size: 4rem;
+font-family: Quicksand;
+font-weight: 700;
+line-height: 70px;
+}
+.calc-btn-text{
+font-size: 1.5rem;
+font-family: Poppins;
+font-weight: 500;
+padding: 22px 22px;
+}
+/* section-3 */
+.sec3{
+  margin-top: 6rem;
+}
+/* card section */
+.card-heading{
+  color: var(--black, #161616);
+text-align: center;
+font-size: 36px;
+font-family: Quicksand;
+font-weight: 700;
+margin-bottom: 2rem;
+}
+.card-heading-2{
+  margin-bottom: 4.5rem;
+}
+.card-txt{
+  color: var(--black, #161616);
+text-align: center;
+font-size: 16px;
+font-family: Poppins;
+font-weight: 600;
+}
+/* section-5 */
+.para-txt-1{
+  color: var(--black, #161616);
+text-align: center;
+font-size: 1.75rem;
+margin: 2rem 0;
+font-family: Poppins;
+}
+.sec-5-h1{
+  color: var(--black, #161616);
+  font-size: 3.1rem;
+  font-family: Quicksand;
+  font-weight: 600;
+}
+.para-txt-2{
+  color: var(--black, #161616);
+font-size: 1.5rem;
+font-family: Poppins;
+}
+.sec-5-h2{
+  color: var(--black, #161616);
+font-size: 2.25rem;
+font-family: Poppins;
+font-weight: 600;
+}
+/* footer */
+.footer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin: 2.5rem;
+}
+.footer-para{
+  color: #FFF;
+  width: 31.2rem;
+font-size: 1.25rem;
+font-family: Poppins;
+margin-top: 3rem;
+}
+.footer-txt-1{
+  font-size: 1.25rem;
+  color: var(--white, #FFF);
+font-family: Quicksand;
+font-weight: 700;
+}
+.footer-text-2{
+  color: var(--white, #FFF);
+font-size: 1.25rem;
+font-family: Poppins;
+}
+/* .footer-left{
+  margin-left: 5rem;
+} */
+.footer-right{
+  display: flex;
+  justify-content: space-around;
+}
+.footer-end{
+  background: #153A66;
+  color: #FFF;
+font-size: 1.5rem;
+padding: 2rem;
+text-align: center;
+font-family: Quicksand;
+font-weight: 500;
+}
+/* .......... */
+.left_jal{
+  background-image: url(/assets/left-jal.png);
+  height: 150px; /* You must set a specified height */
+  width: 200px;
+  position: absolute;
+  left: 0;
+  top: 500px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.right_elips{
+  background-image: url(/assets/elips-round-top.png);
+  height: 400px; /* You must set a specified height */
+  width: 150px;
+  position: absolute;
+  right: 0;
+  top: 500px;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  z-index: -4;
+}
+
+
+
+@media (max-width: 1600px){
+ /* .footer{
+  flex-wrap: wrap;
+  margin: 0;
+ }
+ .footer-right{
+  justify-content: flex-start;
+ } */
+}
+@media (max-width: 1199px){
+
+}/* for tablets and airpads */
+@media (max-width: 992px) and (min-width: 550px) {
+ 
+}
+@media (max-width: 767px) and (min-width: 320px) {
+  
+}
+
+
+
+/* for mobile devices */
+@media (max-width: 549px) and (min-width: 320px) {
+ 
+}
