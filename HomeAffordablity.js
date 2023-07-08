@@ -92,7 +92,6 @@ plus4.addEventListener('click',()=>{
     para4.classList.remove('hidden');
 })
 
-// border-b-[0.563rem] border-lightBlue
 
 // table-function
 let btn1=document.querySelector('#btn1'); 
@@ -118,3 +117,6 @@ btn2.classList.remove('border-lightBlue');
 Yrs15.classList.add('hidden')
 Yrs30.classList.remove('hidden')
 })
+
+// function for home affordability calculator
+

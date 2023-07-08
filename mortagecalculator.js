@@ -88,3 +88,207 @@ plus4.addEventListener('click',()=>{
     minus4.classList.remove('hidden');
     para4.classList.remove('hidden');
 })
+
+
+// function for Mortage Calculator
+
+function calculateMonthlyPaymentMortage() {
+    // Get input values
+    const homePrice = parseFloat(document.getElementById("homePrice").value);
+    const downPayment = parseFloat(document.getElementById("downPayment").value);
+    const loanTerm = parseFloat(document.getElementById("loanTerm").value);
+    const startDate = new Date(document.getElementById("startDate").value);
+  
+    // Calculate loan amount
+    const loanAmount = homePrice - downPayment;
+  
+    // Calculate total number of months
+    const numberOfPayments = loanTerm * 12;
+  
+    // Calculate monthly interest rate
+    const interestRate = 5; // Assuming a fixed interest rate of 5%
+    const monthlyRate = interestRate / 100 / 12;
+    // Calculate monthly payment with monthly interest
+    const monthlyPayment =
+      (loanAmount * monthlyRate) /
+      (1 - Math.pow(1 + monthlyRate, -numberOfPayments));
+  
+    // Calculate monthly payment without monthly interest
+    // const monthlyPayment = loanAmount / numberOfPayments;
+  
+    // Calculate the start month and year
+    const startMonth = startDate.getMonth() + 1; // Add 1 because getMonth() returns zero-based month
+    const startYear = startDate.getFullYear();
+  
+    // Calculate the interest for the start period
+    const currentDate = new Date();
+    const currentMonth = currentDate.getMonth() + 1;
+    const currentYear = currentDate.getFullYear();
+    const numStartMonths =
+      (startYear - currentYear) * 12 + (startMonth - currentMonth);
+    const interestForStartPeriod =
+      loanAmount * (numStartMonths / numberOfPayments);
+  
+    // Adjust the monthly payment for the start period interest
+    const adjustedMonthlyPayment =
+      (loanAmount + interestForStartPeriod) / numberOfPayments;
+  
+    // Check if monthlyPayment is NaN
+    const displayValue = isNaN(adjustedMonthlyPayment)
+      ? ""
+      : "$" + adjustedMonthlyPayment.toFixed(2);
+  
+    // Display the result
+    document.getElementById("monthlyPayment").textContent = displayValue;
+  
+    // Calculate principal and interest
+    let principalAndInterest = adjustedMonthlyPayment * numberOfPayments;
+  
+    // Calculate property taxes, homeowner's insurance, HOA dues, PMI, and extra payment
+    let propertyTaxes = homePrice * 0.02; // Assuming 2% of home price for property taxes
+    let homeownersInsurance = homePrice * 0.005; // Assuming 0.5% of home price for homeowner's insurance
+    let hoaDues = 200; // Assuming fixed HOA dues of $200 per month
+    let pmi = loanAmount * 0.01; // Assuming 1% of loan amount for PMI
+    let extraPayment = 100; // Assuming a fixed extra payment of $100 per month
+  
+    // Generate yearly payment and yearly interest data
+    const yearlyPaymentData = [];
+    const yearlyInterestData = [];
+    // Calculate total number of months
+    const numMonths = loanTerm * 12;
+    // Calculate total interest paid
+    const totalInterest = monthlyPayment * numMonths - loanAmount;
+  
+    for (let i = 1; i <= loanTerm; i++) {
+      const yearlyPayment = parseInt(loanAmount / loanTerm);
+      const yearlyInterest = parseInt(totalInterest / loanTerm);
+      yearlyPaymentData.push(yearlyPayment);
+      yearlyInterestData.push(yearlyInterest);
+    }
+  
+    // Calculate total payment
+    const totalPayment =
+      principalAndInterest +
+      propertyTaxes +
+      homeownersInsurance +
+      hoaDues +
+      pmi +
+      extraPayment;
+  
+    if (homePrice && downPayment && loanTerm) {
+      if (Chart.getChart("myChart")) {
+        // Destroy Chart
+        Chart.getChart("myChart").destroy();
+      }
+      // Draw Chart
+      drawMortageCalculatorGraph([
+        principalAndInterest,
+        propertyTaxes,
+        homeownersInsurance,
+        hoaDues,
+        pmi,
+        extraPayment,
+      ]);
+  
+      if (Chart.getChart("myLineChart")) {
+        // Destroy Chart
+        Chart.getChart("myLineChart").destroy();
+      }
+      drawMortageMonthlyPaymentGraph(
+        startYear,
+        loanTerm,
+        yearlyPaymentData,
+        yearlyInterestData
+      );
+    }
+  }
+  
+  function drawMortageMonthlyPaymentGraph(
+    startYear,
+    numberOfYears = 5,
+    y1value = [500, 1000, 1500, 2000, 2500],
+    y2value = [400, 800, 1200, 1600, 2000]
+  ) {
+    let date;
+    startYear ? (date = startYear) : (date = new Date().getFullYear());
+    // var xValues = ["2023", "2025", "2026", "2017", "2018"];
+    var xValues = Array.from(
+      { length: numberOfYears },
+      (_, index) => date + index
+    );
+    // var yValues1  = [500, 1000, 1500, 2000, 2500];
+    var yValues1 = y1value;
+    // var yValues2 = [400, 800, 1200, 1600, 2000]; //second dataset
+    var yValues2 = y2value;
+    var barColors1 = Array.from(xValues, () => "#19D176");
+    var barColors2 = Array.from(xValues, () => "#CCF5E1");
+    new Chart("myLineChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            label: "Principal",
+            backgroundColor: barColors1,
+            data: yValues1,
+            // label: 'Dataset 1' //optional label for this dataset
+          },
+          {
+            label: "Interest",
+            backgroundColor: barColors2,
+            data: yValues2,
+            // label: 'Dataset 2' //optional label for this dataset
+          },
+        ],
+      },
+      options: {
+        legend: { display: true },
+        title: {
+          display: true,
+        },
+        scales: {
+          y: {
+            ticks: {
+              // Include a dollar sign in the ticks
+              callback: function (value, index, values) {
+                return "$" + value;
+              },
+            },
+          },
+        },
+      },
+    });
+  }
+  
+  function drawMortageCalculatorGraph(
+    yvalue = [862.87, 862.87, 187, 186, 187, 186]
+  ){
+  var xValues = ["Principal and interest", "Property Taxes", "Homeoner's insurance", "HOA due's","PMI","Extra Payment"];
+  var yValues = yvalue;
+  var barColors = [
+    "#0B72C7",
+    "#FE8F00",
+    "#8E60F0",
+    "#03B378",
+    "#19D176",
+    "#153A66",
+  ];
+  
+  new Chart("myChart", {
+    type: "doughnut",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      },
+    ],
+    },
+    options: {
+      title: {
+        display: true,
+        text: ""
+      },
+    },
+  });
+  }

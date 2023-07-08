@@ -10,8 +10,8 @@
     <title>SBA Loan</title>
 </head>
 <body class="transition-all duration-500 bg-bgGrey">
-     <!-- header-start -->
-     <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+       <!-- header-start -->
+    <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
       <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
         <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
           <div class=" flex items-center justify-between w-full lg:w-auto h-full">
@@ -28,8 +28,16 @@
               </span>
             </div>
           </div>
+          <!-- <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end" id="menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </span>
+            <span class="hidden text-2xl cursor-pointer mx-2  lg:hidden  text-darkBlue w-full text-end" id="close">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </div> -->
   <div>
-    <ul id="menu" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+    <ul id="list" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
       <li class="mx-2 md:my-0 py-4 lg:py-0">
         <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
       </li>
@@ -72,18 +80,18 @@
     <img src="./assets/sba bg.png" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem] ">
   </div>
   <div class="2xl:pt-[11rem] md:pt-[4rem]  pt-[1rem] w-full flex flex-col">
-    <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[0.9rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[0.5rem]">
+    <p class=" font-bold text-muted  3xl:text-5xl 2xl:text-[2.4rem] xl:text-4xl lg:text-3xl text-[1.2rem]  text-darkGrey font-quicksand  3xl:leading-[4rem] lg:leading-[2rem] md:leading-[1.2rem]">
       Find The Perfect Loan for Your Business
     </p>
-    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[1rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] md:text-[1.563rem] text-[1.4rem] font-quicksand">
+    <h1 class="text-darkBlue  font-bold 3xl:leading-[6rem] 2xl:leading-[5rem] xl:leading-[4rem] lg:leading-[3.5rem] leading-[2rem] py-[1rem] 3xl:text-[5.313rem] 2xl:text-[4rem] xl:text-[4rem] lg:text-[3.5rem] text-[1.89rem] font-quicksand">
       SBA Loan Calculator
     </h1>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]   text-[0.57rem] text-black font-poppins font-normal">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem]  text-[0.875rem] text-black font-poppins font-normal">
         The SBA Loan Calculator helps small business owners estimate loan payments and borrowing amounts, enabling informed decisions for business financing.
 
     </p>
       <a href="#">
-        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.875rem] flex items-center md:w-fit">
           Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
         </button>
       </a>
@@ -109,7 +117,7 @@
 <!-- calculator section start -->
 
 <div class="container mx-auto">
-  <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]
+  <h1 class="text-darkBlue text-center font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.563rem]
   ">
   Is an SBA loan right for me?
   </h1>
@@ -117,11 +125,11 @@
   <!-- calculator-right-section-start -->
   <div class="flex flex-col lg:items-start items-center justify-center lg:w-[44rem]">
     <h2 class="text-darkBlue font-bold 
-    3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Your monthly payment will be:</h2>
+    3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-4 lg:text-start text-center font-quicksand">Your monthly payment will be:</h2>
     <p  id="autoLoanResult" class="text-lightBlue font-quicksand font-bold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem] xl:leading-[6rem] leading-[4rem] lg:text-start text-center ">$670,55</p>
-    <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">Ready for the next step</p>
+    <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[1.2rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins lg:text-start text-center ">Ready for the next step</p>
     <a href="#">
-        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.875rem] flex items-center md:w-fit">
           Show me my rates <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
         </button>
       </a>
@@ -395,80 +403,80 @@ If you require quick funding for a temporary or one-time financial requirement, 
 <!-- guide-section-end -->
 
   <!-- footer-start -->
-  <footer class="">
-    <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
-  <div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
-    <!-- img-start -->
-  <div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
-  <div class="w-[18rem]
-  3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
-  ">
-    <img src="./assets/logo.svg" alt="" width="100%">
+<footer class="">
+  <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
+<div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+  <!-- img-start -->
+<div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+<div class="w-[18rem]
+3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+">
+  <img src="./assets/logo.svg" alt="" width="100%">
+</div>
+<p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+</div>
+<!-- img-end -->
+<!-- links-start -->
+<div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+  <!-- link1-start -->
+  <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
+    <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
+    <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">
+      <li class="md:my-6 my-4"><a href="">Home</a></li>
+      <li class="md:my-6 my-4"><a href="">About Us</a></li>
+      <li class="md:my-6 my-4"><a href="">Loans</a></li>
+      <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+      <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+    </ul>
   </div>
-  <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
-  </div>
-  <!-- img-end -->
-  <!-- links-start -->
-  <div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
-    <!-- link1-start -->
-    <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
-      <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
-      <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">
-        <li class="md:my-6 my-4"><a href="">Home</a></li>
-        <li class="md:my-6 my-4"><a href="">About Us</a></li>
-        <li class="md:my-6 my-4"><a href="">Loans</a></li>
-        <li class="md:my-6 my-4"><a href="">Approvals</a></li>
-        <li class="md:my-6 my-4"><a href="">FAQs</a></li>
-      </ul>
-    </div>
-    <!-- link1-end -->
-    <!-- link2-start -->
-    <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
-      <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
-       <div class="text-white  flex items-center justify-start gap-x-2">
-        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
-  <img src="./assets/phone.svg" alt="" width="100%">
-        </div>
-         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">(973) 561-4301</p>
-        </div >
-       <div class="text-white  flex items-baseline justify-start gap-x-2">
-        <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
-          <img src="./assets/mail.svg" alt="" class="w-full">
-        </div>
-         <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.625rem]">helpdesk@businessloan <br> warriors.com</p>
-        </div>
-       <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
-         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
-         ">
-           <img width="100%" src="./assets/twitter.png" class="w-full">
-         </div>
-         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
-         ">
-           <img width="100%" src="./assets/fb.png" class="w-full">
-         </div>
-         <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
-         ">
-           <img width="100%" src="./assets/insta.png" class="w-full ">
-         </div>
-         <div class="
-         3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
-         ">
-           <img width="100%" src="./assets/youtube.png" class="w-full">
-         </div>
+  <!-- link1-end -->
+  <!-- link2-start -->
+  <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
+    <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+     <div class="text-white  flex items-center justify-start gap-x-2">
+      <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+<img src="./assets/phone.svg" alt="" width="100%">
+      </div>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">(973) 561-4301</p>
+      </div >
+     <div class="text-white  flex items-baseline justify-start gap-x-2">
+      <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
+        <img src="./assets/mail.svg" alt="" class="w-full">
+      </div>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">helpdesk@businessloan <br> warriors.com</p>
+      </div>
+     <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/twitter.png" class="w-full">
        </div>
-  </div>
-    <!-- link2-end -->
-  </div>
-  <!-- links-end -->
-  </div>
-  </div>
-  <div class="bg-[#153A66] text-center  min-h-[6.688rem]">
-    <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
-      Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
-      </span>
-    </p>
-  </div>
-  </footer>
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/fb.png" class="w-full">
+       </div>
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/insta.png" class="w-full ">
+       </div>
+       <div class="
+       3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       ">
+         <img width="100%" src="./assets/youtube.png" class="w-full">
+       </div>
+     </div>
+</div>
+  <!-- link2-end -->
+</div>
+<!-- links-end -->
+</div>
+</div>
+<div class="bg-[#153A66] text-center  min-h-[6.688rem]">
+  <p class="font-quicksand font-medium container mx-auto 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 text center p-8 text-white">
+    Copyright © 2022 All rights reserved. Use of this website is subject to our <span class="text-lightBlue"><a href=""> Legal Disclaimer</a>
+    </span>
+  </p>
+</div>
+</footer>
 <!-- footer-end -->
 <script src="./index.js"  type="module"></script>
 <script src="./SBAloan.js"  type="module"></script>

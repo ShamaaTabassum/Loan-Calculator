@@ -19,6 +19,12 @@ console.log(principalVal);
 console.log(interestRateVal);
 console.log(loanTermVal);
 
+// / Check if monthlyPayment is NaN
+ monthlyPayment = isNaN(monthlyPayment)
+? ""
+: "$" + monthlyPayment.toFixed(2);
 
-autoLoanResult.textContent = `$${monthlyPayment.toFixed(2)}`;
+// Display the result
+autoLoanResult.textContent = monthlyPayment;
+
 };
