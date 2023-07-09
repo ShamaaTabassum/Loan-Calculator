@@ -91,19 +91,26 @@ plus4.addEventListener('click',()=>{
 
 
 // function for Mortage Calculator
+let homePrice=document.getElementById("homePrice");
+let downPayment=document.getElementById("downPayment");
+let loanTerm=document.getElementById("loanTerm");
+let startDate=document.getElementById("startDate");
+let monthlyPaymentData=document.getElementById("monthlyPayment");
+let monthlyPaymentData2=document.getElementById("totalMonthlyPayment");
+
 
 function calculateMonthlyPaymentMortage() {
     // Get input values
-    const homePrice = parseFloat(document.getElementById("homePrice").value);
-    const downPayment = parseFloat(document.getElementById("downPayment").value);
-    const loanTerm = parseFloat(document.getElementById("loanTerm").value);
-    const startDate = new Date(document.getElementById("startDate").value);
+    const homePriceVal = parseFloat(homePrice.value);
+    const downPaymentVal = parseFloat(downPayment.value);
+    const loanTermVal = parseFloat(loanTerm.value);
+    const startDateVal = new Date(startDate.value);
   
     // Calculate loan amount
-    const loanAmount = homePrice - downPayment;
+    const loanAmount = homePriceVal - downPaymentVal;
   
     // Calculate total number of months
-    const numberOfPayments = loanTerm * 12;
+    const numberOfPayments = loanTermVal * 12;
   
     // Calculate monthly interest rate
     const interestRate = 5; // Assuming a fixed interest rate of 5%
@@ -117,8 +124,8 @@ function calculateMonthlyPaymentMortage() {
     // const monthlyPayment = loanAmount / numberOfPayments;
   
     // Calculate the start month and year
-    const startMonth = startDate.getMonth() + 1; // Add 1 because getMonth() returns zero-based month
-    const startYear = startDate.getFullYear();
+    const startMonth = startDateVal.getMonth() + 1; // Add 1 because getMonth() returns zero-based month
+    const startYear = startDateVal.getFullYear();
   
     // Calculate the interest for the start period
     const currentDate = new Date();
@@ -137,16 +144,21 @@ function calculateMonthlyPaymentMortage() {
     const displayValue = isNaN(adjustedMonthlyPayment)
       ? ""
       : "$" + adjustedMonthlyPayment.toFixed(2);
+    // Check if totalmonthlyPayment is NaN
+    const displayValue2 = isNaN(adjustedMonthlyPayment)
+      ? ""
+      : "$" + adjustedMonthlyPayment.toFixed(2);
   
     // Display the result
-    document.getElementById("monthlyPayment").textContent = displayValue;
+    monthlyPaymentData.textContent = displayValue;
+    monthlyPaymentData2.textContent = displayValue2;
   
     // Calculate principal and interest
     let principalAndInterest = adjustedMonthlyPayment * numberOfPayments;
   
     // Calculate property taxes, homeowner's insurance, HOA dues, PMI, and extra payment
-    let propertyTaxes = homePrice * 0.02; // Assuming 2% of home price for property taxes
-    let homeownersInsurance = homePrice * 0.005; // Assuming 0.5% of home price for homeowner's insurance
+    let propertyTaxes = homePriceVal * 0.02; // Assuming 2% of home price for property taxes
+    let homeownersInsurance = homePriceVal * 0.005; // Assuming 0.5% of home price for homeowner's insurance
     let hoaDues = 200; // Assuming fixed HOA dues of $200 per month
     let pmi = loanAmount * 0.01; // Assuming 1% of loan amount for PMI
     let extraPayment = 100; // Assuming a fixed extra payment of $100 per month
@@ -155,13 +167,14 @@ function calculateMonthlyPaymentMortage() {
     const yearlyPaymentData = [];
     const yearlyInterestData = [];
     // Calculate total number of months
-    const numMonths = loanTerm * 12;
+    const numMonths = loanTermVal * 12;
     // Calculate total interest paid
     const totalInterest = monthlyPayment * numMonths - loanAmount;
+    
   
-    for (let i = 1; i <= loanTerm; i++) {
-      const yearlyPayment = parseInt(loanAmount / loanTerm);
-      const yearlyInterest = parseInt(totalInterest / loanTerm);
+    for (let i = 1; i <= loanTermVal; i++) {
+      const yearlyPayment = parseInt(loanAmount / loanTermVal);
+      const yearlyInterest = parseInt(totalInterest / loanTermVal);
       yearlyPaymentData.push(yearlyPayment);
       yearlyInterestData.push(yearlyInterest);
     }
@@ -175,7 +188,8 @@ function calculateMonthlyPaymentMortage() {
       pmi +
       extraPayment;
   
-    if (homePrice && downPayment && loanTerm) {
+      
+    if (homePriceVal && downPaymentVal && loanTermVal) {
       if (Chart.getChart("myChart")) {
         // Destroy Chart
         Chart.getChart("myChart").destroy();
@@ -196,18 +210,18 @@ function calculateMonthlyPaymentMortage() {
       }
       drawMortageMonthlyPaymentGraph(
         startYear,
-        loanTerm,
+        loanTermVal,
         yearlyPaymentData,
         yearlyInterestData
       );
     }
   }
-  
+
   function drawMortageMonthlyPaymentGraph(
     startYear,
     numberOfYears = 5,
     y1value = [500, 1000, 1500, 2000, 2500],
-    y2value = [400, 800, 1200, 1600, 2000]
+  y2value = [400, 800, 1200, 1600, 2000]
   ) {
     let date;
     startYear ? (date = startYear) : (date = new Date().getFullYear());
@@ -220,7 +234,7 @@ function calculateMonthlyPaymentMortage() {
     var yValues1 = y1value;
     // var yValues2 = [400, 800, 1200, 1600, 2000]; //second dataset
     var yValues2 = y2value;
-    var barColors1 = Array.from(xValues, () => "#19D176");
+    var barColors1 = Array.from(xValues, () => "#60AFF0");
     var barColors2 = Array.from(xValues, () => "#CCF5E1");
     new Chart("myLineChart", {
       type: "bar",
@@ -292,3 +306,12 @@ function calculateMonthlyPaymentMortage() {
     },
   });
   }
+
+  function formatCurrency(amount) {
+    return "$" + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
+  }
+// handlers
+  homePrice.addEventListener('input', calculateMonthlyPaymentMortage);
+downPayment.addEventListener('input', calculateMonthlyPaymentMortage);
+loanTerm.addEventListener('input', calculateMonthlyPaymentMortage);
+startDate.addEventListener('input', calculateMonthlyPaymentMortage);

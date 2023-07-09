@@ -200,49 +200,141 @@ let tableBody6=document.querySelector('#table-body6');
 
 // bar-chart
 
-// Function to update the result
-function calculateLoan() {
-    var loanAmount = parseInt(document.getElementById("loan-amount").value);
-    console.log(loanAmount);
-    var interestRate = parseFloat(document.getElementById("interest-rate").value);
-    var loanTerm = parseInt(document.getElementById("loan-term").value);
-  
-    var monthlyRate = interestRate / 100 / 12;
-    var totalPayments = loanTerm * 12;
-    var compoundedInterest = Math.pow(1 + monthlyRate, totalPayments);
-    var monthlyPayment = (loanAmount * monthlyRate * compoundedInterest) / (compoundedInterest - 1);
-    var totalRepayment = monthlyPayment * totalPayments;
-  
-    document.getElementById("monthlyPayment").innerHTML = "$" + monthlyPayment.toFixed(2);
-    document.getElementById("repayment").innerHTML = "$" + totalRepayment.toFixed(2);
+
+
+var loanAmountSlider = document.getElementById("loanAmountSlider");
+var interestRateSlider = document.getElementById("interestRateSlider");
+var loanTermSlider = document.getElementById("loanTermSlider");
+var monthlyPaymentData=document.getElementById("monthlyPayment");
+var interestRateData=document.getElementById("totalInterest");
+
+// function format currency
+
+function formatCurrency(amount) {
+    return "$" + amount.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, "$&,");
   }
 
+// Function for calculator
+
+function calculatePersonalLoan(e) {
+    // Get input values
+    const loanAmount = parseFloat(
+      document.getElementById("loanAmountSlider").value
+    );
+    const interestRate = parseFloat(
+      document.getElementById("interestRateSlider").value
+    );
+    const loanTerm = parseFloat(document.getElementById("loanTermSlider").value);
   
-  var loanAmountSlider = document.getElementById("loan-amount");
-  var loanAmountValue = document.getElementById("loan-amount-value");
-  loanAmountValue.innerHTML = "$" + loanAmountSlider.value;
+    // Calculate monthly interest rate
+    const monthlyRate = interestRate / 100 / 12;
+  
+    // Calculate total number of months
+    const numMonths = loanTerm * 12;
+  
+    // Calculate monthly payment
+    const monthlyPayment =
+      (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -numMonths));
+  
+    // Calculate total interest paid
+    const totalInterest = monthlyPayment * numMonths - loanAmount;
+  
+    // Display the results
+    monthlyPaymentData.textContent =
+      formatCurrency(monthlyPayment);
+    interestRateData.textContent =
+      formatCurrency(totalInterest);
+  
+    // Update the label of the slider
+    const { id, value } = e.target;
+    if (id === "loanAmountSlider") {
+      document.getElementById("loanAmountValue").textContent = `$${value.replace(
+        /\B(?=(\d{3})+(?!\d))/g,
+        ","
+      )}`;
+    } else if (id === "interestRateSlider") {
+      document.getElementById("interestRateValue").textContent = `${value}%`;
+    } else {
+      document.getElementById("loanTermValue").textContent = `${value} Year`;
+    }
+  
+    // Generate yearly payment and yearly interest data
+    const yearlyPaymentData = [];
+    const yearlyInterestData = [];
+  
+    for (let i = 1; i <= loanTerm; i++) {
+      const yearlyPayment = parseInt(loanAmount / loanTerm);
+      const yearlyInterest = parseInt(totalInterest / loanTerm);
+      yearlyPaymentData.push(yearlyPayment);
+      yearlyInterestData.push(yearlyInterest);
+    }
+  
+    // Destroy Chart
+    Chart.getChart("myChart").destroy();
+    // Draw graph
+    drawPersonalLoanGraph(loanTerm, yearlyPaymentData, yearlyInterestData);
+  }
+  function drawPersonalLoanGraph(
+    numberOfYears = 5,
+    y1value = [5000, 5000, 5000, 5000, 5000],
+    y2value = [1363, 1363, 1363, 1363, 1363]
+  ) {
+    let date = new Date().getFullYear();
+    // var xValues = ["2023", "2025", "2026", "2017", "2018"];
+    var xValues = Array.from(
+      { length: numberOfYears },
+      (_, index) => date + index
+    );
+    // var yValues1 = [500, 1000, 1500, 2000, 2500];
+    var yValues1 = y1value;
+    // var yValues2 = [400, 800, 1200, 1600, 2000]; //second dataset
+    var yValues2 = y2value;
+    // var barColors1  = ["#19D176 ", "#19D176","#19D176","#19D176","#19D176"];
+    var barColors1 = Array.from(xValues, () => "#19D176");
+    // var barColors2 = ["#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0", "#60AFF0"];
+    var barColors2 = Array.from(xValues, () => "#60AFF0");
+    new Chart("myChart", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [
+          {
+            label: "Yearly Payment",
+            backgroundColor: barColors1,
+            data: yValues1,
+            // label: 'Dataset 1' //optional label for this dataset
+          },
+          {
+            label: "Yearly Interest",
+            backgroundColor: barColors2,
+            data: yValues2,
+            // label: 'Dataset 2' //optional label for this dataset
+          },
+        ],
+      },
+      options: {
+        legend: { display: true },
+        title: {
+          display: true,
+        },
+        scales: {
+          y: {
+            ticks: {
+              // Include a dollar sign in the ticks
+              callback: function (value, index, values) {
+                return "$" + value;
+              },
+              // maxTicksLimit: 5,
+              // stepSize: 3,
+            },
+          },
+        },
+      },
+    });
+  }
   
 
-  loanAmountSlider.oninput = function() {
-      loanAmountValue.innerHTML = "$" + this.value;
-    };
-  
-  var interestRateSlider = document.getElementById("interest-rate");
-  var interestRateValue = document.getElementById("interest-rate-value");
-  interestRateValue.innerHTML =interestRateSlider.value + "%";
-  
-  interestRateSlider.oninput = function() {
-    interestRateValue.innerHTML =this.value + "%";
-  };
-  
-  var loanTermSlider = document.getElementById("loan-term");
-  var loanTermValue = document.getElementById("loan-term-value");
-  loanTermValue.innerHTML =loanTermSlider.value + " years";
-  
-  loanTermSlider.oninput = function() {
-    loanTermValue.innerHTML =this.value + " years";
-};
 // Event handler for the input field change
-loanAmountSlider.addEventListener('input', calculateLoan);
-interestRateSlider.addEventListener('input', calculateLoan);
-loanTermSlider.addEventListener('input', calculateLoan);
+loanAmountSlider.addEventListener('input', calculatePersonalLoan);
+interestRateSlider.addEventListener('input', calculatePersonalLoan);
+loanTermSlider.addEventListener('input', calculatePersonalLoan);
