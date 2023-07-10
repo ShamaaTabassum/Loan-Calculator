@@ -15,71 +15,71 @@
     <title>Mortage Calculator</title>
 </head>
 <body class="transition-all duration-500 bg-bgGrey">
-      <!-- header-start -->
-      <header class="bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
-        <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
-          <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
-            <div class=" flex items-center justify-between w-full lg:w-auto h-full">
-              <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
-                <span class="cursor-pointer">
-                  <a href="./index.html">
-                    <img src="./assets/logo.svg" class="w-full" alt="">
-                  </a>
-                </span>
-              </div>
-              <div class="lg:hidden w-full">
-                <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
-                  <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-                </span>
-              </div>
+          <!-- header-start -->
+    <header class=" bg-white h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000]">
+      <!-- 3xl:px-[6.75rem] lg:px-14 md:px-16 px-4 -->
+        <nav class=" container mx-auto h-full bg-white grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+          <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+            <div class="2xl:w-[20.375rem] lg:max-w-[15rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
+              <span class="cursor-pointer">
+                <a href="./index.html">
+                  <img src="./assets/Logo.png" class="w-full" alt="">
+                </a>
+              </span>
             </div>
-            <!-- <div class="lg:hidden w-full">
-              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end" id="menu">
-                <ion-icon name="menu-outline"></ion-icon>
+            <div class="lg:hidden w-full">
+              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
               </span>
-              <span class="hidden text-2xl cursor-pointer mx-2  lg:hidden  text-darkBlue w-full text-end" id="close">
-                <ion-icon name="close-outline"></ion-icon>
-              </span>
-            </div> -->
-    <div>
-      <ul id="list" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
-        <li class="mx-2 md:my-0 py-4 lg:py-0">
-          <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
-        </li>
-        <li class="mx-2 md:my-0 py-4 lg:py-0">
-          <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
-        </li>
-        <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
-          <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
-            <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
-          </span></a>
-            <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
-    :text-[1.2] text-[0.938rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
-            <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
-            <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
-            <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
-            <li class="py-1"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
-            <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
-            <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
-            <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
-        </ul>
-        </li>
-        <li class="mx-2 md:my-0 py-4 lg:py-0">
-          <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
-        </li>
-        <li class="mx-2 md:my-0 py-4 lg:py-0">
-          <a class="xl:text-[1.375rem] lg:text-[1.2] text-[0.938rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
-        </li>
-        <a href="">
-          <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-3 3xl:px-6 lg:py-2 lg:px-4 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] xl:text-xl lg:text-base md:text-[0.938rem] text-[0.7rem] flex items-center md:w-fit">
-            Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1"></ion-icon>
-          </button>
-        </a>
+            </div>
+          </div>
+          <!-- <div class="lg:hidden w-full">
+            <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end" id="menu">
+              <ion-icon name="menu-outline"></ion-icon>
+            </span>
+            <span class="hidden text-2xl cursor-pointer mx-2  lg:hidden  text-darkBlue w-full text-end" id="close">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </div> -->
+  <div>
+    <ul id="list" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium  hover:text-gray-600 duration-300" href="#">About Us</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+        <a  name="loan" class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" id="loan-text">Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+          <ion-icon name="chevron-down-outline" id="down-arrow" ></ion-icon>
+        </span></a>
+          <ul id="loan" class="  hidden  lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]  xl:text-[1.375rem] lg
+  :text-[1.2] text-[1.125rem] text-darkGrey hover:text-gray-600 bg-white border-solid border-[0.1rem] rounded-md border-darkGrey" >
+          <li class="py-1"><a class="" href="./autoloan.html">Auto loan</a></li>
+          <li class="py-1"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+          <li class="py-1"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+          <li class="py-1"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
+          <li class="py-1"><a class="" href="./personalloan.html">Personal Loan</a></li>
+          <li class="py-1"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+          <li class="py-1"><a class="" href="./SBALoan.html">SBA loan</a></li>
       </ul>
-    </div>
-          </nav>
-      </header>
-  <!-- header-end -->
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">Approvals</a>
+      </li>
+      <li class="mx-2 md:my-0 py-4 lg:py-0">
+        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300" href="#">FAQs</a>
+      </li>
+      <a href="">
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-4 3xl:px-6 py-3 px-4  hover:bg-darkGrey hover:text-white my-7 rounded-[2.8rem] xl:text-xl lg:text-base text-[0.938rem]  flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1 hover:text-white"></ion-icon>
+        </button>
+      </a>
+    </ul>
+  </div>
+        </nav>
+    </header>
+<!-- header-end -->
 <div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
   <div class="3xl:min-w-[50.4rem] xl:min-w-[45rem] lg:min-w-[38rem] md:min-w-[25.125rem] h-full xl:mr-[-5.5rem] max-w-full pt-0">
     <img src="./assets/rent vs buy hero (2).svg" alt="" class="w-full  2xl:pb-0 xl:pb-[2rem] lg:pb-[5rem] pb-0 lg:pt-[2rem] pt-[1rem] ">
@@ -95,8 +95,8 @@
         Estimate your mortgage payments and determine affordability with the Mortgage Calculator. Plan your finances wisely and make informed decisions when it comes to purchasing or refinancing a home.
     </p>
       <a href="#">
-        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 py-1 px-2 hover:bg-green-200 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl md:text-[0.938rem] text-[0.875rem] flex items-center md:w-fit">
-          Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1"></ion-icon>
+        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold  3xl:py-4 3xl:px-6 py-3 px-4  hover:bg-darkGrey hover:text-white duration-500 2xl:py-5 2xl:px-10 md:py-3 md:px-6 my-7 rounded-[2.8rem] 3xl:text-3xl xl:text-2xl lg:text-xl text-[0.938rem] flex items-center md:w-fit">
+          Get started <ion-icon name="arrow-forward-outline" class="text-darkGreen pl-1 hover:text-white"></ion-icon>
         </button>
       </a>
   </div>
@@ -268,16 +268,16 @@
 <h2 id="monthlyPayment" class="text-darkGreen text-center font-quicksand font-semibold 3xl:text-[4rem] 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] md:text-[2.188rem] text-[1.4rem]"></h2>
 <div class="flex md:flex-row flex-col gap-y-4 items-center justify-center lg:w-[70%] w-full gap-x-4">
   <div class="xl:w-[20.938rem] md:w-[14rem] w-[70%]  h-fit border border-darkGrey flex flex-col items-center justify-center">
-    <p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] font-poppins font-semibold">Total Interest Paid:</p>
+    <p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] text-[0.875rem]  font-poppins font-semibold">Total Interest Paid:</p>
     <p class="h-[70%] px-8 py-4 text-center text-darkBlue 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-quicksand font-semibold">$390,624.92</p>
     </div>
     <div class="xl:w-[20.938rem] md:w-[14rem] w-[70%]  h-fit border border-darkGrey flex flex-col items-center justify-center">
-      <p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] font-poppins font-semibold">Total Loan Amount:</p>
+      <p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] text-[0.875rem] font-poppins font-semibold">Total Loan Amount:</p>
       <p class="h-[70%] px-8 py-4 text-center text-darkBlue 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-quicksand font-semibold">$280,000.00</p>
       </div>
 </div>
 <div class="xl:w-[20.938rem] md:w-[14rem] w-[70%]  h-fit border border-darkGrey flex flex-col items-center justify-center">
-<p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] lg:text-[0.8rem] text-[0.5rem] font-poppins font-semibold">Total Of All Payments:</p>
+<p class="h-[30%] p-3 text-center bg-lightBlue w-full text-white 3xl:text-xl xl:text-[1.15rem] text-[0.875rem]  font-poppins font-semibold">Total Of All Payments:</p>
 <p class="h-[70%] px-8 py-4 text-center text-darkBlue 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-quicksand font-semibold">$670,624.92</p>
 </div>
 
@@ -291,7 +291,7 @@
   <div class="flex items-center justify-between lg:flex-row flex-col p-8 gap-x-20">
     <!-- chart-start -->
     <div class="flex flex-col items-center justify-center lg:w-[40%] w-full">
-      <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] text-base font-poppins font-normal text-center">Monthly payment breakdown</p>
+      <p class="text-black 3xl:text-2xl text-xl  font-poppins font-normal text-center">Monthly payment breakdown</p>
       <div class="">
         <canvas id="myChart" style="width:100%; max-width:500px; height: 600px;z-index: -1;" ></canvas>
        
@@ -372,9 +372,9 @@
                  </h2>
      
              </div>
-      <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] font-poppins font-normal text-start">We’ve found offers for this result:</p>
+      <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] font-poppins font-normal text-start">We’ve found offers for this result:</p>
         <a href="">
-          <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] font-poppins py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 my-0 font-normal">View Free Offers</button>
+          <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base text-[0.875rem] font-poppins py-2 px-3   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 my-0 font-normal">View Free Offers</button>
         </a>
         <p class="text-lightBlue font-quicksand font-medium duration-500   md:text-xl text-sm flex ">Disclosures</p>
     </div>
@@ -383,7 +383,7 @@
 </div>
 <!-- sect-2-end -->
 <a href="">
-  <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] font-poppins py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">HOW TO USE THIS CALCULATOR</button>
+  <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base text-[0.875rem] font-poppins py-2 px-3  text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">HOW TO USE THIS CALCULATOR</button>
 </a>
 </div>
 </div>
@@ -427,32 +427,32 @@
     </div>
     <div>
       <a href="">
-        <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] font-poppins py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">View Amortization Table</button>
+        <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base text-[0.875rem] font-poppins py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">View Amortization Table</button>
       </a>
     </div>
     </div>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-center text-[0.75rem] text-black font-poppins font-normal border-b-2 border-darkGrey pb-10">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-center  text-black font-poppins font-normal border-b-2 border-darkGrey pb-10">
       Written by <span class="text-lightBlue"> Denny Ceizyk</span>  and <span class="text-lightBlue   ">Rene Bermudez </span>  | Edited by <span class="text-lightBlue">Crissinda Ponder</span>  | Reviewed April 17, 2023
     </p>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-center text-[0.75rem] text-black font-poppins font-normal  my-10">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.875rem]  text-center  text-black font-poppins font-normal  my-10">
       Curious about mortgage payment calculations? Utilize our calculator to estimate your monthly mortgage payment, considering factors such as home price, mortgage term, down payment, and interest rate. Additionally, our calculator includes private mortgage insurance (PMI) if your selected down payment is below 20%.
     </p>
     <div class="flex w-full items-center justify-center">
       <a href="">
-        <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base lg:text-[0.85rem] md:text-[0.75rem] text-[0.7rem] font-poppins py-[0.3rem] px-[1rem]   text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">Get Current Mortgage rate</button>
+        <button class="3xl:py-[1.375rem] 3xl:px-[3.188rem] lg:py-[0.938rem] lg:px-[2.3rem] md:py-[0.5rem] md:px-[1.7rem] 3xl:text-2xl 2xl:text-xl xl:text-base text-[0.875rem] py-2 px-3 font-poppins  text-white rounded-[0.313rem]  bg-lightBlue md:my-8 mb-4 font-normal">Get Current Mortgage rate</button>
       </a>
     </div>
     <!-- FAQ-start -->
     <div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
       
       <div class=" flex items-baseline justify-between w-full  my-4">
-        <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>How to calculate your mortgage payment using the calculator?</h2>
+        <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[1rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>How to calculate your mortgage payment using the calculator?</h2>
         <div id="plus2" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
         <div id="minus2" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
       </div>
       <div class="h-fit ">
         <p id="para2" class=" hidden font-poppins font-normal mb-4
-        3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.75rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
+        3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.875rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
       </div>
   </div>
     <!-- FAQ-end -->
@@ -468,20 +468,20 @@
     <div class="my-8">
         <h2 class="text-darkBlue font-bold 
         3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] text-[1.563rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">How to read a mortgage payment schedule</h2>
-        <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+        <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
           Although a mortgage amortization schedule may appear daunting, it's actually quite straightforward. It functions as a payment schedule that not only outlines your regular installments throughout the loan term but also provides a detailed breakdown of how much of each payment contributes to the principal and interest. Here are some key points to grasp about mortgage amortization.
 
           <ul class="pl-8">
-            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
               During the initial years of repaying your loan, you will allocate more funds towards paying interest rather than reducing the principal amount.
           </li>
-            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
               Principal payments exceed interest payments over time.
           </li>
-            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
               Consistent payment: Total principal and interest remain unchanged.
           </li>
-            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+            <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
               Loan payoff: Last payment clears balance, except for adjustable-rate mortgage (ARM).
           </li>
           </ul>
@@ -490,13 +490,13 @@
     <div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
       
       <div class=" flex items-baseline justify-between w-full  my-4">
-        <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span> Monthly Payment breakdown: Typical costs included in a mortgage payment</h2>
+        <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[1rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span> Monthly Payment breakdown: Typical costs included in a mortgage payment</h2>
         <div id="plus" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
         <div id="minus" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
       </div>
       <div class="h-fit ">
         <p id="para" class=" hidden font-poppins font-normal mb-4
-        3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.75rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
+        3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.875rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
       </div>
   </div>
     <!-- FAQ-end -->
@@ -504,33 +504,33 @@
         <div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
       
           <div class=" flex items-baseline justify-between w-full  my-4">
-            <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>Typical costs Breakdown:Principal and interests over the life of mortgage loan?</h2>
+            <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[1rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>Typical costs Breakdown:Principal and interests over the life of mortgage loan?</h2>
             <div id="plus3" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
             <div id="minus3" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
           </div>
           <div class="h-fit ">
             <p id="para3" class=" hidden font-poppins font-normal mb-4
-            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.75rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.875rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
           </div>
       </div>
         <!-- FAQ-end -->
         <div class="my-8">
           <h2 class="text-darkBlue font-bold 
           3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">How a home loan calculator helps</h2>
-          <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+          <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
             There are a lot of decisions to make when you’re buying a home. A mortgage calculator can help you decide whether you should:
   </p>
             <ul class="pl-8">
-              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                 Make a larger down payment to get a lower monthly payment
             </li>
-              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
                 Make a larger down payment to reduce how much PMI you pay monthly
             </li>
-              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                 Buy a home in a neighborhood with expensive HOA fees
             </li>
-              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+              <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                 Buy in an area with high property taxes
             </li>
             </ul>
@@ -539,20 +539,20 @@
         <div class="bg-white rounded-[2.813rem] flex items-center justify-between flex-col p-8 my-8">
       
           <div class=" flex items-baseline justify-between w-full  my-4">
-            <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[0.938rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>The Mortgage Formula: The math behind calculating a mortgage payment?</h2>
+            <h2 class="font-quicksand font-semibold 3xl:text-4xl xl:text-[2rem] lg:text-2xl md:text-xl text-[1rem]  text-start"><span class="font-bold text-darkGreen mr-2">Q:</span>The Mortgage Formula: The math behind calculating a mortgage payment?</h2>
             <div id="plus4" class="lg:w-[2rem] w-[1.5rem] cursor-pointer "><img src="./assets/Union.png" alt="" class="w-full"></div>
             <div id="minus4" class="hidden lg:w-[2rem] w-[1.5rem] cursor-pointer h-[1rem] "><img src="./assets/Rectangle 23.png" alt="" class="w-full"></div>
           </div>
           <div class="h-fit ">
             <p id="para4" class=" hidden font-poppins font-normal mb-4
-            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.75rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
+            3xl:text-[1.75rem] xl:text-[1.5rem] lg:text-[1.25rem] md:text-[0.938rem]   text-[0.875rem]">Business Loan Warriors can help your business in several ways. We understand every business is unique, and we therefore offer a variety of business funding solutions, to meet your businesses specific need. Our internal credit review will help prepare your application for underwriters, therefore increasing your chances of getting approved. Our clients appreciate the feedback we give them, so they can make some minor changes in their business to help get qualified for better financing.</p>
           </div>
       </div>
         <!-- FAQ-end -->
         <div class="my-8">
           <h2 class="text-darkBlue font-bold 
           3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">Example monthly payment comparison for 10-, 15- and 30-year loan terms</h2>
-          <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+          <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
             The table below shows what this tradeoff would look like for three different repayment terms for a $360,000 loan at today’s interest rates.
             </p>
 <!-- table-start -->
@@ -602,33 +602,33 @@
   </tbody>
 </table>
 <!-- table-end -->
-<p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+<p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-start  text-black font-poppins font-normal " style="margin: 1rem 0;">
   As you can see, even small differences in how much you pay monthly can make radical changes in the total cost of a loan.
   </p>
             </div>
             <div class="my-8">
               <h2 class="text-darkBlue font-bold 
               3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">What our mortgage calculator tells you about your PITI</h2>
-              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
                 PITI breakdown: Principal, interest, taxes, and insurance are included in your mortgage payment. See the table below for different loan terms and their tradeoffs with a $360,000 loan at current interest rates.
       </p>
-              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
                 A few things are worth noting about the PITI calculations included in our mortgage calculator:
       </p>
                 <ul class="pl-8">
-                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                     <strong> Principal and interest calculations apply to 30-year and 15-year fixed-rate terms.</strong> Inquire with your lender regarding 10-year, 20-year, or 25-year fixed-term options, as well as ARM loan programs.
                 </li>
-                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
+                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
                     <strong> Property taxes</strong> can vary annually as the tax authorities in your area have the ability to adjust tax rates. This could result in fluctuations in your PITI payment.
                 </li>
-                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                     <strong>Homeowners insurance premiums have the potential to increase,</strong> so it's advisable to regularly compare rates and be prepared to shop around, particularly if you notice a significant rise in your premium.
                 </li>
-                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                     <strong>Cancellation of PMI</strong> is possible as lenders typically mandate it when your home equity is less than 20%. As the value of your home rises, you can inquire with your lender about available options to eliminate your PMI.
                 </li>
-                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                  <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                     <strong>HOA fees are not included in your PITI payment. </strong>While you are required to pay dues in an HOA community, lenders consider them for mortgage qualification purposes only. You will directly pay the HOA fees to the association.
                 </li>
                 </ul>
@@ -636,7 +636,7 @@
                 <div class="my-8">
                   <h2 class="text-darkBlue font-bold 
                   3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">How much can you afford to borrow?</h2>
-                  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+                  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-start  text-black font-poppins font-normal " style="margin: 1rem 0;">
                     Lenders determine your borrowing limit by evaluating your
                  debt-to-income (DTI) ratio, which compares your total debt, 
                  including the new house payment, to your monthly earnings.
@@ -645,43 +645,43 @@
                   may be considered up to 50%.
           </p>
           <div class="my-8 bg-[#60AFF04D] rounded-[0.625rem] px-[3.625rem] py-[3.313rem] gap-[2.5rem]">
-            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
               <strong>Example Calculation:</strong>  Here's a simple example to help you 
               determine if you can afford a mortgage. Let's assume your 
               total monthly debt, including the estimated mortgage payment,
                is $2,500, and your monthly income before taxes is $6,000.
             </p>
-            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
               <strong>$2,500 monthly debt payments divided by $6,000 monthly income = 41.67% DTI ratio</strong>
             </p>
-            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
               Since the conventional DTI ratio maximum is 45% to 50%, you likely can afford this payment.
             </p>
             </div>
-            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+            <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
               You can adjust the DTI ratio on a <span class="text-lightBlue underline"><a href="">home affordability calculator</a></span>  to get an idea of home prices that fit within your budget.
             </p>
             <div class="my-8 bg-[#60AFF04D] rounded-[0.625rem] px-[3.625rem] py-[3.313rem] gap-[2.5rem]">
               <h2 class="text-black 2xl:text-4xl lg:text-3xl md:text-2xl text-[1rem] font-poppins py-4 font-semibold">
                 CONVENTIONAL RATE CHANGES FOR FOR HIGH-DTI AND OTHER LOANS IN 2023
                 </h2>
-              <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+              <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
                 Starting from August 1, 2023, if you have a conventional loan and your debt-to-income (DTI) ratio exceeds 40%, you may encounter higher interest rates or incur a fee during the closing process. This additional cost applies to borrowers who are financing more than 60% of their home's value, with the fee ranging from 0.25% to 0.375% of the loan amount.
               </p>
-              <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
+              <p class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal" style="margin: 2rem 0;">
                 Other fees — not related to your DTI — may also apply if you:
               </p>
               <ul class="pl-8">
-                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                   Purchase an investment property, second home or multiunit property
               </li>
-                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
+                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 2rem 0;">
                   Purchase a manufactured home or a condo
               </li>
-                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                   Choose an ARM loan
               </li>
-                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.8rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
+                <li class="text-black 3xl:text-2xl 2xl:text-xl xl:text-[1.15rem] lg:text-base md:text-[0.938rem] text-[0.875rem] 2xl:leading-9 lg:leading-8 md:leading-6 font-poppins font-normal list-disc" style="margin: 1rem 0;">
                   Choose a high-balance loan
               </li>
               </ul>
@@ -690,21 +690,21 @@
             <div class="my-8">
               <h2 class="text-darkBlue font-bold 
               3xl:text-[4rem] 2xl:text-[3rem] xl:text-[2.5rem] lg:text-[2rem] md:text-[1.563rem] text-[1.4rem] 2xl:leading-[4.5rem] lg:leading-[3rem] md:leading-[1rem] my-8 lg:text-start text-center font-quicksand">How do I lower my monthly payment?</h2>
-              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+              <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
                 Try one or all of the following tips to get a smaller monthly mortgage payment:
                 </p>
    
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-start  text-black font-poppins font-normal " style="margin: 1rem 0;">
       Opt for the maximum term available. Selecting a 30-year fixed-rate loan will result 
                 in the lowest monthly payment compared to shorter-term loans.
       </p>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-start  text-black font-poppins font-normal " style="margin: 1rem 0;">
       <strong>Make a bigger down payment.</strong>By opting for a smaller loan amount, you'll experience a decrease in your principal and interest payments, while also reducing your PMI expenses. With a down payment of 20%, you can completely eliminate the need for PMI.
       </p>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] text-[0.875rem]  text-start  text-black font-poppins font-normal " style="margin: 1rem 0;">
       <strong>Consider an ARM.</strong> If you have short-term plans for your home, consider inquiring about an ARM (Adjustable Rate Mortgage). Initially, the rate is usually lower than fixed rates for a specific period. However, starting from May 1, 2023, conventional loan borrowers opting for an ARM loan may face higher interest rates or an additional fee at closing.
       </p>
-    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem] md:text-[0.8rem]  text-start text-[0.75rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
+    <p class="3xl:text-[1.875rem] xl:text-[1.3rem] lg:text-[1.1rem]  text-start text-[0.875rem] text-black font-poppins font-normal " style="margin: 1rem 0;">
       <strong>Shop for the best rate possible.</strong> Based on business loan warrior’s data, obtaining quotes from three to five lenders can result in significant savings on your monthly payment and interest expenses throughout your loan term.
       </p>
                 </div>
@@ -719,14 +719,14 @@
 <div class="bg-white md:max-w-[31.125rem] w-full h-full md:h-[39.688rem] flex items-center justify-center gap-8 flex-col p-16 lg:my-8 lg:mx-0 m-4">
   <div><img src="./assets/home.png" alt="" style="width: 100%;"></div>
   <h2 class="text-black 2xl:text-4xl md:text-3xl  text-xl font-poppins py-4 font-semibold text-center">Home Affordablity Calculator</h2>
-  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.795rem] text-black font-poppins font-normal">Calculate how much house you can afford based on your finance</p>
-  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.795rem] text-lightBlue font-poppins font-medium hover:underline"><a href="./HomeAffordablity.html">Calculate</a></p>
+  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.875rem] text-black font-poppins font-normal">Calculate how much house you can afford based on your finance</p>
+  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.875rem] text-lightBlue font-poppins font-medium hover:underline"><a href="./HomeAffordablity.html">Calculate</a></p>
 </div>
 <div class="bg-white md:max-w-[31.125rem] w-full h-full md:h-[39.688rem] flex items-center justify-center gap-8 flex-col p-16 lg:my-8 lg:mx-0 m-4">
   <div><img src="./assets/home.png" alt="" style="width: 100%;"></div>
   <h2 class="text-black 2xl:text-4xl md:text-3xl  text-xl font-poppins py-4 font-semibold text-center">Rent vs Buy Calculator</h2>
-  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.795rem] text-black font-poppins font-normal">Calculate whether it will save you more money to rent or buy a home</p>
-  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.795rem] text-lightBlue font-poppins font-medium hover:underline"><a href="./rent-vs-buy.html">Calculate</a></p>
+  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.875rem] text-black font-poppins font-normal">Calculate whether it will save you more money to rent or buy a home</p>
+  <p class="3xl:text-[1.875rem] xl:text-[1.3rem] md:text-[1.1rem]  text-center text-[0.875rem] text-lightBlue font-poppins font-medium hover:underline"><a href="./rent-vs-buy.html">Calculate</a></p>
 </div>
       </div>
 </div>
@@ -734,48 +734,36 @@
             
        
 
- <!-- footer-start -->
+<!-- footer-start -->
 <footer class="">
   <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
-<div class="container mx-auto flex items-center justify-between bg-[#3C6FAB] w-full md:flex-row flex-col md:gap-y-0 gap-y-6">
+<div class="container mx-auto flex lg:items-center items-start justify-between lg:bg-[#3C6FAB] w-full lg:flex-row md:flex-col flex-col-reverse  md:gap-y-0 gap-y-6 py-[2rem]" >
   <!-- img-start -->
-<div class="flex flex-col items-start justify-between w-full md:w-[40%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
+<div class="flex flex-col items-start justify-between w-full lg:w-[40%] md:w-[50%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
 <div class="w-[18rem]
-3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full max-w-[8.5rem]
+3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full min-w-[8.5rem]
 ">
-  <img src="./assets/logo.svg" alt="" width="100%">
+  <img src="./assets/Logo.png" alt="" width="100%">
 </div>
-<p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
+<p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
 </div>
 <!-- img-end -->
 <!-- links-start -->
-<div class="flex flex-row items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full md:w-[48%]">
+<div class="flex md:flex-row flex-col-reverse items-baseline justify-between gap-y-10 lg:gap-x-0 gap-x-10 w-full lg:w-[48%]">
   <!-- link1-start -->
-  <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0">
-    <h5 class="3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Useful Links</h5>
-    <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">
-      <li class="md:my-6 my-4"><a href="">Home</a></li>
-      <li class="md:my-6 my-4"><a href="">About Us</a></li>
-      <li class="md:my-6 my-4"><a href="">Loans</a></li>
-      <li class="md:my-6 my-4"><a href="">Approvals</a></li>
-      <li class="md:my-6 my-4"><a href="">FAQs</a></li>
-    </ul>
-  </div>
-  <!-- link1-end -->
-  <!-- link2-start -->
   <div class="flex  flex-col md:gap-y-[2.8rem] gap-y-[1.5rem] justify-center">
-    <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] md:text-xl  text-base">Contact Us</h6>
+    <h6 class="font-quicksand text-white font-bold 3xl:text-2xl lg:text[1.15rem] text-xl  ">Contact Us</h6>
      <div class="text-white  flex items-center justify-start gap-x-2">
       <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
 <img src="./assets/phone.svg" alt="" width="100%">
       </div>
-       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">(973) 561-4301</p>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">(973) 561-4301</p>
       </div >
      <div class="text-white  flex items-baseline justify-start gap-x-2">
       <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
         <img src="./assets/mail.svg" alt="" class="w-full">
       </div>
-       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.75rem]">helpdesk@businessloan <br> warriors.com</p>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">helpdesk@businessloan <br> warriors.com</p>
       </div>
      <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
        <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
@@ -796,6 +784,19 @@
          <img width="100%" src="./assets/youtube.png" class="w-full">
        </div>
      </div>
+</div>
+  <!-- link1-end -->
+  <!-- link2-start -->
+ 
+<div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0 ">
+  <h5 class="3xl:text-2xl lg:text[1.15rem] text-xl  ">Useful Links</h5>
+  <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">
+    <li class="md:my-6 my-4"><a href="">Home</a></li>
+    <li class="md:my-6 my-4"><a href="">About Us</a></li>
+    <li class="md:my-6 my-4"><a href="">Loans</a></li>
+    <li class="md:my-6 my-4"><a href="">Approvals</a></li>
+    <li class="md:my-6 my-4"><a href="">FAQs</a></li>
+  </ul>
 </div>
   <!-- link2-end -->
 </div>
