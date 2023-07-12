@@ -1,6 +1,9 @@
 header{
     background-color: rgb(246,246,249);
-
+position: sticky;
+top: 0;
+left: 0;
+right: 0;
 }
 .active{
     background-color: white;
@@ -15,4 +18,15 @@ header{
 .product-list{
     left: 13.5rem;
     top: 0;
+}
+.scroll{
+    overflow-y: scroll;
+}
+
+
+
+@media only screen and (max-width: 786px){
+    header{
+    position: static;
+    }
 }
