@@ -11,114 +11,116 @@
     <title>Home</title>
   </head>
   <body class="transition-all duration-500 bg-bgGrey">
-      <!-- header-start -->
+     <!-- header-start -->
 
-      <header class=" h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000] border-b-2 " style="position: sticky;top: 0;left: 0;right: 0;">
-        <nav class=" container mx-auto h-full bg-darkGrey grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
-          <div class=" flex items-center justify-between w-full lg:w-auto h-full">
-            <div class="2xl:w-[18.375rem] lg:max-w-[13rem] md:max-w-[12rem] min-w-[5.875rem] flex justify-between items-center">
-              <span class="cursor-pointer">
-                <a href="./index.html">
-                  <img src="./assets/logo2.jpeg" class="w-full" alt="">
-                </a>
-              </span>
-            </div>
-            <div class="lg:hidden w-full">
-              <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
-                <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
-              </span>
-            </div>
-          </div>
-    <div>
-    <ul id="list" class="lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
-      <li class="mx-2 md:my-0 py-4 lg:py-0">
-        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+   <header class=" h-fit 3xl:max-h-[7.5rem]   flex justify-center items-center z-[1000] border-b-2 " >
+    <nav class=" container mx-auto h-full bg-darkGrey grid lg:grid-rows-[auto] lg:grid-cols-[repeat(2,auto)] grid-rows-[5.75rem,auto] lg:items-center items-start lg:justify-between">
+      <div class=" flex items-center justify-between w-full lg:w-auto h-full">
+        <div class="2xl:w-[18.375rem] lg:max-w-[13rem] md:max-w-[12rem] w-fit flex justify-between items-center">
+          <span class="cursor-pointer">
+            <a href="./index.html">
+              <img src="./assets/logo2.jpeg" class="w-full" alt="">
+            </a>
+          </span>
+        </div>
+        <div class="lg:hidden w-full">
+          <span class="text-2xl cursor-pointer mx-2  lg:hidden block text-darkBlue w-full text-end">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        </div>
+      </div>
+<div>
+<ul id="list" class=" lg:flex lg:items-center lg:justify-between justify-start lg:flex-row flex-col z-[-1] lg:z-auto min-h-fit lg:w-auto transition-all ease-in duration-500 hidden"  style="width: 100%;">
+  <li class="mx-2 md:my-0 py-4 lg:py-0">
+    <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600  active:text-darkBlue active:font-bold duration-300 " href="./index.html">Home</a>
+  </li>
+  <li id="dropdown-text1" class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+    <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+      <ion-icon name="chevron-down-outline" id="down-arrow1" ></ion-icon>
+    </span></a>
+      <ul id="dropdown-list1" class="ul-list hidden lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]   text-[1.125rem] text-black" >
+      <li class="drop-down-list py-2"><a class="" href="./autoloan.html">Auto loan</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./personalloan.html">Personal Loan</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./SBALoan.html">SBA loan</a></li>
+  </ul>
+  </li>
+  <li class="mx-2 md:my-0 py-4 block lg:py-0 relative" id="dropdown-text2">
+    <a  class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Products<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+      <ion-icon name="chevron-down-outline" id="down-arrow2" ></ion-icon>
+    </span></a>
+      <ul id="dropdown-list2" class="ul-list   hidden lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
+
+      <li id="dropdown-text2-1" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="#">Business Loans<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow2-1" ></ion-icon>
+      </span></a>
+        <ul id="dropdown-list2-1" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 " >
+              <li class="drop-down-list py-2"><a class="" href="">Equipment Financing</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Restaurant Financing Loans</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Short Term Business Loans</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">SBA Loans</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Merchant Cash Advance</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Invoice Financing</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Business Line of Credit</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Construction Loans</a></li>
+              <li class="drop-down-list py-2"><a class="" href="">Business Acquisition Loans</a></li>
+          </ul>
       </li>
-      <li id="dropdown-text1" class="mx-2 md:my-0 py-4 block lg:py-0 relative">
-        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Loan<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
-          <ion-icon name="chevron-down-outline" id="down-arrow1" ></ion-icon>
-        </span></a>
-          <ul id="dropdown-list1" class="ul-list hidden lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]   text-[1.125rem] text-black" >
-          <li class="drop-down-list py-2"><a class="" href="./autoloan.html">Auto loan</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./HomeAffordablity.html">Home Affordbility</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./mortagecalculator.html">Mortage Calculator</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./mortageRefinance.html">Mortage Refinance</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./personalloan.html">Personal Loan</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./rent-vs-buy.html">Rent vs buy</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./SBALoan.html">SBA loan</a></li>
-      </ul>
+      <li class="drop-down-list py-2 text-black"><a class="" href="">Credit Card Match</a></li>
+      <li class="drop-down-list py-2 text-black"><a class="" href="">Personal Loans</a></li>
+      <li id="dropdown-text2-2" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="#">Debt Relief<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow2-2" ></ion-icon>
+      </span></a>
+        <ul id="dropdown-list2-2" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 " >
+              <li class="drop-down-list py-1"><a class="" href="">Federal Debt Relief</a></li>
+              <li class="drop-down-list py-1"><a class="" href="">Accredited Debt Relief</a></li>
+          </ul>
       </li>
-      <li class="mx-2 md:my-0 py-4 block lg:py-0 relative" id="dropdown-text2">
-        <a  class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Products<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
-          <ion-icon name="chevron-down-outline" id="down-arrow2" ></ion-icon>
-        </span></a>
-          <ul id="dropdown-list2" class="ul-list   hidden lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
-    
-          <li id="dropdown-text2-1" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="">Business Loans<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
-            <ion-icon name="chevron-down-outline" id="down-arrow2-1" ></ion-icon>
-          </span></a>
-            <ul id="dropdown-list2-1" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 " >
-                  <li class="drop-down-list py-2"><a class="" href="">Equipment Financing</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Restaurant Financing Loans</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Short Term Business Loans</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">SBA Loans</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Merchant Cash Advance</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Invoice Financing</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Business Line of Credit</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Construction Loans</a></li>
-                  <li class="drop-down-list py-2"><a class="" href="">Business Acquisition Loans</a></li>
-              </ul>
-          </li>
-          <li class="drop-down-list py-2 text-black"><a class="" href="">Credit Card Match</a></li>
-          <li class="drop-down-list py-2 text-black"><a class="" href="">Personal Loans</a></li>
-          <li id="dropdown-text2-2" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="">Debt Relief<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
-            <ion-icon name="chevron-down-outline" id="down-arrow2-2" ></ion-icon>
-          </span></a>
-            <ul id="dropdown-list2-2" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 " >
-                  <li class="drop-down-list py-1"><a class="" href="">Federal Debt Relief</a></li>
-                  <li class="drop-down-list py-1"><a class="" href="">Accredited Debt Relief</a></li>
-              </ul>
-          </li>
-          <li id="dropdown-text2-3" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="">Insurances<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
-            <ion-icon name="chevron-down-outline" id="down-arrow2-3" ></ion-icon>
-          </span></a>
-            <ul id="dropdown-list2-3" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
-                  <li class="drop-down-list py-1"><a class="" href="">Auto Insurance Coverage</a></li>
-                  <li class="drop-down-list py-1"><a class="" href="">Life Insurance</a></li>
-                  <li class="drop-down-list py-1"><a class="" href="">Home Insurance</a></li>
-              </ul>
-          </li>
-          <li class="drop-down-list py-2 text-black"><a class="" href="">Investing</a></li>
-          <li id="dropdown-text2-4" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="">Deposit Accounts<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
-            <ion-icon name="chevron-down-outline" id="down-arrow2-4" ></ion-icon>
-          </span></a>
-            <ul id="dropdown-list2-4" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
-                  <li class="drop-down-list py-1"><a class="" href="">Saving LP</a></li>
-                  <li class="drop-down-list py-1"><a class="" href="">CDs LP</a></li>
-              </ul>
-          </li>
-      </ul>
+      <li id="dropdown-text2-3" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center"  href="#">Insurances<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow2-3" ></ion-icon>
+      </span></a>
+        <ul id="dropdown-list2-3" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
+              <li class="drop-down-list py-1"><a class="" href="">Auto Insurance Coverage</a></li>
+              <li class="drop-down-list py-1"><a class="" href="">Life Insurance</a></li>
+              <li class="drop-down-list py-1"><a class="" href="">Home Insurance</a></li>
+          </ul>
       </li>
-      <li id="dropdown-text3" class="mx-2 md:my-0 py-4 block lg:py-0 relative">
-        <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Company<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
-          <ion-icon name="chevron-down-outline" id="down-arrow3" ></ion-icon>
-        </span></a>
-          <ul id="dropdown-list3" class="ul-list hidden lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]   text-[1.125rem] text-black" >
-          <li class="drop-down-list py-2"><a class="" href="./autoloan.html">About Us</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./HomeAffordablity.html">Approvals</a></li>
-          <li class="drop-down-list py-2"><a class="" href="./mortagecalculator.html">Blog</a></li>
-      </ul>
+      <li class="drop-down-list py-2 text-black"><a class="" href="">Investing</a></li>
+      <li id="dropdown-text2-4" class="drop-down-list py-2 md:my-0  block lg:py-0 relative"><a  class=" text-[1.125rem]  md:px-0 font-quicksand text-black font-medium hover:text-gray-600 duration-300 flex items-center justify-center "  href="#">Deposit Accounts<span class="text-lg cursor-pointer mx-2 mt-3 block text-black w-full text-end">
+        <ion-icon name="chevron-down-outline" id="down-arrow2-4" ></ion-icon>
+      </span></a>
+        <ul id="dropdown-list2-4" class="product-list hidden ul-list  lg:absolute lg:pl-6 py-2 pl-4 pr-2 md:left-0 z-10  w-full lg:w-[15rem]  text-[1.125rem]    text-black hover:text-gray-600 ">
+              <li class="drop-down-list py-1"><a class="" href="">Saving LP</a></li>
+              <li class="drop-down-list py-1"><a class="" href="">CDs LP</a></li>
+          </ul>
       </li>
-      <a href="">
-        <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-4 3xl:px-6 py-3 px-4  hover:bg-darkGrey hover:text-white my-7 rounded-[2.8rem] xl:text-xl lg:text-base text-[0.938rem]  flex items-center md:w-fit">
-          Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1 hover:text-white"></ion-icon>
-        </button>
-      </a>
-    </ul>
-    </div>
-        </nav>
-    </header>
-    <!-- header-end -->
+  </ul>
+  </li>
+  <li id="dropdown-text3" class="mx-2 md:my-0 py-4 block lg:py-0 relative">
+    <a class="xl:text-[1.375rem] lg:text-[1.2] text-[1.125rem] 3xl:mx-7 lg:mx-2 md:mx-0 md:px-2 font-quicksand text-darkGrey font-medium hover:text-gray-600 duration-300 flex items-center justify-center" href="#" >Company<span class="text-2xl cursor-pointer mx-2 mt-3 block text-darkGrey w-full text-end">
+      <ion-icon name="chevron-down-outline" id="down-arrow3" ></ion-icon>
+    </span></a>
+      <ul id="dropdown-list3" class="ul-list hidden lg:absolute lg:pl-6 pl-4 pr-6 md:left-0 z-10  w-full lg:w-[15rem]   text-[1.125rem] text-black" >
+      <li class="drop-down-list py-2"><a class="" href="./autoloan.html">About Us</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./HomeAffordablity.html">Approvals</a></li>
+      <li class="drop-down-list py-2"><a class="" href="./mortagecalculator.html">Blog</a></li>
+  </ul>
+  </li>
+  <a href="">
+    <button class="bg-lightGreen text-darkBlue font-quicksand md:font-bold font-semibold duration-500 3xl:py-4 3xl:px-6 py-3 px-4  hover:bg-darkGrey hover:text-white my-7 rounded-[2.8rem] xl:text-xl lg:text-base text-[0.938rem]  flex items-center md:w-fit">
+      Get started <ion-icon name="arrow-forward-outline" class="text-darkBlue pl-1 hover:text-white"></ion-icon>
+    </button>
+  </a>
+</ul>
+</div>
+    </nav>
+</header>
+
+  
+<!-- header-end -->
 <!-- section-1-start -->
 
 <div class="container mx-auto flex md:flex-row-reverse flex-col items-center md:justify-between min-h-fit  2xl:pb-14 pb-0 py-2">
@@ -521,12 +523,11 @@ transition: linear 0.3s;
 <div class="container mx-auto flex lg:items-center items-start justify-between lg:bg-[#3C6FAB] w-full lg:flex-row md:flex-col flex-col-reverse  md:gap-y-0 gap-y-6 py-[2rem]" style="padding-top: 2rem; padding-bottom: 2rem;">
   <!-- img-start -->
 <div class="flex flex-col items-start justify-between w-full lg:w-[40%] md:w-[50%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
-<div class="w-[18rem]
-3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full min-w-[8.5rem]
+<div class="2xl:w-[20rem] lg:max-w-[15rem] md:max-w-[12rem] max-w-[5rem] h-full
 ">
 <span class="cursor-pointer">
   <a href="./index.html">
-    <img src="./assets/logo2.jpeg" class="w-full" alt="">
+    <img src="./assets/logo2.jpeg" class="w-full" style="width: 14rem;" alt="">
   </a>
 </span>
 </div>
