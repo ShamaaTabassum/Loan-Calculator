@@ -1,3 +1,15 @@
+// changing header color
+
+let header=document.querySelector("header");
+window.addEventListener("scroll", function() {
+  if (window.scrollY > 50) {
+      header.classList.add("active");
+  } else {
+     header.classList.remove("active");
+  }
+});
+
+
 // function for menu
 function Menu(e) {
 let list = document.querySelector('#list');
@@ -5,15 +17,32 @@ let list = document.querySelector('#list');
   e.name === "menu" ? (e.name = "close", list.classList.remove('hidden')) :( e.name = "menu" ,list.classList.add('hidden'))
 } 
 window.Menu = Menu;
-// function for dropdown menu
+// function for dropdown menu 
 const loan = document.getElementById('loan');
 const loanText = document.getElementById('loan-text');
 const downArrow = document.getElementById('down-arrow');
 
-    downArrow && loanText.addEventListener('click', () => {
-      loan.classList.toggle('block');
-      loan.classList.toggle('hidden');
+    downArrow && loanText.addEventListener('mouseover', () => {
+      loan.classList.add('block');
+      loan.classList.remove('hidden');
     });
+    downArrow && loanText.addEventListener('mouseout', () => {
+      loan.classList.remove('block');
+      loan.classList.add('hidden');
+    });
+// function for dropdown menu 1
+const loan1 = document.getElementById('loan1');
+const loanText1 = document.getElementById('loan-text1');
+const downArrow1 = document.getElementById('down-arrow1');
+
+downArrow1 && loanText1.addEventListener('mouseover', () => {
+  loan1.classList.add('block');
+  loan1.classList.remove('hidden');
+});
+downArrow1 && loanText1.addEventListener('mouseout', () => {
+  loan1.classList.remove('block');
+  loan1.classList.add('hidden');
+});
 
     // ......
     // function to Calculate Business Loan 
