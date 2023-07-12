@@ -12,3 +12,7 @@ header{
 .drop-down-list:hover{
     background-color: rgb(250, 250, 250);
 }
+.product-list{
+    left: 13.5rem;
+    top: 0;
+}
