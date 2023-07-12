@@ -195,15 +195,37 @@
   </div>
   <!-- para-section-end -->
   <!-- footer-start -->
+  
+<style>
+  footer{
+    transition: all 0.3s;
+  }
+  a:hover{
+cursor: pointer;
+color: darkgrey;
+  }
+  .social{
+    transition: all 0.3s;
+  }
+  .social:hover{
+transform: scale(1.3);
+transition: linear 0.3s;
+  }
+</style>
+
 <footer class="">
   <div class="bg-[#3C6FAB]  flex  items-center justify-center min-h-[36rem]">
-<div class="container mx-auto flex lg:items-center items-start justify-between lg:bg-[#3C6FAB] w-full lg:flex-row md:flex-col flex-col-reverse  md:gap-y-0 gap-y-6 py-[2rem]" >
+<div class="container mx-auto flex lg:items-center items-start justify-between lg:bg-[#3C6FAB] w-full lg:flex-row md:flex-col flex-col-reverse  md:gap-y-0 gap-y-6 py-[2rem]" style="padding-top: 2rem; padding-bottom: 2rem;">
   <!-- img-start -->
 <div class="flex flex-col items-start justify-between w-full lg:w-[40%] md:w-[50%] 3xl:pb-[6rem] lg:pb-[5rem] md:pb-[2rem] pb-0">
 <div class="w-[18rem]
 3xl:min-w-[18rem] xl:min-w-[15rem] lg:min-w-[12rem] md:min-w-[9.25rem] h-full min-w-[8.5rem]
 ">
-  <img src="./assets/Logo.png" alt="" width="100%">
+<span class="cursor-pointer">
+  <a href="./index.html">
+    <img src="./assets/Logo.png" class="w-full" alt="">
+  </a>
+</span>
 </div>
 <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem] text-white pt-4">Business Loan Warriors combines financial technology and human intelligence to help our clients, businesses owners access the capital they need. The dedicated work of our seasoned finance, technology, and customer service professionals allow us to deliver a next generation lending platform. <span class="text-lightBlue">Learn More</span></p>
 </div>
@@ -217,31 +239,35 @@
       <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
 <img src="./assets/phone.svg" alt="" width="100%">
       </div>
-       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">(973) 561-4301</p>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem] cursor-pointer" ><a href="tel:+123456789" >(973) 561-4301</a></p>
       </div >
      <div class="text-white  flex items-baseline justify-start gap-x-2">
       <div class="3xl:w-6 lg:w-5 md:w-4 w-3 text-darkGreen">
         <img src="./assets/mail.svg" alt="" class="w-full">
       </div>
-       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">helpdesk@businessloan <br> warriors.com</p>
+       <p class="font-poppins font-normal 3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]"><a href="mailto:helpdesk@businessloanwarriors.com">helpdesk@businessloan <br> warriors.com</a></p>
       </div>
      <div class="flex items-center justify-between gap-2 lg:py-3 md:py-1 py-0">
-       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem] social 
        ">
-         <img width="100%" src="./assets/twitter.png" class="w-full">
+       <a href="https://twitter.com/" target="_blank"><img width="100%" src="./assets/twitter.png" class="w-full">
+       </a>
        </div>
-       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem] social 
        ">
-         <img width="100%" src="./assets/fb.png" class="w-full">
+       <a href="https://facebook.com/" target="_blank"><img width="100%" src="./assets/fb.png" class="w-full">
+       </a>
        </div>
-       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
+       <div class="3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem] social 
        ">
-         <img width="100%" src="./assets/insta.png" class="w-full ">
+       <a href="https://instagram.com/" target="_blank"><img width="100%" src="./assets/insta.png" class="w-full ">
+       </a>
        </div>
-       <div class="
+       <div class="social 
        3xl:w-[2.875rem] md:w-[2.104rem] w-[1.5rem]
        ">
-         <img width="100%" src="./assets/youtube.png" class="w-full">
+       <a href="https://youtube.com/" target="_blank"><img width="100%" src="./assets/youtube.png" class="w-full">
+       </a>
        </div>
      </div>
 </div>
@@ -251,9 +277,9 @@
 <div class="flex  flex-col gap-y-2 font-quicksand text-white font-bold xl:ml-20 ml-0 ">
   <h5 class="3xl:text-2xl lg:text[1.15rem] text-xl  ">Useful Links</h5>
   <ul class="3xl:text-xl xl:text-[1.15rem] md:text-[0.938rem] text-[0.875rem]">
-    <li class="md:my-6 my-4"><a href="">Home</a></li>
+    <li class="md:my-6 my-4"><a href="./index.html">Home</a></li>
     <li class="md:my-6 my-4"><a href="">About Us</a></li>
-    <li class="md:my-6 my-4"><a href="">Loans</a></li>
+    <li class="md:my-6 my-4"><a href="./index.html">Loans</a></li>
     <li class="md:my-6 my-4"><a href="">Approvals</a></li>
     <li class="md:my-6 my-4"><a href="">FAQs</a></li>
   </ul>
